@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "lib": [
-      "ESNext",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "jsx": "preserve",
 
     "noEmit": true,
@@ -24,12 +20,6 @@
     "forceConsistentCasingInFileNames": true
   },
 
-  "include": [
-    "./next.config.js",
-    "./next-env.d.ts",
-    "./src/**/*"
-  ],
-  "exclude": [
-    "./node_modules"
-  ]
+  "include": ["./next.config.js", "./next-env.d.ts", "./src/**/*"],
+  "exclude": ["./node_modules"]
 }
