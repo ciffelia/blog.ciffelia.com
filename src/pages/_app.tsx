@@ -2,6 +2,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Background from '@/components/app/Background';
 import Header from '@/components/header/Header';
+import Footer from '@/components/header/Footer';
 import '@/styles.css';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
@@ -19,6 +20,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       <div className="flex flex-col font-serif">
         <Header />
         <Component {...pageProps} />
+        <Footer />
       </div>
     </>
   );
