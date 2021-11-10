@@ -1,4 +1,4 @@
-import ArticleMetadata from '@/types/ArticleMetadata';
+import { ArticleMetadata } from '@/types/ArticleMetadata';
 import MetaCommon from '@/components/meta/MetaCommon';
 import MetaOgpBasic from '@/components/meta/ogp/MetaOgpBasic';
 import MetaOgpArticle from '@/components/meta/ogp/MetaOgpArticle';

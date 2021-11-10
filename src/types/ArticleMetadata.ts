@@ -1,4 +1,4 @@
-export default interface ArticleMetadata {
+export interface ArticleMetadata {
   slug: string;
   title: string;
   description: string;

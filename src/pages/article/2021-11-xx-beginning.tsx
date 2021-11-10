@@ -1,5 +1,5 @@
 import { parseISO } from 'date-fns';
-import ArticleMetadata from '@/types/ArticleMetadata';
+import { ArticleMetadata } from '@/types/ArticleMetadata';
 import ArticleHead from '@/components/article/ArticleHead';
 import ArticleContainer from '@/components/article/ArticleContainer';
 import ExternalLink from '@/components/ExternalLink';
