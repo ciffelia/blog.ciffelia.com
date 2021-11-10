@@ -1,8 +1,8 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Background from '@/components/app/Background';
-import Header from '@/components/header/Header';
-import Footer from '@/components/header/Footer';
+import Header from '@/components/app/header/Header';
+import Footer from '@/components/app/footer/Footer';
 import '@/styles.css';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
