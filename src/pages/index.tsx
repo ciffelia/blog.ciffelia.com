@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Container from '@/components/Container';
 
 const Home: React.FC = () => {
   return (
@@ -18,32 +19,34 @@ const Home: React.FC = () => {
           content="Ciffeliaが技術の話などをするブログ"
         />
       </Head>
-      <div className="w-screen max-w-screen-lg lg:mx-auto p-5 lg:rounded-2xl bg-gray-50 filter drop-shadow-2xl text-4xl">
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-        <p>hello world</p>
-      </div>
+      <Container>
+        <main className="text-4xl">
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+          <p>hello world</p>
+        </main>
+      </Container>
     </>
   );
 };
