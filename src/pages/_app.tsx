@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import Background from '@/components/app/Background';
 import Header from '@/components/header/Header';
 import '@/styles.css';
 
@@ -14,7 +15,8 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@ciffelia" />
       </Head>
-      <div className="bg-gray-50 font-serif">
+      <Background />
+      <div className="flex flex-col font-serif">
         <Header />
         <Component {...pageProps} />
       </div>

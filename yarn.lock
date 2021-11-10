@@ -906,6 +906,7 @@ __metadata:
     prettier: ^2.4.1
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-tsparticles: ^1.37.3
     tailwindcss: ^2.2.19
     typescript: ^4.4.4
   languageName: unknown
@@ -4381,6 +4382,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-tsparticles@npm:^1.37.3":
+  version: 1.37.3
+  resolution: "react-tsparticles@npm:1.37.3"
+  dependencies:
+    fast-deep-equal: ^3.1.3
+    tsparticles: ^1.37.3
+  peerDependencies:
+    react: ">=16"
+  checksum: f119e64b360b68ac52beca6c9470e6c1d9a3e55e7ad75f97b49ceb9d63b6eb53964a09e22fb03b36fb8424e6645c1464f44757bc3e192cc6ea42ee2765bd13e4
+  languageName: node
+  linkType: hard
+
 "react@npm:^17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
@@ -5193,6 +5206,13 @@ __metadata:
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
+  languageName: node
+  linkType: hard
+
+"tsparticles@npm:^1.37.3":
+  version: 1.37.3
+  resolution: "tsparticles@npm:1.37.3"
+  checksum: 98c41d2edb82f6fc9eae86325013322036dc4dcecb819b6b43037c4a0ca6a939c37c43f74206a753b108f09b7309febc35a0993450ef908bdf83b56abb1527b2
   languageName: node
   linkType: hard
 
