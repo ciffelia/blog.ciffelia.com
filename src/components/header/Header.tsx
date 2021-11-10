@@ -17,6 +17,7 @@ const Header: React.FC = () => {
               src={ciffeliaIcon}
               alt=""
               layout="fill"
+              sizes="5rem"
               className="rounded-full"
               priority
             />
