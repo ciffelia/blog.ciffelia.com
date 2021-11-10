@@ -1,5 +1,7 @@
 import React from 'react';
-import Particles from 'react-tsparticles';
+import dynamic from 'next/dynamic';
+
+const Particles = dynamic(async () => await import('react-tsparticles'));
 
 const Background: React.FC = () => {
   return (
