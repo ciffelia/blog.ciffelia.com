@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import ArticleMetadata from '@/types/ArticleMetadata';
 import MetaCommon from '@/components/meta/MetaCommon';
 import MetaOgpBasic from '@/components/meta/ogp/MetaOgpBasic';

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import MetaCommon from '@/components/meta/MetaCommon';
 import MetaOgpBasic from '@/components/meta/ogp/MetaOgpBasic';
 import MetaOgpWebsite from '@/components/meta/ogp/MetaOgpWebsite';
