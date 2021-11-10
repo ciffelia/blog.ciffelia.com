@@ -1,21 +1,52 @@
 import Head from 'next/head';
+import ArticleMetadata from '@/types/ArticleMetadata';
+import MetaCommon from '@/components/meta/MetaCommon';
+import MetaOgpBasic from '@/components/meta/ogp/MetaOgpBasic';
+import MetaOgpArticle from '@/components/meta/ogp/MetaOgpArticle';
+import MetaTwitterCard from '@/components/meta/MetaTwitterCard';
 
 export interface Props {
-  title: string;
-  ogpImageUrl: string;
+  metadata: ArticleMetadata;
 }
 
-const ArticleHead: React.FC<Props> = ({ title, ogpImageUrl }) => {
+const ArticleHead: React.FC<Props> = ({
+  metadata: {
+    slug,
+    title,
+    description,
+    tags,
+    publishedAt,
+    modifiedAt,
+    ogpImageUrl,
+  },
+}) => {
   const pageTitle = `${title} - blog.ciffelia.com`;
+  const path = `/article/${slug}`;
 
   return (
-    <Head>
-      <title>{pageTitle}</title>
-      <meta property="og:title" content={pageTitle} />
-      <meta property="og:type" content="article" />
-      <meta property="og:url" content="https://blog.ciffelia.com/" />
-      <meta property="og:image" content={ogpImageUrl} />
-    </Head>
+    <>
+      <MetaCommon
+        title={pageTitle}
+        description={description}
+        path={`/article/${slug}`}
+        modifiedAt={modifiedAt}
+        tags={tags}
+      />
+
+      <MetaOgpBasic
+        title={pageTitle}
+        path={path}
+        imageUrl={ogpImageUrl}
+        description={description}
+      />
+      <MetaOgpArticle
+        publishedAt={publishedAt}
+        modifiedAt={modifiedAt}
+        tags={tags}
+      />
+
+      <MetaTwitterCard />
+    </>
   );
 };
 

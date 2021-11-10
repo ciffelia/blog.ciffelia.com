@@ -11,10 +11,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       <Head>
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta property="og:locale" content="ja_JP" />
-        <meta property="og:site_name" content="blog.ciffelia.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@ciffelia" />
       </Head>
       <Background />
       <div className="flex flex-col font-serif">
