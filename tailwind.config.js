@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     fontFamily: {
       // https://ics.media/entry/200317/
-      serif: `"Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif`,
+      serif: `"Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", 
+    "BIZ UDPGothic", Meiryo, sans-serif`,
       quicksand: 'Quicksand',
     },
   },
