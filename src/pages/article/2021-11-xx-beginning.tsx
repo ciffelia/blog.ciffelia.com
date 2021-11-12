@@ -19,8 +19,7 @@ const Article202111xxBeginning: React.FC = () => {
   return (
     <>
       <ArticleHead metadata={metadata} />
-      <ArticleContainer>
-        <h1>ブログをつくった</h1>
+      <ArticleContainer metadata={metadata}>
         <p>ブログをつくりました。</p>
         <p>
           リポジトリは
