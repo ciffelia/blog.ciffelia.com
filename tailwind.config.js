@@ -8,6 +8,16 @@ module.exports = {
     "BIZ UDPGothic", Meiryo, sans-serif`,
       quicksand: 'Quicksand',
     },
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none', // Unset max-width: 65ch on .prose
+            textAlign: 'justify',
+          },
+        },
+      },
+    },
   },
   variants: {
     extend: {},

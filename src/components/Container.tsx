@@ -6,7 +6,7 @@ export interface Props {
 
 const Container: React.FC<Props> = ({ children }) => {
   return (
-    <div className="w-screen max-w-screen-lg lg:mx-auto p-10 lg:rounded-2xl bg-gray-50 filter drop-shadow-2xl">
+    <div className="w-screen max-w-screen-md lg:mx-auto p-10 lg:rounded-2xl bg-gray-50 filter drop-shadow-2xl">
       {children}
     </div>
   );
