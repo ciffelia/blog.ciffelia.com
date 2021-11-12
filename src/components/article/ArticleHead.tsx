@@ -1,8 +1,8 @@
 import { ArticleMetadata } from '@/types/ArticleMetadata';
-import MetaCommon from '@/components/meta/MetaCommon';
-import MetaOgpBasic from '@/components/meta/ogp/MetaOgpBasic';
-import MetaOgpArticle from '@/components/meta/ogp/MetaOgpArticle';
-import MetaTwitterCard from '@/components/meta/MetaTwitterCard';
+import MetaCommon from '@/components/common/meta/MetaCommon';
+import MetaOgpBasic from '@/components/common/meta/ogp/MetaOgpBasic';
+import MetaOgpArticle from '@/components/common/meta/ogp/MetaOgpArticle';
+import MetaTwitterCard from '@/components/common/meta/MetaTwitterCard';
 
 export interface Props {
   metadata: ArticleMetadata;

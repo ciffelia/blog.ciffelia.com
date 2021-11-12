@@ -1,7 +1,7 @@
-import MetaCommon from '@/components/meta/MetaCommon';
-import MetaOgpBasic from '@/components/meta/ogp/MetaOgpBasic';
-import MetaOgpWebsite from '@/components/meta/ogp/MetaOgpWebsite';
-import MetaTwitterCard from '@/components/meta/MetaTwitterCard';
+import MetaCommon from '@/components/common/meta/MetaCommon';
+import MetaOgpBasic from '@/components/common/meta/ogp/MetaOgpBasic';
+import MetaOgpWebsite from '@/components/common/meta/ogp/MetaOgpWebsite';
+import MetaTwitterCard from '@/components/common/meta/MetaTwitterCard';
 
 const HomeHead: React.FC = () => (
   <>
