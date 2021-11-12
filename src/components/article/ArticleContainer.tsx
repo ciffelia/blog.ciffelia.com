@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArticleMetadata } from '@/types/ArticleMetadata';
-import Container from '@/components/Container';
+import Container from '@/components/common/Container';
 import ArticleTitle from '@/components/article/ArticleTitle';
 
 export interface Props {

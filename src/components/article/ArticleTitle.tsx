@@ -1,6 +1,6 @@
 import { FaRegCalendarAlt } from 'react-icons/fa';
 import { ArticleMetadata } from '@/types/ArticleMetadata';
-import { Timestamp } from '@/components/Timestamp';
+import { Timestamp } from '@/components/common/Timestamp';
 
 export interface Props {
   metadata: ArticleMetadata;

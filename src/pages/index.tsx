@@ -1,5 +1,5 @@
 import HomeHead from '@/components/home/HomeHead';
-import Container from '@/components/Container';
+import Container from '@/components/common/Container';
 
 const Home: React.FC = () => {
   return (
