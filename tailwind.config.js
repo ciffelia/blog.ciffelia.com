@@ -13,6 +13,8 @@ module.exports = {
         DEFAULT: {
           css: {
             maxWidth: 'none', // Unset max-width: 65ch on .prose
+            fontSize: '16px',
+            letterSpacing: '0.1em',
             textAlign: 'justify',
           },
         },
