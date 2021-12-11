@@ -1,6 +1,7 @@
 import { articleList } from '@/articleList';
 import HomeHead from '@/components/home/HomeHead';
 import ArticleCard from '@/components/home/ArticleCard';
+import SilhouetteCard from '@/components/home/SilhouetteCard';
 
 const Home: React.VFC = () => {
   return (
@@ -11,6 +12,7 @@ const Home: React.VFC = () => {
           {articleList.map((metadata) => (
             <ArticleCard key={metadata.slug} metadata={metadata} />
           ))}
+          <SilhouetteCard />
         </ul>
       </div>
     </>
