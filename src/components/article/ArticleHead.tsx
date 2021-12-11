@@ -8,7 +8,7 @@ export interface Props {
   metadata: ArticleMetadata;
 }
 
-const ArticleHead: React.FC<Props> = ({
+const ArticleHead: React.VFC<Props> = ({
   metadata: {
     slug,
     title,

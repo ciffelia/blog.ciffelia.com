@@ -7,7 +7,7 @@ export interface Props {
   description: string;
 }
 
-const MetaOgpBasic: React.FC<Props> = ({
+const MetaOgpBasic: React.VFC<Props> = ({
   title,
   path,
   imageUrl,

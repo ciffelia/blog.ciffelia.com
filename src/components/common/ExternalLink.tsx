@@ -3,7 +3,7 @@ export interface Props {
   children: React.ReactNode;
 }
 
-const ExternalLink: React.FC<Props> = (props) => {
+const ExternalLink: React.VFC<Props> = (props) => {
   return (
     // eslint-disable-next-line react/jsx-no-target-blank
     <a href={props.to} target="_blank" rel="noopener">

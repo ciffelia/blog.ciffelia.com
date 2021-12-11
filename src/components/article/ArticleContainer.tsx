@@ -8,7 +8,7 @@ export interface Props {
   children: React.ReactNode;
 }
 
-const ArticleContainer: React.FC<Props> = ({ metadata, children }) => {
+const ArticleContainer: React.VFC<Props> = ({ metadata, children }) => {
   return (
     <Container>
       <article className="flex flex-col gap-y-8">

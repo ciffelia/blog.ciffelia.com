@@ -7,7 +7,7 @@ export interface Props {
   children: React.ReactNode;
 }
 
-const SocialLink: React.FC<Props> = ({ url, color, children }) => {
+const SocialLink: React.VFC<Props> = ({ url, color, children }) => {
   return (
     <ExternalLink to={url}>
       <div

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const MetaTwitterCard: React.FC = () => (
+const MetaTwitterCard: React.VFC = () => (
   <Head>
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@ciffelia" />

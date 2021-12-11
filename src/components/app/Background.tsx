@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 
 const Particles = dynamic(async () => await import('react-tsparticles'));
 
-const Background: React.FC = () => {
+const Background: React.VFC = () => {
   return (
     <div className="fixed inset-0 bg-blue-900" style={{ zIndex: -1 }}>
       <Particles

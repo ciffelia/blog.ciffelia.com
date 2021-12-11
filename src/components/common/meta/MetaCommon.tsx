@@ -8,7 +8,7 @@ export interface Props {
   tags?: string[];
 }
 
-const MetaCommon: React.FC<Props> = ({
+const MetaCommon: React.VFC<Props> = ({
   title,
   description,
   path,

@@ -6,7 +6,11 @@ export interface Props {
   tags: string[];
 }
 
-const MetaOgpArticle: React.FC<Props> = ({ publishedAt, modifiedAt, tags }) => (
+const MetaOgpArticle: React.VFC<Props> = ({
+  publishedAt,
+  modifiedAt,
+  tags,
+}) => (
   <Head>
     <meta property="og:type" content="article" />
     <meta

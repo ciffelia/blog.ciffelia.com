@@ -1,7 +1,7 @@
 import HomeHead from '@/components/home/HomeHead';
 import Container from '@/components/common/Container';
 
-const Home: React.FC = () => {
+const Home: React.VFC = () => {
   return (
     <>
       <HomeHead />

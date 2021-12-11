@@ -5,7 +5,7 @@ interface Props {
   dateOnly: boolean;
 }
 
-const Timestamp: React.FC<Props> = ({ value, dateOnly }) => {
+const Timestamp: React.VFC<Props> = ({ value, dateOnly }) => {
   return (
     <time dateTime={value.toISOString()}>
       {format(value, dateOnly ? 'yyyy-MM-dd' : 'yyyy-MM-dd HH:mm')}

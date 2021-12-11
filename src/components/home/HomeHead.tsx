@@ -3,7 +3,7 @@ import MetaOgpBasic from '@/components/common/meta/ogp/MetaOgpBasic';
 import MetaOgpWebsite from '@/components/common/meta/ogp/MetaOgpWebsite';
 import MetaTwitterCard from '@/components/common/meta/MetaTwitterCard';
 
-const HomeHead: React.FC = () => (
+const HomeHead: React.VFC = () => (
   <>
     <MetaCommon
       title="blog.ciffelia.com"
