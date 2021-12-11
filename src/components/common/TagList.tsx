@@ -6,7 +6,7 @@ export interface Props {
 
 const TagList: React.VFC<Props> = ({ tags }) => {
   return (
-    <ul className="flex justify-center items-center gap-x-2">
+    <ul className="flex flex-wrap justify-center items-center gap-x-2">
       {tags.map((tag) => (
         <Tag key={tag}>{tag}</Tag>
       ))}
