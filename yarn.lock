@@ -114,7 +114,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/quicksand@npm:^4.5.1":
+"@fontsource/quicksand@npm:4.5.1":
   version: 4.5.1
   resolution: "@fontsource/quicksand@npm:4.5.1"
   checksum: b002eed8f11e9180d29dc1f67e480a74932f9efb9003d0ddb13c7374a8c50b5bc977df6705048dbf4b96d241d56b3b486294564187093bce197153c644e440b9
@@ -372,7 +372,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:^0.5.0":
+"@tailwindcss/typography@npm:0.5.0":
   version: 0.5.0
   resolution: "@tailwindcss/typography@npm:0.5.0"
   dependencies:
@@ -407,7 +407,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^16.11.12":
+"@types/node@npm:*, @types/node@npm:16.11.12":
   version: 16.11.12
   resolution: "@types/node@npm:16.11.12"
   checksum: a3feb346d61a56f5a137c29bb8c63cfa3cc02e184b9dffdc18ef1528dcce55596e570575215a2e39e6ce69343eeb2a5ba71c271938f1dc8db4cc393902855412
@@ -428,7 +428,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17.0.37":
+"@types/react@npm:17.0.37":
   version: 17.0.37
   resolution: "@types/react@npm:17.0.37"
   dependencies:
@@ -446,7 +446,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.6.0":
+"@typescript-eslint/eslint-plugin@npm:5.6.0":
   version: 5.6.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.6.0"
   dependencies:
@@ -484,6 +484,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/parser@npm:5.6.0":
+  version: 5.6.0
+  resolution: "@typescript-eslint/parser@npm:5.6.0"
+  dependencies:
+    "@typescript-eslint/scope-manager": 5.6.0
+    "@typescript-eslint/types": 5.6.0
+    "@typescript-eslint/typescript-estree": 5.6.0
+    debug: ^4.3.2
+  peerDependencies:
+    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 7d703cfe6b0a33b35139f509bcc16065f234a11603244cee4f55e193112d93ed9cd4a6db4bcf57c6b766e8a4d602b4f2400cb8d52ea02b3fc2cdfb64e5b88a3e
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/parser@npm:^4.0.0, @typescript-eslint/parser@npm:^4.20.0":
   version: 4.33.0
   resolution: "@typescript-eslint/parser@npm:4.33.0"
@@ -498,23 +515,6 @@ __metadata:
     typescript:
       optional: true
   checksum: 102457eae1acd516211098fea081c8a2ed728522bbda7f5a557b6ef23d88970514f9a0f6285d53fca134d3d4d7d17822b5d5e12438d5918df4d1f89cc9e67d57
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/parser@npm:^5.6.0":
-  version: 5.6.0
-  resolution: "@typescript-eslint/parser@npm:5.6.0"
-  dependencies:
-    "@typescript-eslint/scope-manager": 5.6.0
-    "@typescript-eslint/types": 5.6.0
-    "@typescript-eslint/typescript-estree": 5.6.0
-    debug: ^4.3.2
-  peerDependencies:
-    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 7d703cfe6b0a33b35139f509bcc16065f234a11603244cee4f55e193112d93ed9cd4a6db4bcf57c6b766e8a4d602b4f2400cb8d52ea02b3fc2cdfb64e5b88a3e
   languageName: node
   linkType: hard
 
@@ -893,7 +893,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.4.0":
+"autoprefixer@npm:10.4.0":
   version: 10.4.0
   resolution: "autoprefixer@npm:10.4.0"
   dependencies:
@@ -964,30 +964,30 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blog.ciffelia.com@workspace:."
   dependencies:
-    "@fontsource/quicksand": ^4.5.1
-    "@tailwindcss/typography": ^0.5.0
-    "@types/node": ^16.11.12
-    "@types/react": ^17.0.37
-    "@typescript-eslint/eslint-plugin": ^5.6.0
-    "@typescript-eslint/parser": ^5.6.0
-    autoprefixer: ^10.4.0
-    date-fns: ^2.27.0
-    eslint: ^7.32.0
-    eslint-config-next: ^12.0.4
-    eslint-config-prettier: ^8.3.0
-    eslint-config-standard-with-typescript: ^21.0.1
-    eslint-plugin-import: ^2.25.3
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-promise: ^5.2.0
-    next: ^12.0.4
-    postcss: ^8.4.4
-    prettier: ^2.5.1
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    react-icons: ^4.3.1
-    react-tsparticles: ^1.37.5
-    tailwindcss: ^3.0.1
-    typescript: ^4.4.4
+    "@fontsource/quicksand": 4.5.1
+    "@tailwindcss/typography": 0.5.0
+    "@types/node": 16.11.12
+    "@types/react": 17.0.37
+    "@typescript-eslint/eslint-plugin": 5.6.0
+    "@typescript-eslint/parser": 5.6.0
+    autoprefixer: 10.4.0
+    date-fns: 2.27.0
+    eslint: 7.32.0
+    eslint-config-next: 12.0.4
+    eslint-config-prettier: 8.3.0
+    eslint-config-standard-with-typescript: 21.0.1
+    eslint-plugin-import: 2.25.3
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-promise: 5.2.0
+    next: 12.0.4
+    postcss: 8.4.4
+    prettier: 2.5.1
+    react: 17.0.2
+    react-dom: 17.0.2
+    react-icons: 4.3.1
+    react-tsparticles: 1.37.5
+    tailwindcss: 3.0.1
+    typescript: 4.4.4
   languageName: unknown
   linkType: soft
 
@@ -1561,7 +1561,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.27.0":
+"date-fns@npm:2.27.0":
   version: 2.27.0
   resolution: "date-fns@npm:2.27.0"
   checksum: db62036b3816eb0322c9532b353beac7f660a91e1a55dbd21c14893c621ebb8509f21c66ba287844dabd34dee0207edd54a9537bce6bb7cab9383dedc6b8bc90
@@ -1868,7 +1868,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:^12.0.4":
+"eslint-config-next@npm:12.0.4":
   version: 12.0.4
   resolution: "eslint-config-next@npm:12.0.4"
   dependencies:
@@ -1892,7 +1892,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.3.0":
+"eslint-config-prettier@npm:8.3.0":
   version: 8.3.0
   resolution: "eslint-config-prettier@npm:8.3.0"
   peerDependencies:
@@ -1903,7 +1903,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-standard-with-typescript@npm:^21.0.1":
+"eslint-config-standard-with-typescript@npm:21.0.1":
   version: 21.0.1
   resolution: "eslint-config-standard-with-typescript@npm:21.0.1"
   dependencies:
@@ -1981,7 +1981,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.22.1, eslint-plugin-import@npm:^2.25.3":
+"eslint-plugin-import@npm:2.25.3, eslint-plugin-import@npm:^2.22.1":
   version: 2.25.3
   resolution: "eslint-plugin-import@npm:2.25.3"
   dependencies:
@@ -2025,7 +2025,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-node@npm:^11.1.0":
+"eslint-plugin-node@npm:11.1.0":
   version: 11.1.0
   resolution: "eslint-plugin-node@npm:11.1.0"
   dependencies:
@@ -2041,7 +2041,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-promise@npm:^5.2.0":
+"eslint-plugin-promise@npm:5.2.0":
   version: 5.2.0
   resolution: "eslint-plugin-promise@npm:5.2.0"
   peerDependencies:
@@ -2134,7 +2134,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.32.0":
+"eslint@npm:7.32.0":
   version: 7.32.0
   resolution: "eslint@npm:7.32.0"
   dependencies:
@@ -3520,7 +3520,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^12.0.4":
+"next@npm:12.0.4":
   version: 12.0.4
   resolution: "next@npm:12.0.4"
   dependencies:
@@ -4118,7 +4118,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.1.6, postcss@npm:^8.4.4":
+"postcss@npm:8.4.4, postcss@npm:^8.1.6":
   version: 8.4.4
   resolution: "postcss@npm:8.4.4"
   dependencies:
@@ -4136,7 +4136,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.5.1":
+"prettier@npm:2.5.1":
   version: 2.5.1
   resolution: "prettier@npm:2.5.1"
   bin:
@@ -4276,7 +4276,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^17.0.2":
+"react-dom@npm:17.0.2":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
   dependencies:
@@ -4289,7 +4289,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^4.3.1":
+"react-icons@npm:4.3.1":
   version: 4.3.1
   resolution: "react-icons@npm:4.3.1"
   peerDependencies:
@@ -4319,7 +4319,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-tsparticles@npm:^1.37.5":
+"react-tsparticles@npm:1.37.5":
   version: 1.37.5
   resolution: "react-tsparticles@npm:1.37.5"
   dependencies:
@@ -4331,7 +4331,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^17.0.2":
+"react@npm:17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
   dependencies:
@@ -4977,7 +4977,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.0.1":
+"tailwindcss@npm:3.0.1":
   version: 3.0.1
   resolution: "tailwindcss@npm:3.0.1"
   dependencies:
@@ -5150,7 +5150,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.4.4":
+"typescript@npm:4.4.4":
   version: 4.4.4
   resolution: "typescript@npm:4.4.4"
   bin:
@@ -5160,7 +5160,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.4.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.4.4#~builtin<compat/typescript>":
   version: 4.4.4
   resolution: "typescript@patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"
   bin:
