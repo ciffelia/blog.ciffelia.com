@@ -12,7 +12,7 @@ const ArticleCard: React.VFC<Props> = ({
   metadata: { slug, title, publishedAt, ogpImageUrl },
 }) => {
   return (
-    <li className="flex overflow-hidden rounded-2xl bg-gray-50 drop-shadow-2xl">
+    <li className="flex overflow-hidden rounded-2xl bg-gray-50 shadow-lg shadow-white/10 hover:shadow-white/25 hover:scale-[1.01] transition-all duration-200">
       <Link href={`/article/${slug}`}>
         <a className="grow flex flex-col">
           <div className="relative w-full aspect-ogp">
