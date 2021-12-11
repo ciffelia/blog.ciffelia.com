@@ -1,4 +1,4 @@
-import { FaEdit } from 'react-icons/fa';
+import { FaRegEdit } from 'react-icons/fa';
 import { ArticleMetadata } from '@/types/ArticleMetadata';
 import { Timestamp } from '@/components/common/Timestamp';
 import TagList from '@/components/common/TagList';
@@ -17,7 +17,7 @@ const ArticleTitle: React.VFC<Props> = ({
       </div>
       <TagList tags={tags} />
       <div className="flex justify-center items-center gap-x-2">
-        <FaEdit />
+        <FaRegEdit />
         <Timestamp value={publishedAt} dateOnly />
       </div>
       <hr className="border-t-4" />
