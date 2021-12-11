@@ -1,4 +1,4 @@
-import { FaRegCalendarAlt } from 'react-icons/fa';
+import { FaEdit } from 'react-icons/fa';
 import { ArticleMetadata } from '@/types/ArticleMetadata';
 import { Timestamp } from '@/components/common/Timestamp';
 import TagList from '@/components/common/TagList';
@@ -8,7 +8,7 @@ export interface Props {
 }
 
 const ArticleTitle: React.VFC<Props> = ({
-  metadata: { title, modifiedAt, tags },
+  metadata: { title, publishedAt, tags },
 }) => {
   return (
     <div className="flex flex-col gap-y-5">
@@ -17,9 +17,10 @@ const ArticleTitle: React.VFC<Props> = ({
       </div>
       <TagList tags={tags} />
       <div className="flex justify-center items-center gap-x-2">
-        <FaRegCalendarAlt />
-        <Timestamp value={modifiedAt} dateOnly />
+        <FaEdit />
+        <Timestamp value={publishedAt} dateOnly />
       </div>
+      <hr className="border-t-4" />
     </div>
   );
 };
