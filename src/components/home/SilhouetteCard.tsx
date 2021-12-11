@@ -40,7 +40,7 @@ const SilhouetteCard: React.VFC = () => {
   const randomItem = useMemo(randomlySelectItem, []);
 
   return (
-    <li className="flex justify-center items-center p-6 rounded-2xl bg-gray-50 shadow-lg shadow-white/10 hover:shadow-white/20 hover:scale-[1.01] transition-all duration-200">
+    <li className="flex justify-center items-center p-6 rounded-2xl bg-gray-50 shadow-lg shadow-white/10">
       {randomItem}
     </li>
   );
