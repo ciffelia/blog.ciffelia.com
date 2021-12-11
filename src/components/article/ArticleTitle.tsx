@@ -1,6 +1,7 @@
 import { FaRegCalendarAlt } from 'react-icons/fa';
 import { ArticleMetadata } from '@/types/ArticleMetadata';
 import { Timestamp } from '@/components/common/Timestamp';
+import TagList from '@/components/common/TagList';
 
 export interface Props {
   metadata: ArticleMetadata;
@@ -14,13 +15,7 @@ const ArticleTitle: React.FC<Props> = ({
       <div className="prose">
         <h1 className="text-center">{title}</h1>
       </div>
-      <ul className="flex justify-center items-center gap-x-2">
-        {tags.map((tag) => (
-          <li key={tag} className="border border-gray-300 rounded-md px-1.5">
-            {tag}
-          </li>
-        ))}
-      </ul>
+      <TagList tags={tags} />
       <div className="flex justify-center items-center gap-x-2">
         <FaRegCalendarAlt />
         <Timestamp value={modifiedAt} dateOnly />
