@@ -1,38 +1,18 @@
+import { articleList } from '@/articleList';
 import HomeHead from '@/components/home/HomeHead';
-import Container from '@/components/common/Container';
+import ArticleCard from '@/components/home/ArticleCard';
 
 const Home: React.VFC = () => {
   return (
     <>
       <HomeHead />
-      <Container>
-        <main className="text-4xl">
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-        </main>
-      </Container>
+      <div className="flex justify-center w-screen md:px-16">
+        <ul className="grid grid-cols-[repeat(auto-fit,min(400px,100%))] justify-center gap-10 w-full">
+          {articleList.map((metadata) => (
+            <ArticleCard key={metadata.slug} metadata={metadata} />
+          ))}
+        </ul>
+      </div>
     </>
   );
 };

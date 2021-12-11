@@ -18,6 +18,9 @@ module.exports = {
           },
         },
       },
+      aspectRatio: {
+        ogp: '1.91 / 1',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],
