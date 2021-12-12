@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { jsonLdScriptProps } from 'react-schemaorg';
 import { BlogPosting, BreadcrumbList } from 'schema-dts';
 import { NextSeo } from 'next-seo';
+import { SITE_URL_BASE } from '@/constants';
 import { ArticleMetadata } from '@/types/ArticleMetadata';
 
 export interface Props {
@@ -19,7 +20,7 @@ const ArticleHead: React.VFC<Props> = ({
     thumbnailUrl,
   },
 }) => {
-  const canonicalUrl = `https://blog.ciffelia.com/article/${slug}`;
+  const canonicalUrl = `${SITE_URL_BASE}/article/${slug}`;
 
   return (
     <>

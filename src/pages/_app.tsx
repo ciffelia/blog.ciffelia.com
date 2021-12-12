@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
+import { SITE_NAME } from '@/constants';
 import Background from '@/components/app/Background';
 import Header from '@/components/app/header/Header';
 import Footer from '@/components/app/footer/Footer';
@@ -8,11 +9,11 @@ import '@/styles.css';
 const MyApp: React.VFC<AppProps> = ({ Component, pageProps }) => (
   <>
     <DefaultSeo
-      titleTemplate="%s | blog.ciffelia.com"
-      defaultTitle="blog.ciffelia.com"
+      titleTemplate={`%s | ${SITE_NAME}`}
+      defaultTitle={SITE_NAME}
       openGraph={{
         locale: 'ja_JP',
-        site_name: 'blog.ciffelia.com',
+        site_name: SITE_NAME,
       }}
       twitter={{
         cardType: 'summary_large_image',

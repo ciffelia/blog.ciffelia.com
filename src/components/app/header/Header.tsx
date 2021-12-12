@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { SITE_NAME } from '@/constants';
 import ciffeliaIcon from '@/images/ciffelia.png';
 import homeIcon from '@/images/home.svg';
 import twitterIcon from '@/images/twitter.svg';
@@ -22,7 +23,7 @@ const Header: React.VFC = () => (
           />
         </div>
         <span className="font-quicksand text-4xl sm:text-5xl text-gray-50">
-          blog.ciffelia.com
+          {SITE_NAME}
         </span>
       </a>
     </Link>

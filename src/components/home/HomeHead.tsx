@@ -1,10 +1,11 @@
 import { NextSeo } from 'next-seo';
+import { SITE_URL_BASE } from '@/constants';
 
 const HomeHead: React.VFC = () => (
   <>
     <NextSeo
       description="Ciffeliaが技術の話などをするブログ"
-      canonical={`https://blog.ciffelia.com`}
+      canonical={SITE_URL_BASE}
       openGraph={{
         type: 'website',
         images: [
