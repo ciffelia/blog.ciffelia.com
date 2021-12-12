@@ -67,6 +67,10 @@ const ArticleHead: React.VFC<Props> = ({
             datePublished: publishedAt.toISOString(),
             dateModified: modifiedAt.toISOString(),
             image: [thumbnailUrl],
+            author: {
+              '@type': 'Person',
+              name: 'Ciffelia',
+            },
           })}
         />
       </Head>
