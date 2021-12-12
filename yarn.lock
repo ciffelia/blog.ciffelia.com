@@ -986,7 +986,9 @@ __metadata:
     react: 17.0.2
     react-dom: 17.0.2
     react-icons: 4.3.1
+    react-schemaorg: ^2.0.0
     react-tsparticles: 1.37.5
+    schema-dts: ^1.0.0
     tailwindcss: 3.0.1
     typescript: 4.4.4
   languageName: unknown
@@ -4331,6 +4333,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-schemaorg@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "react-schemaorg@npm:2.0.0"
+  peerDependencies:
+    react: ">=16.3.0"
+    schema-dts: ">=0.7.4"
+    typescript: ">=3.1.6"
+  checksum: b22b1f2d1f93ac6a19361fad2a1ff8b122a67e2ed29149c89c25c4d260a73abe0fe4054521987aed519ae13e9b2e518c4f0954760019fd2315c30a78ce38fb3e
+  languageName: node
+  linkType: hard
+
 "react-tsparticles@npm:1.37.5":
   version: 1.37.5
   resolution: "react-tsparticles@npm:1.37.5"
@@ -4561,6 +4574,15 @@ __metadata:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
   checksum: c4b35cf967c8f0d3e65753252d0f260271f81a81e427241295c5a7b783abf4ea9e905f22f815ab66676f5313be0a25f47be582254db8f9241b259213e999b8fc
+  languageName: node
+  linkType: hard
+
+"schema-dts@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "schema-dts@npm:1.0.0"
+  peerDependencies:
+    typescript: ">=4.1.0"
+  checksum: 006769e04c17330cb031eeb197311774d5e31c17b28354f78f46ea7ec1f96b88293a85ccc0f727cd580942d78bce4287f6c2a46845cdc79480b70564b4d44a67
   languageName: node
   linkType: hard
 
