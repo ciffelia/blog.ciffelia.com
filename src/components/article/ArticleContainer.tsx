@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArticleMetadata } from '@/types/ArticleMetadata';
 import Container from '@/components/common/Container';
-import ArticleTitle from '@/components/article/ArticleTitle';
+import ArticleHeader from '@/components/article/ArticleHeader';
 
 export interface Props {
   metadata: ArticleMetadata;
@@ -10,12 +10,14 @@ export interface Props {
 
 const ArticleContainer: React.VFC<Props> = ({ metadata, children }) => {
   return (
-    <Container>
-      <article className="flex flex-col gap-y-8">
-        <ArticleTitle metadata={metadata} />
+    <article className="flex flex-col gap-5">
+      <Container>
+        <ArticleHeader metadata={metadata} />
+      </Container>
+      <Container>
         <div className="prose prose-blue">{children}</div>
-      </article>
-    </Container>
+      </Container>
+    </article>
   );
 };
 
