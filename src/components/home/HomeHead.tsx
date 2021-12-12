@@ -1,7 +1,6 @@
 import MetaCommon from '@/components/common/meta/MetaCommon';
 import MetaOgpBasic from '@/components/common/meta/ogp/MetaOgpBasic';
 import MetaOgpWebsite from '@/components/common/meta/ogp/MetaOgpWebsite';
-import MetaTwitterCard from '@/components/common/meta/MetaTwitterCard';
 
 const HomeHead: React.VFC = () => (
   <>
@@ -18,8 +17,6 @@ const HomeHead: React.VFC = () => (
       description="Ciffeliaが技術の話などをするブログ"
     />
     <MetaOgpWebsite />
-
-    <MetaTwitterCard />
   </>
 );
 

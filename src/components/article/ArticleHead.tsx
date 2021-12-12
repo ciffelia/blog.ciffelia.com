@@ -2,7 +2,6 @@ import { ArticleMetadata } from '@/types/ArticleMetadata';
 import MetaCommon from '@/components/common/meta/MetaCommon';
 import MetaOgpBasic from '@/components/common/meta/ogp/MetaOgpBasic';
 import MetaOgpArticle from '@/components/common/meta/ogp/MetaOgpArticle';
-import MetaTwitterCard from '@/components/common/meta/MetaTwitterCard';
 
 export interface Props {
   metadata: ArticleMetadata;
@@ -43,8 +42,6 @@ const ArticleHead: React.VFC<Props> = ({
         modifiedAt={modifiedAt}
         tags={tags}
       />
-
-      <MetaTwitterCard />
     </>
   );
 };
