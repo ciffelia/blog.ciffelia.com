@@ -980,15 +980,15 @@ __metadata:
     eslint-plugin-node: 11.1.0
     eslint-plugin-promise: 5.2.0
     next: 12.0.4
-    next-seo: ^4.28.1
+    next-seo: 4.28.1
     postcss: 8.4.4
     prettier: 2.5.1
     react: 17.0.2
     react-dom: 17.0.2
     react-icons: 4.3.1
-    react-schemaorg: ^2.0.0
+    react-schemaorg: 2.0.0
     react-tsparticles: 1.37.5
-    schema-dts: ^1.0.0
+    schema-dts: 1.0.0
     tailwindcss: 3.0.1
     typescript: 4.4.4
   languageName: unknown
@@ -3523,7 +3523,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-seo@npm:^4.28.1":
+"next-seo@npm:4.28.1":
   version: 4.28.1
   resolution: "next-seo@npm:4.28.1"
   peerDependencies:
@@ -4333,7 +4333,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-schemaorg@npm:^2.0.0":
+"react-schemaorg@npm:2.0.0":
   version: 2.0.0
   resolution: "react-schemaorg@npm:2.0.0"
   peerDependencies:
@@ -4577,7 +4577,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-dts@npm:^1.0.0":
+"schema-dts@npm:1.0.0":
   version: 1.0.0
   resolution: "schema-dts@npm:1.0.0"
   peerDependencies:
