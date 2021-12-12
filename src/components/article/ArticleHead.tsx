@@ -1,7 +1,5 @@
+import { NextSeo } from 'next-seo';
 import { ArticleMetadata } from '@/types/ArticleMetadata';
-import MetaCommon from '@/components/common/meta/MetaCommon';
-import MetaOgpBasic from '@/components/common/meta/ogp/MetaOgpBasic';
-import MetaOgpArticle from '@/components/common/meta/ogp/MetaOgpArticle';
 
 export interface Props {
   metadata: ArticleMetadata;
@@ -17,33 +15,28 @@ const ArticleHead: React.VFC<Props> = ({
     modifiedAt,
     ogpImageUrl,
   },
-}) => {
-  const pageTitle = `${title} - blog.ciffelia.com`;
-  const path = `/article/${slug}`;
-
-  return (
-    <>
-      <MetaCommon
-        title={pageTitle}
-        description={description}
-        path={`/article/${slug}`}
-        modifiedAt={modifiedAt}
-        tags={tags}
-      />
-
-      <MetaOgpBasic
-        title={pageTitle}
-        path={path}
-        imageUrl={ogpImageUrl}
-        description={description}
-      />
-      <MetaOgpArticle
-        publishedAt={publishedAt}
-        modifiedAt={modifiedAt}
-        tags={tags}
-      />
-    </>
-  );
-};
+}) => (
+  <>
+    <NextSeo
+      title={title}
+      description={description}
+      canonical={`https://blog.ciffelia.com/article/${slug}`}
+      openGraph={{
+        type: 'article',
+        images: [
+          {
+            url: ogpImageUrl,
+          },
+        ],
+        article: {
+          publishedTime: publishedAt.toISOString(),
+          modifiedTime: modifiedAt.toISOString(),
+          authors: ['Ciffelia'],
+          tags,
+        },
+      }}
+    />
+  </>
+);
 
 export default ArticleHead;

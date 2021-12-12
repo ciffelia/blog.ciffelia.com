@@ -8,6 +8,8 @@ import '@/styles.css';
 const MyApp: React.VFC<AppProps> = ({ Component, pageProps }) => (
   <>
     <DefaultSeo
+      titleTemplate="%s | blog.ciffelia.com"
+      defaultTitle="blog.ciffelia.com"
       openGraph={{
         locale: 'ja_JP',
         site_name: 'blog.ciffelia.com',
