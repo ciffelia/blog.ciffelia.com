@@ -1,7 +1,7 @@
 import { FaRegEdit } from 'react-icons/fa';
 import { ArticleMetadata } from '@/types/ArticleMetadata';
 import TagList from '@/components/common/TagList';
-import { Timestamp } from '@/components/common/Timestamp';
+import Timestamp from '@/components/common/Timestamp';
 
 export interface Props {
   metadata: ArticleMetadata;

@@ -4,14 +4,12 @@ export interface Props {
   tags: string[];
 }
 
-const TagList: React.VFC<Props> = ({ tags }) => {
-  return (
-    <ul className="flex flex-wrap justify-center items-center gap-x-2">
-      {tags.map((tag) => (
-        <Tag key={tag}>{tag}</Tag>
-      ))}
-    </ul>
-  );
-};
+const TagList: React.VFC<Props> = ({ tags }) => (
+  <ul className="flex flex-wrap justify-center items-center gap-x-2">
+    {tags.map((tag) => (
+      <Tag key={tag}>{tag}</Tag>
+    ))}
+  </ul>
+);
 
 export default TagList;
