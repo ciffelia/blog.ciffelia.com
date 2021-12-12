@@ -5,5 +5,5 @@ export interface ArticleMetadata {
   tags: string[];
   publishedAt: Date;
   modifiedAt: Date;
-  ogpImageUrl: string;
+  thumbnailUrl: string;
 }

@@ -16,7 +16,7 @@ const ArticleHead: React.VFC<Props> = ({
     tags,
     publishedAt,
     modifiedAt,
-    ogpImageUrl,
+    thumbnailUrl,
   },
 }) => {
   const canonicalUrl = `https://blog.ciffelia.com/article/${slug}`;
@@ -31,7 +31,7 @@ const ArticleHead: React.VFC<Props> = ({
           type: 'article',
           images: [
             {
-              url: ogpImageUrl,
+              url: thumbnailUrl,
             },
           ],
           article: {
@@ -65,7 +65,7 @@ const ArticleHead: React.VFC<Props> = ({
             headline: title,
             datePublished: publishedAt.toISOString(),
             dateModified: modifiedAt.toISOString(),
-            image: [ogpImageUrl],
+            image: [thumbnailUrl],
           })}
         />
       </Head>

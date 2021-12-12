@@ -9,13 +9,13 @@ export interface Props {
 }
 
 const ArticleCard: React.VFC<Props> = ({
-  metadata: { slug, title, publishedAt, ogpImageUrl },
+  metadata: { slug, title, publishedAt, thumbnailUrl },
 }) => (
   <li className="flex overflow-hidden rounded-2xl bg-gray-50 shadow-lg shadow-white/10 hover:shadow-white/25 hover:scale-[1.01] transition-all duration-200">
     <Link href={`/article/${slug}`}>
       <a className="grow flex flex-col">
         <div className="relative w-full aspect-ogp">
-          <Image src={ogpImageUrl} alt="" layout="fill" objectFit="cover" />
+          <Image src={thumbnailUrl} alt="" layout="fill" objectFit="cover" />
         </div>
         <div className="grow p-4 flex flex-col gap-1">
           <div className="grow flex justify-center items-center">
