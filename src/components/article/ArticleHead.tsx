@@ -70,6 +70,7 @@ const ArticleHead: React.VFC<Props> = ({
             author: {
               '@type': 'Person',
               name: 'Ciffelia',
+              url: 'https://ciffelia.com',
             },
           })}
         />
