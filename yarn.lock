@@ -989,7 +989,7 @@ __metadata:
     react-schemaorg: 2.0.0
     react-tsparticles: 1.37.5
     schema-dts: 1.0.0
-    tailwindcss: 3.0.1
+    tailwindcss: 3.0.5
     typescript: 4.4.4
   languageName: unknown
   linkType: soft
@@ -5022,9 +5022,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:3.0.1":
-  version: 3.0.1
-  resolution: "tailwindcss@npm:3.0.1"
+"tailwindcss@npm:3.0.5":
+  version: 3.0.5
+  resolution: "tailwindcss@npm:3.0.5"
   dependencies:
     arg: ^5.0.1
     chalk: ^4.1.2
@@ -5053,7 +5053,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 43c71047589f69178d05ca082b18080e59a29443b0d036a703d99fb1c50b596f32ddb9cd519e3ddd32b95abe175f17f1f70f6e3c29d42326eece7b2c31a387d1
+  checksum: 8509923d71e83348a4f9871c545bc44eb2c8ffb2d8e78d7018bde964812d60c9ac2b3a43bd3a001ca15e20efe32c79cd5e378df7267d8b9d970a4b2e3f1b4022
   languageName: node
   linkType: hard
 
