@@ -989,7 +989,7 @@ __metadata:
     react-schemaorg: 2.0.0
     react-tsparticles: 1.37.5
     schema-dts: 1.0.0
-    tailwindcss: 3.0.5
+    tailwindcss: 3.0.7
     typescript: 4.4.4
   languageName: unknown
   linkType: soft
@@ -4114,6 +4114,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-selector-parser@npm:^6.0.7":
+  version: 6.0.7
+  resolution: "postcss-selector-parser@npm:6.0.7"
+  dependencies:
+    cssesc: ^3.0.0
+    util-deprecate: ^1.0.2
+  checksum: 661808ad629e3f289e0d237fbe9bb13766dadd2d548ec09ae86f68118f5d98be0f25bbaf5cd88486c5416e2eefaa9f73c59c2fc98dc370872fa51b250c7d1d9c
+  languageName: node
+  linkType: hard
+
 "postcss-value-parser@npm:^4.1.0, postcss-value-parser@npm:^4.2.0":
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
@@ -5022,9 +5032,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:3.0.5":
-  version: 3.0.5
-  resolution: "tailwindcss@npm:3.0.5"
+"tailwindcss@npm:3.0.7":
+  version: 3.0.7
+  resolution: "tailwindcss@npm:3.0.7"
   dependencies:
     arg: ^5.0.1
     chalk: ^4.1.2
@@ -5042,7 +5052,7 @@ __metadata:
     postcss-js: ^3.0.3
     postcss-load-config: ^3.1.0
     postcss-nested: 5.0.6
-    postcss-selector-parser: ^6.0.6
+    postcss-selector-parser: ^6.0.7
     postcss-value-parser: ^4.2.0
     quick-lru: ^5.1.1
     resolve: ^1.20.0
@@ -5053,7 +5063,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 8509923d71e83348a4f9871c545bc44eb2c8ffb2d8e78d7018bde964812d60c9ac2b3a43bd3a001ca15e20efe32c79cd5e378df7267d8b9d970a4b2e3f1b4022
+  checksum: 0b33d7c6a0860fae22bce9efbbd990ac635e1fc1a616eaca9ca5e7d3ed78c6efed5ca10ebcc186289cf731ece0769329eef715ca2cb641134550780e6ae39b39
   languageName: node
   linkType: hard
 
