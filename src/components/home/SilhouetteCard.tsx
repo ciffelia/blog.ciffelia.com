@@ -31,13 +31,13 @@ const items = [
   />,
 ];
 
-const randomlySelectItem = (): React.ReactNode => {
+const randomSelectItem = (): React.ReactNode => {
   const i = Math.floor(Math.random() * items.length);
   return items[i];
 };
 
 const SilhouetteCard: React.VFC = () => {
-  const randomItem = useMemo(randomlySelectItem, []);
+  const randomItem = useMemo(randomSelectItem, []);
 
   return (
     <li className="flex justify-center items-center p-6 rounded-2xl bg-gray-50 shadow-lg shadow-white/10 pointer-events-none select-none">
