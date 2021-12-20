@@ -14,7 +14,7 @@ const ArticleCard: React.VFC<Props> = ({
   <li className="flex overflow-hidden rounded-2xl bg-gray-50 shadow-lg shadow-white/10 hover:shadow-white/25 transition-all duration-200">
     <Link href={`/article/${slug}`}>
       <a className="grow flex flex-col">
-        <div className="relative w-full aspect-ogp">
+        <div className="relative w-full aspect-ogp border-b border-slate-200">
           <Image src={thumbnailUrl} alt="" layout="fill" objectFit="cover" />
         </div>
         <div className="grow p-4 flex flex-col gap-1">
