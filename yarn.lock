@@ -987,7 +987,7 @@ __metadata:
     react-dom: 17.0.2
     react-icons: 4.3.1
     react-schemaorg: 2.0.0
-    react-tsparticles: 1.37.5
+    react-tsparticles: 1.37.6
     schema-dts: 1.0.0
     tailwindcss: 3.0.7
     typescript: 4.5.4
@@ -4365,15 +4365,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-tsparticles@npm:1.37.5":
-  version: 1.37.5
-  resolution: "react-tsparticles@npm:1.37.5"
+"react-tsparticles@npm:1.37.6":
+  version: 1.37.6
+  resolution: "react-tsparticles@npm:1.37.6"
   dependencies:
     fast-deep-equal: ^3.1.3
-    tsparticles: ^1.37.5
+    tsparticles: ^1.37.6
   peerDependencies:
     react: ">=16"
-  checksum: 644a2924fd4fa50973780c5bad7d09e3dca7782ed4f6e1a59a0f0ca0f7de943afe4de149bb17777e28b50b4c0db321350916337eeac244cd64450c6028d361fd
+  checksum: 4b86e68e0f3d7534f75d8e00cb8ecde66c9af704f8c8f1311a32eb3232f2e3058795688c34d4632fff6a9187308b18bc3698a74aa8b167ce1fb05079865f63d8
   languageName: node
   linkType: hard
 
@@ -5157,10 +5157,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsparticles@npm:^1.37.5":
-  version: 1.37.5
-  resolution: "tsparticles@npm:1.37.5"
-  checksum: fab2d8c4166c122c3b7f6f5e007d04f2786dc8bfa210d32c0dee8655f8be1143b703194187d70862bc236577b1b5a7f9bc9c442cecd6392a4a78483c4d3f9aa9
+"tsparticles@npm:^1.37.6":
+  version: 1.37.6
+  resolution: "tsparticles@npm:1.37.6"
+  checksum: cd0b5c0429a17f3a1b19354cd552a26091e6679bc5b1ccc9c28894aa866f6cd1d28cedd6754bd037f58363cb2ed306b0b6b3802b82815eeca28a21ed32939ff2
   languageName: node
   linkType: hard
 
