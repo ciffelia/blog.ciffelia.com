@@ -26,7 +26,7 @@
     "react-tsparticles": "1.37.6"
   },
   "devDependencies": {
-    "@types/node": "16.11.12",
+    "@types/node": "16.11.17",
     "@types/react": "17.0.38",
     "@typescript-eslint/eslint-plugin": "5.8.1",
     "@typescript-eslint/parser": "5.8.1",
