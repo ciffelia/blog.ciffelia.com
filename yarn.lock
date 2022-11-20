@@ -414,10 +414,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:14.18.4":
-  version: 14.18.4
-  resolution: "@types/node@npm:14.18.4"
-  checksum: 12015baff875140579d4c8982a7c239685ceee3a7b0ea58e6d6918d001582a752bfbc13e5c06c745e2bb10261068e632929fdf3e013c98fba006cd0cc4c67bf9
+"@types/node@npm:14.18.33":
+  version: 14.18.33
+  resolution: "@types/node@npm:14.18.33"
+  checksum: 4e23f95186d8ae1d38c999bc6b46fe94e790da88744b0a3bfeedcbd0d9ffe2cb0ff39e85f43014f6739e5270292c1a1f6f97a1fc606fd573a0c17fda9a1d42de
   languageName: node
   linkType: hard
 
@@ -973,7 +973,7 @@ __metadata:
   dependencies:
     "@fontsource/quicksand": 4.5.1
     "@tailwindcss/typography": 0.5.0
-    "@types/node": 14.18.4
+    "@types/node": 14.18.33
     "@types/react": 17.0.38
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
