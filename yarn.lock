@@ -740,7 +740,7 @@ __metadata:
     eslint-plugin-n: ^15.5.1
     eslint-plugin-promise: 6.1.1
     next: 12.3.4
-    next-seo: 4.29.0
+    next-seo: 5.14.1
     postcss: 8.4.19
     prettier: 2.8.0
     react: 17.0.2
@@ -2562,14 +2562,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-seo@npm:4.29.0":
-  version: 4.29.0
-  resolution: "next-seo@npm:4.29.0"
+"next-seo@npm:5.14.1":
+  version: 5.14.1
+  resolution: "next-seo@npm:5.14.1"
   peerDependencies:
     next: ^8.1.1-canary.54 || >=9.0.0
     react: ">=16.0.0"
     react-dom: ">=16.0.0"
-  checksum: c725138f2b0a17a4b09afddeeb6d4e1b291220bbd083e8855f7c7646dfb14a742c8dd5a9fd8d5abea4e5a7b978675746b9ce54b119b7d6ceb060a880aace5db8
+  checksum: 3cedc7b4af97721c29f938318df54a47ff14b3f695485d6cc35d0010490589ff4c6c60b2e4c71a515f2c539fcb230a1bf72dd3e0d945b818d837a74a27bef35f
   languageName: node
   linkType: hard
 
