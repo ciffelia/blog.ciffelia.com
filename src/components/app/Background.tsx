@@ -51,7 +51,7 @@ const Background: React.FC = () => (
   </div>
 );
 
-const particlesInit = async (engine: Engine) => {
+const particlesInit = async (engine: Engine): Promise<void> => {
   await loadFull(engine);
 };
 
