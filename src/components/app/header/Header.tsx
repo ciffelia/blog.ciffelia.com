@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { SITE_NAME } from '@/constants';
 import ciffeliaIcon from '@/images/ciffelia.png';
 import homeIcon from '@/images/home.svg';
@@ -10,22 +10,20 @@ import SocialLink from './SocialLink';
 
 const Header: React.VFC = () => (
   <header className="flex flex-col lg:flex-row items-center justify-between gap-y-4 px-16 py-6">
-    <Link href="/">
-      <a className="flex items-center gap-2 sm:gap-4">
-        <div className="inline-block relative w-12 h-12 sm:w-20 sm:h-20">
-          <Image
-            src={ciffeliaIcon}
-            alt=""
-            layout="fill"
-            sizes="5rem"
-            className="rounded-full"
-            priority
-          />
-        </div>
-        <span className="font-quicksand text-4xl sm:text-5xl text-gray-50">
-          {SITE_NAME}
-        </span>
-      </a>
+    <Link href="/" className="flex items-center gap-2 sm:gap-4">
+      <div className="inline-block relative w-12 h-12 sm:w-20 sm:h-20">
+        <Image
+          src={ciffeliaIcon}
+          alt=""
+          layout="fill"
+          sizes="5rem"
+          className="rounded-full"
+          priority
+        />
+      </div>
+      <span className="font-quicksand text-4xl sm:text-5xl text-gray-50">
+        {SITE_NAME}
+      </span>
     </Link>
     <ul className="flex gap-x-4">
       <li>

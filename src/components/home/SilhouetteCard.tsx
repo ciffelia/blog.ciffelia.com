@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import cat1 from '@/images/silhouette/cat1.svg';
 import cat2 from '@/images/silhouette/cat2.svg';
 import cat3 from '@/images/silhouette/cat3.svg';
