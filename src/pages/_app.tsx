@@ -33,10 +33,12 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => (
       ]}
     />
     <Background />
-    <div className="flex flex-col font-serif">
+    <div className="min-h-screen flex flex-col font-serif">
       <Header />
       <Component {...pageProps} />
-      <Footer />
+      <div className="mt-auto">
+        <Footer />
+      </div>
     </div>
   </>
 );
