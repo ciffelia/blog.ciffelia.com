@@ -1,10 +1,14 @@
+import dynamic from 'next/dynamic';
 import { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import { SITE_NAME } from '@/constants';
-import Background from '@/components/app/Background';
 import Header from '@/components/app/header/Header';
 import Footer from '@/components/app/footer/Footer';
 import '@/styles.css';
+
+const Background = dynamic(
+  async () => await import('@/components/app/Background'),
+);
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => (
   <>

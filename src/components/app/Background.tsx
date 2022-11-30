@@ -1,11 +1,12 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
-
-const Particles = dynamic(async () => await import('react-tsparticles'));
+import Particles from 'react-tsparticles';
+import type { Engine } from 'tsparticles-engine';
+import { loadFull } from 'tsparticles';
 
 const Background: React.FC = () => (
   <div className="fixed inset-0 bg-blue-900" style={{ zIndex: -1 }}>
     <Particles
+      init={particlesInit}
       options={{
         particles: {
           color: {
@@ -49,5 +50,9 @@ const Background: React.FC = () => (
     />
   </div>
 );
+
+const particlesInit = async (engine: Engine) => {
+  await loadFull(engine);
+};
 
 export default Background;
