@@ -15,7 +15,7 @@ export const metadata: ArticleMetadata = {
     'https://og-image.ciffelia.com/api/gen?theme=light&fontFamily=%22Roboto+Mono%22%2C+%22Noto+Sans+JP%22%2C+monospace&fontSize=60px&text=**%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E3%81%A4%E3%81%8F%E3%81%A3%E3%81%9F+%3Arocket%3A**&imageSrc=https%3A%2F%2Ficon.ciffelia.com%2F%3Frounded%3Dtrue%26format%3Dwebp&imageSrc=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg&imageSrc=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fremojansen%2Flogo.ts%40master%2Fts.svg&imageSize=160px',
 };
 
-const Article202111xxBeginning: React.VFC = () => (
+const Article202111xxBeginning: React.FC = () => (
   <>
     <ArticleHead metadata={metadata} />
     <ArticleContainer metadata={metadata}>

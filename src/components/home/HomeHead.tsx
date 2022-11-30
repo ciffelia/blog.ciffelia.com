@@ -1,7 +1,7 @@
 import { NextSeo } from 'next-seo';
 import { SITE_URL_BASE } from '@/constants';
 
-const HomeHead: React.VFC = () => (
+const HomeHead: React.FC = () => (
   <>
     <NextSeo
       description="Ciffeliaが技術の話などをするブログ"

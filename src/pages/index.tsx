@@ -3,7 +3,7 @@ import HomeHead from '@/components/home/HomeHead';
 import ArticleCard from '@/components/home/ArticleCard';
 import SilhouetteCard from '@/components/home/SilhouetteCard';
 
-const Home: React.VFC = () => (
+const Home: React.FC = () => (
   <>
     <HomeHead />
     <div className="flex justify-center w-screen md:px-16">

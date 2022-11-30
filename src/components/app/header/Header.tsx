@@ -8,7 +8,7 @@ import githubIcon from '@/images/github.svg';
 import zennIcon from '@/images/zenn.svg';
 import SocialLink from './SocialLink';
 
-const Header: React.VFC = () => (
+const Header: React.FC = () => (
   <header className="flex flex-col lg:flex-row items-center justify-between gap-y-4 px-16 py-6">
     <Link href="/" className="flex items-center gap-2 sm:gap-4">
       <div className="inline-block relative w-12 h-12 sm:w-20 sm:h-20">

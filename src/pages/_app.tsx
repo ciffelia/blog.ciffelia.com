@@ -6,7 +6,7 @@ import Header from '@/components/app/header/Header';
 import Footer from '@/components/app/footer/Footer';
 import '@/styles.css';
 
-const MyApp: React.VFC<AppProps> = ({ Component, pageProps }) => (
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => (
   <>
     <DefaultSeo
       titleTemplate={`%s | ${SITE_NAME}`}

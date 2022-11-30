@@ -8,7 +8,7 @@ export interface Props {
   metadata: ArticleMetadata;
 }
 
-const ArticleCard: React.VFC<Props> = ({
+const ArticleCard: React.FC<Props> = ({
   metadata: { slug, title, publishedAt, thumbnailUrl },
 }) => (
   <li className="flex overflow-hidden rounded-2xl bg-gray-50 shadow-lg shadow-white/10 hover:shadow-white/25 transition-all duration-200">

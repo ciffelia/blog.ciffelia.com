@@ -36,7 +36,7 @@ const randomSelectItem = (): React.ReactNode => {
   return items[i];
 };
 
-const SilhouetteCard: React.VFC = () => {
+const SilhouetteCard: React.FC = () => {
   const randomItem = useMemo(randomSelectItem, []);
 
   return (

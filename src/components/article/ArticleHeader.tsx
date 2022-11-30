@@ -7,7 +7,7 @@ export interface Props {
   metadata: ArticleMetadata;
 }
 
-const ArticleHeader: React.VFC<Props> = ({
+const ArticleHeader: React.FC<Props> = ({
   metadata: { title, publishedAt, tags },
 }) => (
   <div className="flex flex-col gap-y-5">
