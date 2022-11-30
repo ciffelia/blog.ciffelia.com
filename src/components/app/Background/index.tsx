@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 const BackgroundInner = dynamic(async () => await import('./BackgroundInner'));
 
 const Background: React.FC = () => (
-  <div className="fixed inset-0 bg-blue-900" style={{ zIndex: -1 }}>
+  <div className="-z-10 fixed inset-0 bg-blue-900">
     <BackgroundInner />
   </div>
 );
