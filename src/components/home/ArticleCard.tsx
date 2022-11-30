@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { FaRegEdit } from 'react-icons/fa';
 import { ArticleMetadata } from '@/types/ArticleMetadata';
 import Timestamp from '@/components/common/Timestamp';
@@ -14,7 +14,13 @@ const ArticleCard: React.FC<Props> = ({
   <li className="flex overflow-hidden rounded-2xl bg-gray-50 shadow-lg shadow-white/10 hover:shadow-white/25 transition-all duration-200">
     <Link href={`/article/${slug}`} className="grow flex flex-col">
       <div className="relative w-full aspect-ogp border-b border-slate-200">
-        <Image src={thumbnailUrl} alt="" layout="fill" objectFit="cover" />
+        <Image
+          src={thumbnailUrl}
+          alt=""
+          className="object-cover"
+          fill
+          sizes="100%"
+        />
       </div>
       <div className="grow p-4 flex flex-col gap-1">
         <div className="grow flex justify-center items-center">
