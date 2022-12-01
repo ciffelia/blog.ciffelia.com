@@ -1,3 +1,4 @@
+import { Quicksand } from '@next/font/google';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SITE_NAME } from '@/constants';
@@ -7,6 +8,10 @@ import twitterIcon from '@/images/twitter.svg';
 import githubIcon from '@/images/github.svg';
 import zennIcon from '@/images/zenn.svg';
 import SocialLink from './SocialLink';
+
+const quicksand = Quicksand({
+  weight: '600',
+});
 
 const Header: React.FC = () => (
   <header className="flex flex-col lg:flex-row items-center justify-between gap-y-4 px-16 py-6">
@@ -18,7 +23,9 @@ const Header: React.FC = () => (
         sizes="(min-width: 640px) 5rem, 3rem"
         priority
       />
-      <span className="font-quicksand text-4xl sm:text-5xl text-gray-50">
+      <span
+        className={`${quicksand.className} text-4xl sm:text-5xl text-gray-50`}
+      >
         {SITE_NAME}
       </span>
     </Link>

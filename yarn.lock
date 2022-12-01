@@ -41,13 +41,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/quicksand@npm:4.5.11":
-  version: 4.5.11
-  resolution: "@fontsource/quicksand@npm:4.5.11"
-  checksum: b6cec983a7d75417d56c0db2984b7cdb56fb36ef3904441253e1e74b54120da0ef46352ed909e470fce65e40ea78ac54b7a1579546cedafc7fcf2962c95f9f8e
-  languageName: node
-  linkType: hard
-
 "@gar/promisify@npm:^1.0.1":
   version: 1.1.2
   resolution: "@gar/promisify@npm:1.1.2"
@@ -93,6 +86,13 @@ __metadata:
   dependencies:
     glob: 7.1.7
   checksum: 94d60dd108325db191fc3a2cf53a07984f18c98f92e62c7383e75eade72b0696d1abe27d12d20cc4b1bab365243f279c2cf0faa5009043c5890bb57b0cb5275f
+  languageName: node
+  linkType: hard
+
+"@next/font@npm:13.0.5":
+  version: 13.0.5
+  resolution: "@next/font@npm:13.0.5"
+  checksum: 12304ac4a52be437f02a472a00e2183fc4dd49ca9b4583a2abde5249686c246346348d47231e74258659ccf54c8bca349811aec0d894c3e8824592316e78740c
   languageName: node
   linkType: hard
 
@@ -739,7 +739,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blog.ciffelia.com@workspace:."
   dependencies:
-    "@fontsource/quicksand": 4.5.11
+    "@next/font": 13.0.5
     "@tailwindcss/typography": 0.5.8
     "@types/node": 16.18.4
     "@types/react": 18.0.25
