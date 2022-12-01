@@ -28,7 +28,7 @@
     "tsparticles-engine": "2.5.2"
   },
   "devDependencies": {
-    "@types/node": "16.18.3",
+    "@types/node": "16.18.4",
     "@types/react": "18.0.25",
     "@typescript-eslint/eslint-plugin": "5.45.0",
     "autoprefixer": "10.4.13",
