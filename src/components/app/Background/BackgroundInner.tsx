@@ -18,14 +18,6 @@ const BackgroundInner: React.FC = () => (
           opacity: 0.5,
           width: 1,
         },
-        move: {
-          direction: 'none',
-          enable: true,
-          outMode: 'bounce',
-          random: false,
-          speed: 0.5,
-          straight: false,
-        },
         number: {
           density: {
             enable: true,
