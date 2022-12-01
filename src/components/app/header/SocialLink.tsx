@@ -13,7 +13,7 @@ const SocialLink: React.FC<Props> = ({ name, url, color, icon }) => (
   <ExternalLink to={url}>
     <div
       style={{ backgroundColor: color }}
-      className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full hover:shadow-md hover:shadow-white/20 transition-all duration-200"
+      className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full"
     >
       <Image
         src={icon}
