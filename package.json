@@ -23,9 +23,9 @@
     "react-dom": "18.2.0",
     "react-icons": "4.7.1",
     "react-schemaorg": "2.0.0",
-    "react-tsparticles": "2.5.3",
-    "tsparticles": "2.5.3",
-    "tsparticles-engine": "2.5.2"
+    "react-tsparticles": "2.6.0",
+    "tsparticles": "2.6.0",
+    "tsparticles-engine": "2.6.0"
   },
   "devDependencies": {
     "@types/node": "16.18.6",
