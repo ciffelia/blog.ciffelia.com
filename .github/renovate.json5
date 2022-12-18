@@ -5,10 +5,23 @@
     ':prHourlyLimitNone',
     ':prConcurrentLimitNone',
   ],
+  timezone: 'Asia/Tokyo',
+  schedule: ['every weekend'],
   packageRules: [
     {
       matchManagers: ['npm'],
       rangeStrategy: 'bump',
+    },
+    {
+      matchPackageNames: ['prettier'],
+      matchUpdateTypes: ['minor', 'patch'],
+      automerge: true,
+    },
+    {
+      matchPackagePrefixes: ['@types/'],
+      matchUpdateTypes: ['patch'],
+      matchCurrentVersion: '!/^0/',
+      automerge: true,
     },
     {
       matchPackageNames: ['@types/node'],
