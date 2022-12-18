@@ -7,6 +7,10 @@
   ],
   packageRules: [
     {
+      matchManagers: ['npm'],
+      rangeStrategy: 'bump',
+    },
+    {
       matchPackageNames: ['@types/node'],
       major: { enabled: false },
     },
