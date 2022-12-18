@@ -1,10 +1,18 @@
 {
-  extends: ['config:base'],
-  prHourlyLimit: 0,
+  extends: [
+    'config:base',
+    ':semanticCommitsDisabled',
+    ':prHourlyLimitNone',
+    ':prConcurrentLimitNone',
+  ],
   packageRules: [
     {
       matchPackageNames: ['@types/node'],
       major: { enabled: false },
+    },
+    {
+      matchSourceUrls: ['https://github.com/matteobruni/tsparticles'],
+      groupName: 'tsparticles monorepo',
     },
   ],
 }
