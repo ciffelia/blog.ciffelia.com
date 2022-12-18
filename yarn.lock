@@ -89,7 +89,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/font@npm:~13.0.7":
+"@next/font@npm:^13.0.7":
   version: 13.0.7
   resolution: "@next/font@npm:13.0.7"
   checksum: 88324e483561ed1372b97d434b98cff3c3adfeafc4217b45ff96f429c42ea4c6eebb089b34d8ef353aaf6413aa5f6d918a2ea83701ad129d2cc6f6751184d82a
@@ -264,7 +264,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:~0.5.8":
+"@tailwindcss/typography@npm:^0.5.8":
   version: 0.5.8
   resolution: "@tailwindcss/typography@npm:0.5.8"
   dependencies:
@@ -299,7 +299,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:~16.18.10":
+"@types/node@npm:^16.18.10":
   version: 16.18.10
   resolution: "@types/node@npm:16.18.10"
   checksum: 1b138616923e9a1c6d3806edf75714b605d2ec689357cdc675bc73816c508ff11b3c68df054b02a496c76654d8ed53add2e90816af39423431c73aa6eec06f29
@@ -313,7 +313,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:~18.0.26":
+"@types/react@npm:^18.0.26":
   version: 18.0.26
   resolution: "@types/react@npm:18.0.26"
   dependencies:
@@ -338,7 +338,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:~5.46.1":
+"@typescript-eslint/eslint-plugin@npm:^5.46.1":
   version: 5.46.1
   resolution: "@typescript-eslint/eslint-plugin@npm:5.46.1"
   dependencies:
@@ -689,7 +689,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:~10.4.13":
+"autoprefixer@npm:^10.4.13":
   version: 10.4.13
   resolution: "autoprefixer@npm:10.4.13"
   dependencies:
@@ -739,33 +739,33 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blog.ciffelia.com@workspace:."
   dependencies:
-    "@next/font": ~13.0.7
-    "@tailwindcss/typography": ~0.5.8
-    "@types/node": ~16.18.10
-    "@types/react": ~18.0.26
-    "@typescript-eslint/eslint-plugin": ~5.46.1
-    autoprefixer: ~10.4.13
-    date-fns: ~2.29.3
-    eslint: ~8.30.0
-    eslint-config-next: ~13.0.7
-    eslint-config-prettier: ~8.5.0
-    eslint-config-standard-with-typescript: ~24.0.0
-    eslint-plugin-import: ~2.26.0
-    eslint-plugin-n: ~15.6.0
-    eslint-plugin-promise: ~6.1.1
-    next: ~13.0.7
-    next-seo: ~5.15.0
-    postcss: ~8.4.20
-    prettier: ~2.8.1
-    react: ~18.2.0
-    react-dom: ~18.2.0
-    react-icons: ~4.7.1
-    react-schemaorg: ~2.0.0
-    react-tsparticles: ~2.6.0
-    schema-dts: ~1.1.0
-    tailwindcss: ~3.2.4
-    tsparticles: ~2.6.0
-    tsparticles-engine: ~2.6.0
+    "@next/font": ^13.0.7
+    "@tailwindcss/typography": ^0.5.8
+    "@types/node": ^16.18.10
+    "@types/react": ^18.0.26
+    "@typescript-eslint/eslint-plugin": ^5.46.1
+    autoprefixer: ^10.4.13
+    date-fns: ^2.29.3
+    eslint: ^8.30.0
+    eslint-config-next: ^13.0.7
+    eslint-config-prettier: ^8.5.0
+    eslint-config-standard-with-typescript: ^24.0.0
+    eslint-plugin-import: ^2.26.0
+    eslint-plugin-n: ^15.6.0
+    eslint-plugin-promise: ^6.1.1
+    next: ^13.0.7
+    next-seo: ^5.15.0
+    postcss: ^8.4.20
+    prettier: ^2.8.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-icons: ^4.7.1
+    react-schemaorg: ^2.0.0
+    react-tsparticles: ^2.6.0
+    schema-dts: ^1.1.0
+    tailwindcss: ^3.2.4
+    tsparticles: ^2.6.0
+    tsparticles-engine: ^2.6.0
     typescript: 4.9.3
   languageName: unknown
   linkType: soft
@@ -1004,7 +1004,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:~2.29.3":
+"date-fns@npm:^2.29.3":
   version: 2.29.3
   resolution: "date-fns@npm:2.29.3"
   checksum: e01cf5b62af04e05dfff921bb9c9933310ed0e1ae9a81eb8653452e64dc841acf7f6e01e1a5ae5644d0337e9a7f936175fd2cb6819dc122fdd9c5e86c56be484
@@ -1260,7 +1260,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:~13.0.7":
+"eslint-config-next@npm:^13.0.7":
   version: 13.0.7
   resolution: "eslint-config-next@npm:13.0.7"
   dependencies:
@@ -1283,7 +1283,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:~8.5.0":
+"eslint-config-prettier@npm:^8.5.0":
   version: 8.5.0
   resolution: "eslint-config-prettier@npm:8.5.0"
   peerDependencies:
@@ -1294,7 +1294,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-standard-with-typescript@npm:~24.0.0":
+"eslint-config-standard-with-typescript@npm:^24.0.0":
   version: 24.0.0
   resolution: "eslint-config-standard-with-typescript@npm:24.0.0"
   dependencies:
@@ -1375,7 +1375,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.26.0, eslint-plugin-import@npm:~2.26.0":
+"eslint-plugin-import@npm:^2.26.0":
   version: 2.26.0
   resolution: "eslint-plugin-import@npm:2.26.0"
   dependencies:
@@ -1421,7 +1421,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-n@npm:~15.6.0":
+"eslint-plugin-n@npm:^15.6.0":
   version: 15.6.0
   resolution: "eslint-plugin-n@npm:15.6.0"
   dependencies:
@@ -1439,7 +1439,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-promise@npm:~6.1.1":
+"eslint-plugin-promise@npm:^6.1.1":
   version: 6.1.1
   resolution: "eslint-plugin-promise@npm:6.1.1"
   peerDependencies:
@@ -1543,7 +1543,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:~8.30.0":
+"eslint@npm:^8.30.0":
   version: 8.30.0
   resolution: "eslint@npm:8.30.0"
   dependencies:
@@ -2656,7 +2656,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-seo@npm:~5.15.0":
+"next-seo@npm:^5.15.0":
   version: 5.15.0
   resolution: "next-seo@npm:5.15.0"
   peerDependencies:
@@ -2667,7 +2667,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:~13.0.7":
+"next@npm:^13.0.7":
   version: 13.0.7
   resolution: "next@npm:13.0.7"
   dependencies:
@@ -3106,7 +3106,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.18, postcss@npm:~8.4.20":
+"postcss@npm:^8.4.18, postcss@npm:^8.4.20":
   version: 8.4.20
   resolution: "postcss@npm:8.4.20"
   dependencies:
@@ -3124,7 +3124,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:~2.8.1":
+"prettier@npm:^2.8.1":
   version: 2.8.1
   resolution: "prettier@npm:2.8.1"
   bin:
@@ -3189,7 +3189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:~18.2.0":
+"react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -3201,7 +3201,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:~4.7.1":
+"react-icons@npm:^4.7.1":
   version: 4.7.1
   resolution: "react-icons@npm:4.7.1"
   peerDependencies:
@@ -3217,7 +3217,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-schemaorg@npm:~2.0.0":
+"react-schemaorg@npm:^2.0.0":
   version: 2.0.0
   resolution: "react-schemaorg@npm:2.0.0"
   peerDependencies:
@@ -3228,7 +3228,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-tsparticles@npm:~2.6.0":
+"react-tsparticles@npm:^2.6.0":
   version: 2.6.0
   resolution: "react-tsparticles@npm:2.6.0"
   dependencies:
@@ -3240,7 +3240,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:~18.2.0":
+"react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -3428,7 +3428,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-dts@npm:~1.1.0":
+"schema-dts@npm:^1.1.0":
   version: 1.1.0
   resolution: "schema-dts@npm:1.1.0"
   peerDependencies:
@@ -3699,7 +3699,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:~3.2.4":
+"tailwindcss@npm:^3.2.4":
   version: 3.2.4
   resolution: "tailwindcss@npm:3.2.4"
   dependencies:
@@ -3808,7 +3808,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsparticles-engine@npm:^2.6.0, tsparticles-engine@npm:~2.6.0":
+"tsparticles-engine@npm:^2.6.0":
   version: 2.6.0
   resolution: "tsparticles-engine@npm:2.6.0"
   checksum: fec33d8dd410ed8151244eaf4b9a279d03a0480e95d040ecd949841b22d292ee901559fde070b1410682d2a1ed0aa7bb6c61ef5ee4282e213990a9a2db402315
@@ -4206,7 +4206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsparticles@npm:~2.6.0":
+"tsparticles@npm:^2.6.0":
   version: 2.6.0
   resolution: "tsparticles@npm:2.6.0"
   dependencies:
