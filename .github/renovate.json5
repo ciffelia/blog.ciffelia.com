@@ -14,13 +14,15 @@
     },
     {
       matchManagers: ['npm'],
-      matchPackageNames: ['prettier', 'yarn'],
+      matchPackagePatterns: [
+        '^yarn$',
+        '^@types/',
+        '^@typescript-eslint/',
+        '^eslint',
+        '^prettier$',
+        '^schema-dts$',
+      ],
       matchUpdateTypes: ['minor', 'patch'],
-      automerge: true,
-    },
-    {
-      matchPackagePrefixes: ['@types/'],
-      matchUpdateTypes: ['patch'],
       matchCurrentVersion: '!/^0/',
       automerge: true,
     },
