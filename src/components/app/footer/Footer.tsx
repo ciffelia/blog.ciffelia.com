@@ -2,6 +2,7 @@ import { Quicksand } from '@next/font/google';
 
 const quicksand = Quicksand({
   weight: '500',
+  display: 'swap',
 });
 
 const Footer: React.FC = () => (

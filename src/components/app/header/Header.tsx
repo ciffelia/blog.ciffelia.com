@@ -11,6 +11,7 @@ import SocialLink from './SocialLink';
 
 const quicksand = Quicksand({
   weight: '600',
+  display: 'swap',
 });
 
 const Header: React.FC = () => (
