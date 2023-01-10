@@ -1,11 +1,11 @@
 import { NextSeo } from 'next-seo';
-import { SITE_URL_BASE } from '@/constants';
+import { PRODUCTION_SITE_URL_BASE } from '@/constants';
 
 const HomeHead: React.FC = () => (
   <>
     <NextSeo
       description="Ciffeliaが技術の話などをするブログ"
-      canonical={SITE_URL_BASE}
+      canonical={PRODUCTION_SITE_URL_BASE}
       openGraph={{
         type: 'website',
         images: [

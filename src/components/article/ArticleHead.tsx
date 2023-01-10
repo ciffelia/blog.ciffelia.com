@@ -2,8 +2,9 @@ import Head from 'next/head';
 import { jsonLdScriptProps } from 'react-schemaorg';
 import { BlogPosting, BreadcrumbList } from 'schema-dts';
 import { NextSeo } from 'next-seo';
-import { SITE_URL_BASE } from '@/constants';
+import { PRODUCTION_SITE_URL_BASE } from '@/constants';
 import { ArticleMetadata } from '@/types/ArticleMetadata';
+import { buildOgImageUrl } from '@/utils/buildApiUrl';
 
 export interface Props {
   metadata: ArticleMetadata;
@@ -17,10 +18,12 @@ const ArticleHead: React.FC<Props> = ({
     tags,
     publishedAt,
     modifiedAt,
-    thumbnailUrl,
+    thumbnail,
   },
 }) => {
-  const canonicalUrl = `${SITE_URL_BASE}/article/${slug}`;
+  const canonicalUrl = `${PRODUCTION_SITE_URL_BASE}/article/${slug}`;
+  const ogImageUrl =
+    'url' in thumbnail ? thumbnail.url : buildOgImageUrl(title);
 
   return (
     <>
@@ -32,7 +35,7 @@ const ArticleHead: React.FC<Props> = ({
           type: 'article',
           images: [
             {
-              url: thumbnailUrl,
+              url: ogImageUrl,
             },
           ],
           article: {
@@ -66,7 +69,7 @@ const ArticleHead: React.FC<Props> = ({
             headline: title,
             datePublished: publishedAt.toISOString(),
             dateModified: modifiedAt.toISOString(),
-            image: [thumbnailUrl],
+            image: [ogImageUrl],
             author: {
               '@type': 'Person',
               name: 'Ciffelia',

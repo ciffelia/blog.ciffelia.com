@@ -5,5 +5,13 @@ export interface ArticleMetadata {
   tags: string[];
   publishedAt: Date;
   modifiedAt: Date;
-  thumbnailUrl: string;
+  thumbnail: ArticleThumbnail;
 }
+
+export type ArticleThumbnail =
+  | {
+      url: string;
+    }
+  | {
+      emoji: string;
+    };
