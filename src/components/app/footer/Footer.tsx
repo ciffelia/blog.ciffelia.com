@@ -1,6 +1,7 @@
 import { Quicksand } from '@next/font/google';
 
 const quicksand = Quicksand({
+  subsets: ['latin'],
   weight: '500',
   display: 'swap',
 });

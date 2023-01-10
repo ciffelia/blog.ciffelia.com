@@ -10,6 +10,7 @@ import zennIcon from '@/images/zenn.svg';
 import SocialLink from './SocialLink';
 
 const quicksand = Quicksand({
+  subsets: ['latin'],
   weight: '600',
   display: 'swap',
 });
