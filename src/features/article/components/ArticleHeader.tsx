@@ -1,3 +1,4 @@
+import { parseISO } from 'date-fns';
 import { FaRegEdit } from 'react-icons/fa';
 import { ArticleMetadata } from '@/features/article';
 import { TagList } from '@/components/TagList';
@@ -17,7 +18,7 @@ export const ArticleHeader: React.FC<ArticleHeaderProps> = ({
     <TagList tags={tags} />
     <div className="flex justify-center items-center gap-x-2">
       <FaRegEdit />
-      <Timestamp value={publishedAt} dateOnly />
+      <Timestamp value={parseISO(publishedAt)} dateOnly />
     </div>
   </div>
 );

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { parseISO } from 'date-fns';
 import { FaRegEdit } from 'react-icons/fa';
 import { ArticleMetadata, ArticleThumbnail } from '@/features/article';
 import { Timestamp } from '@/components/Timestamp';
@@ -10,10 +11,10 @@ export interface ArticleCardProps {
 }
 
 export const ArticleCard: React.FC<ArticleCardProps> = ({
-  metadata: { slug, title, publishedAt, thumbnail },
+  metadata: { id, title, publishedAt, thumbnail },
 }) => (
   <li className="flex overflow-hidden rounded-2xl bg-gray-50 shadow-lg shadow-white/10 hover:shadow-white/25 transition-all duration-200">
-    <Link href={`/article/${slug}`} className="grow flex flex-col">
+    <Link href={`/article/${id}`} className="grow flex flex-col">
       <div className="relative w-full aspect-ogp border-b border-slate-200">
         <Thumbnail thumbnail={thumbnail} />
       </div>
@@ -23,7 +24,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
         </div>
         <div className="flex justify-center items-center gap-2">
           <FaRegEdit />
-          <Timestamp value={publishedAt} dateOnly />
+          <Timestamp value={parseISO(publishedAt)} dateOnly />
         </div>
       </div>
     </Link>

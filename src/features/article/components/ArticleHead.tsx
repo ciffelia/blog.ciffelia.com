@@ -12,7 +12,7 @@ export interface ArticleHeadProps {
 
 export const ArticleHead: React.FC<ArticleHeadProps> = ({
   metadata: {
-    slug,
+    id,
     title,
     description,
     tags,
@@ -21,7 +21,7 @@ export const ArticleHead: React.FC<ArticleHeadProps> = ({
     thumbnail,
   },
 }) => {
-  const canonicalUrl = `${PRODUCTION_SITE_URL_BASE}/article/${slug}`;
+  const canonicalUrl = `${PRODUCTION_SITE_URL_BASE}/article/${id}`;
   const ogImageUrl =
     'url' in thumbnail ? thumbnail.url : buildArticleOpengraphImageUrl(title);
 
@@ -39,8 +39,8 @@ export const ArticleHead: React.FC<ArticleHeadProps> = ({
             },
           ],
           article: {
-            publishedTime: publishedAt.toISOString(),
-            modifiedTime: modifiedAt.toISOString(),
+            publishedTime: publishedAt,
+            modifiedTime: modifiedAt,
             authors: ['Ciffelia'],
             tags,
           },
@@ -67,8 +67,8 @@ export const ArticleHead: React.FC<ArticleHeadProps> = ({
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
             headline: title,
-            datePublished: publishedAt.toISOString(),
-            dateModified: modifiedAt.toISOString(),
+            datePublished: publishedAt,
+            dateModified: modifiedAt,
             image: [ogImageUrl],
             author: {
               '@type': 'Person',
