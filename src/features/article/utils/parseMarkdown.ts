@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict';
+import assert from 'assert/strict';
 import matter from 'gray-matter';
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
