@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
 import { promises as fs } from 'fs';
-import assert from 'node:assert/strict';
+import { strict as assert } from 'assert';
 import { ArticleMetadata } from '../types/ArticleMetadata';
 import { parseMarkdown } from './parseMarkdown';
 
