@@ -1,8 +1,8 @@
 import { parseISO } from 'date-fns';
-import { ArticleMetadata } from '@/types/ArticleMetadata';
-import ArticleHead from '@/components/article/ArticleHead';
-import ArticleContainer from '@/components/article/ArticleContainer';
-import ExternalLink from '@/components/common/ExternalLink';
+import { ArticleMetadata } from '@/features/article';
+import { ArticleHead } from '@/features/article/components/ArticleHead';
+import { ArticleContainer } from '@/features/article/components/ArticleContainer';
+import { ExternalLink } from '@/components/ExternalLink';
 
 export const metadata: ArticleMetadata = {
   slug: '2021-11-xx-beginning',

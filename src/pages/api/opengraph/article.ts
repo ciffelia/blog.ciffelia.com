@@ -3,4 +3,4 @@ export const config = {
   runtime: 'experimental-edge',
 };
 
-export { handler as default } from '@/features/emoji/api/emoji';
+export { handler as default } from '@/features/opengraph/api/article';
