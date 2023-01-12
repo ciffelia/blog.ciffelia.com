@@ -4,7 +4,7 @@ import { promises as fs } from 'fs';
 import { strict as assert } from 'assert';
 import type { Root as HastRoot } from 'hast';
 import { ArticleMetadata } from '../types/ArticleMetadata';
-import { parseMarkdown } from './parseMarkdown';
+import { parseMarkdown, parseMarkdownMetadata } from './parseMarkdown';
 
 const articlesDir = path.join(
   fileURLToPath(import.meta.url),
@@ -30,4 +30,20 @@ export const getArticle = async (
   );
 
   return { tree, metadata };
+};
+
+export const getArticleMetadata = async (
+  id: string,
+): Promise<ArticleMetadata> => {
+  const articlePath = path.join(articlesDir, `${id}.md`);
+  const rawContent = await fs.readFile(articlePath, 'utf-8');
+
+  const metadata = await parseMarkdownMetadata(rawContent);
+  assert.equal(
+    metadata.id,
+    id,
+    'id must match the filename of the markdown file.',
+  );
+
+  return metadata;
 };

@@ -43,3 +43,19 @@ export const parseMarkdown = async (
 
   return { tree: hastRoot, metadata };
 };
+
+export const parseMarkdownMetadata = async (
+  markdown: string,
+): Promise<ArticleMetadata> => {
+  const file = new VFile(markdown);
+  const processor = unified()
+    .use(remarkParse)
+    .use(remarkFrontmatter)
+    .use(remarkExtractFrontmatter)
+    .freeze();
+
+  const root = processor.parse(file);
+  await processor.run(root, file);
+
+  return ArticleMetadata.parse(file.data.matter);
+};

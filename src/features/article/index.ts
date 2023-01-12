@@ -3,4 +3,8 @@ export type {
   ArticleThumbnail,
 } from './types/ArticleMetadata';
 
-export { getArticle, listArticleId } from './utils/loadArticles';
+export {
+  getArticle,
+  getArticleMetadata,
+  listArticleId,
+} from './utils/loadArticles';
