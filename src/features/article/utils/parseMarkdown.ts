@@ -15,7 +15,9 @@ import {
   remarkExtractFrontmatter,
 } from './unifiedPlugins';
 
-// Markdownドキュメントをパースし、hastノードとメタデータを返す。
+/**
+ * Markdownドキュメントをパースし、hastノードとメタデータを返す。
+ */
 export const transformMarkdown = async (
   markdown: string,
 ): Promise<{ tree: HastRoot; metadata: ArticleMetadata }> => {
@@ -45,8 +47,10 @@ export const transformMarkdown = async (
   return { tree: hastRoot, metadata };
 };
 
-// Markdownドキュメントをパースし、メタデータを返す。
-// `transformMarkdown`より速い。
+/**
+ * Markdownドキュメントをパースし、メタデータを返す。
+ * {@link transformMarkdown}より速い。
+ */
 export const extractMarkdownMetadata = async (
   markdown: string,
 ): Promise<ArticleMetadata> => {
