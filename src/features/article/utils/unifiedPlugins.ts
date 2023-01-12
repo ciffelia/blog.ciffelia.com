@@ -2,6 +2,7 @@ import type { Plugin } from 'unified';
 import type { Root as MdastRoot } from 'mdast';
 import type { Root as HastRoot } from 'hast';
 import { SKIP, visit } from 'unist-util-visit';
+import { removePosition } from 'unist-util-remove-position';
 
 // A remark plugin to extract the content of the first heading.
 // The heading will be removed. Its content will be stored in `data.title`.
@@ -53,5 +54,12 @@ export const rehypeNotProseForPre: Plugin<[], HastRoot> = () => {
       });
       return SKIP;
     });
+  };
+};
+
+// A rehype plugin to remove the position field from a tree.
+export const rehypeRemovePosition: Plugin<[], HastRoot> = () => {
+  return (tree, file) => {
+    removePosition(tree, true);
   };
 };

@@ -1,20 +1,20 @@
+import React from 'react';
+import type { Root as HastRoot } from 'hast';
 import { ArticleMetadata } from '../types/ArticleMetadata';
 import { ArticleHead } from '../components/ArticleHead';
 import { ArticleContainer } from '../components/ArticleContainer';
+import { ArticleContent } from '../components/ArticleContent';
 
 export interface ArticlePageProps {
+  tree: HastRoot;
   metadata: ArticleMetadata;
-  content: string;
 }
 
-export const ArticlePage: React.FC<ArticlePageProps> = ({
-  content,
-  metadata,
-}) => (
+export const ArticlePage: React.FC<ArticlePageProps> = ({ tree, metadata }) => (
   <>
     <ArticleHead metadata={metadata} />
     <ArticleContainer metadata={metadata}>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <ArticleContent tree={tree} />
     </ArticleContainer>
   </>
 );

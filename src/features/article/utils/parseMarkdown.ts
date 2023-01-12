@@ -1,22 +1,28 @@
 import { strict as assert } from 'assert';
 import matter from 'gray-matter';
+import { VFile } from 'vfile';
 import { unified } from 'unified';
+import type { Root as HastRoot } from 'hast';
 import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeHighlight from 'rehype-highlight';
 import rehypePresetMinify from 'rehype-preset-minify';
-import rehypeStringify from 'rehype-stringify';
 import { ArticleMetadata } from '../types/ArticleMetadata';
-import { rehypeNotProseForPre, remarkExtractTitle } from './unifiedPlugins';
+import {
+  rehypeNotProseForPre,
+  remarkExtractTitle,
+  rehypeRemovePosition,
+} from './unifiedPlugins';
 
 export const parseMarkdown = async (
   markdown: string,
-): Promise<{ html: string; metadata: ArticleMetadata }> => {
+): Promise<{ tree: HastRoot; metadata: ArticleMetadata }> => {
   const { content, data } = matter(markdown);
   const metadata = ArticleMetadata.parse(data);
 
-  const file = await unified()
+  const file = new VFile(content);
+  const processor = unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkExtractTitle)
@@ -24,8 +30,10 @@ export const parseMarkdown = async (
     .use(rehypeNotProseForPre)
     .use(rehypeHighlight)
     .use(rehypePresetMinify)
-    .use(rehypeStringify)
-    .process(content);
+    .use(rehypeRemovePosition);
+
+  const mdastRoot = processor.parse(file);
+  const hastRoot = await processor.run(mdastRoot, file);
 
   assert.equal(
     metadata.title,
@@ -33,5 +41,5 @@ export const parseMarkdown = async (
     'title must match the first heading of the markdown.',
   );
 
-  return { html: file.toString(), metadata };
+  return { tree: hastRoot, metadata };
 };

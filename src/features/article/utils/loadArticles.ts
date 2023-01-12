@@ -2,6 +2,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import { promises as fs } from 'fs';
 import { strict as assert } from 'assert';
+import type { Root as HastRoot } from 'hast';
 import { ArticleMetadata } from '../types/ArticleMetadata';
 import { parseMarkdown } from './parseMarkdown';
 
@@ -17,19 +18,16 @@ export const listArticleId = async (): Promise<string[]> => {
 
 export const getArticle = async (
   id: string,
-): Promise<{ content: string; metadata: ArticleMetadata }> => {
+): Promise<{ tree: HastRoot; metadata: ArticleMetadata }> => {
   const articlePath = path.join(articlesDir, `${id}.md`);
   const rawContent = await fs.readFile(articlePath, 'utf-8');
 
-  const { html, metadata } = await parseMarkdown(rawContent);
+  const { tree, metadata } = await parseMarkdown(rawContent);
   assert.equal(
     metadata.id,
     id,
     'id must match the filename of the markdown file.',
   );
 
-  return {
-    content: html,
-    metadata,
-  };
+  return { tree, metadata };
 };
