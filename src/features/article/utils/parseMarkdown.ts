@@ -15,7 +15,8 @@ import {
   remarkExtractFrontmatter,
 } from './unifiedPlugins';
 
-export const parseMarkdown = async (
+// Markdownドキュメントをパースし、hastノードとメタデータを返す。
+export const transformMarkdown = async (
   markdown: string,
 ): Promise<{ tree: HastRoot; metadata: ArticleMetadata }> => {
   const file = new VFile(markdown);
@@ -44,7 +45,9 @@ export const parseMarkdown = async (
   return { tree: hastRoot, metadata };
 };
 
-export const parseMarkdownMetadata = async (
+// Markdownドキュメントをパースし、メタデータを返す。
+// `transformMarkdown`より速い。
+export const extractMarkdownMetadata = async (
   markdown: string,
 ): Promise<ArticleMetadata> => {
   const file = new VFile(markdown);
