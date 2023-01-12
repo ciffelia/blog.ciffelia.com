@@ -22,14 +22,18 @@ export const getArticle = async (
   const articlePath = path.join(articlesDir, `${id}.md`);
   const markdownText = await fs.readFile(articlePath, 'utf-8');
 
-  const { tree, metadata } = await transformMarkdown(markdownText);
-  assert.equal(
-    metadata.id,
-    id,
-    'id must match the filename of the markdown file.',
-  );
+  try {
+    const { tree, metadata } = await transformMarkdown(markdownText);
+    assert.equal(
+      metadata.id,
+      id,
+      'id must match the filename of the markdown file.',
+    );
 
-  return { tree, metadata };
+    return { tree, metadata };
+  } catch (e) {
+    throw new Error(`Failed to parse ${articlePath}`, { cause: e });
+  }
 };
 
 export const getArticleMetadata = async (
@@ -38,12 +42,16 @@ export const getArticleMetadata = async (
   const articlePath = path.join(articlesDir, `${id}.md`);
   const markdownText = await fs.readFile(articlePath, 'utf-8');
 
-  const metadata = await extractMarkdownMetadata(markdownText);
-  assert.equal(
-    metadata.id,
-    id,
-    'id must match the filename of the markdown file.',
-  );
+  try {
+    const metadata = await extractMarkdownMetadata(markdownText);
+    assert.equal(
+      metadata.id,
+      id,
+      'id must match the filename of the markdown file.',
+    );
 
-  return metadata;
+    return metadata;
+  } catch (e) {
+    throw new Error(`Failed to parse ${articlePath}`, { cause: e });
+  }
 };
