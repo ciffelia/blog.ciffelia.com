@@ -959,7 +959,6 @@ __metadata:
     typescript: 4.9.4
     unified: ^10.1.2
     unist-util-remove-position: ^4.0.1
-    unist-util-visit: ^4.1.1
     vfile: ^5.3.6
     zod: ^3.20.2
   languageName: unknown
@@ -6397,7 +6396,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-visit@npm:^4.0.0, unist-util-visit@npm:^4.1.1":
+"unist-util-visit@npm:^4.0.0":
   version: 4.1.1
   resolution: "unist-util-visit@npm:4.1.1"
   dependencies:

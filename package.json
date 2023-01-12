@@ -37,7 +37,6 @@
     "tsparticles-engine": "^2.7.1",
     "unified": "^10.1.2",
     "unist-util-remove-position": "^4.0.1",
-    "unist-util-visit": "^4.1.1",
     "vfile": "^5.3.6",
     "zod": "^3.20.2"
   },

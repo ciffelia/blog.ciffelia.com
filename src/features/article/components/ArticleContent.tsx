@@ -14,10 +14,21 @@ export const ArticleContent: React.FC<ArticleContentProps> = ({ tree }) => {
         .use(rehypeReact, {
           createElement: React.createElement,
           Fragment: React.Fragment,
+          components: {
+            pre: Pre,
+          },
         })
         .freeze(),
     [],
   );
 
   return useMemo(() => processor.stringify(tree), [processor, tree]);
+};
+
+const Pre: React.FC<React.ComponentPropsWithoutRef<'pre'>> = (props) => {
+  return (
+    <div className="not-prose">
+      <pre {...props} />
+    </div>
+  );
 };

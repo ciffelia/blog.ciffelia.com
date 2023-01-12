@@ -9,11 +9,7 @@ import remarkRehype from 'remark-rehype';
 import rehypeHighlight from 'rehype-highlight';
 import rehypePresetMinify from 'rehype-preset-minify';
 import { ArticleMetadata } from '../types/ArticleMetadata';
-import {
-  rehypeNotProseForPre,
-  remarkExtractTitle,
-  rehypeRemovePosition,
-} from './unifiedPlugins';
+import { remarkExtractTitle, rehypeRemovePosition } from './unifiedPlugins';
 
 export const parseMarkdown = async (
   markdown: string,
@@ -27,7 +23,6 @@ export const parseMarkdown = async (
     .use(remarkGfm)
     .use(remarkExtractTitle)
     .use(remarkRehype)
-    .use(rehypeNotProseForPre)
     .use(rehypeHighlight)
     .use(rehypePresetMinify)
     .use(rehypeRemovePosition);

@@ -1,7 +1,6 @@
 import type { Plugin } from 'unified';
 import type { Root as MdastRoot } from 'mdast';
 import type { Root as HastRoot } from 'hast';
-import { SKIP, visit } from 'unist-util-visit';
 import { removePosition } from 'unist-util-remove-position';
 
 // A remark plugin to extract the content of the first heading.
@@ -35,25 +34,6 @@ export const remarkExtractTitle: Plugin<[], MdastRoot> = () => {
 
     file.data.title = firstNode.children[0].value;
     tree.children.shift();
-  };
-};
-
-// A rehype plugin to wrap `<pre>` nodes with `<div class="not-prose">`.
-export const rehypeNotProseForPre: Plugin<[], HastRoot> = () => {
-  return (tree, file) => {
-    visit(tree, { type: 'element', tagName: 'pre' }, (node, index, parent) => {
-      if (index === null || parent === null) {
-        return;
-      }
-
-      parent.children.splice(index, 1, {
-        type: 'element',
-        tagName: 'div',
-        properties: { class: 'not-prose' },
-        children: [node],
-      });
-      return SKIP;
-    });
   };
 };
 
