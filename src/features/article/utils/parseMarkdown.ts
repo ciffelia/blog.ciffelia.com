@@ -28,7 +28,8 @@ export const parseMarkdown = async (
     .use(remarkRehype)
     .use(rehypeHighlight)
     .use(rehypePresetMinify)
-    .use(rehypeRemovePosition);
+    .use(rehypeRemovePosition)
+    .freeze();
 
   const mdastRoot = processor.parse(file);
   const hastRoot = await processor.run(mdastRoot, file);
