@@ -16,9 +16,9 @@ export const ArticleHeader: React.FC<ArticleHeaderProps> = ({
 
   return (
     <div className="flex flex-col gap-y-5">
-      <div className="prose">
-        <h1 className="text-center">{title}</h1>
-      </div>
+      <h1 className="text-center text-4xl font-extrabold tracking-wide">
+        {title}
+      </h1>
       <TagList tags={tags} />
       <div className="flex justify-center items-center gap-x-4">
         {!isPublished && (
