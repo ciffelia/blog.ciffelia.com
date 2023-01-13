@@ -1,3 +1,4 @@
+export { rehypeEmbed } from './rehypeEmbed';
 export { remarkGfmSubset } from './remarkGfmSubset';
 export { rehypeRemovePosition } from './rehypeRemovePosition';
 export { remarkExtractFrontmatter } from './remarkExtractFrontmatter';
