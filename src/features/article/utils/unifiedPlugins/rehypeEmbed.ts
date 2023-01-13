@@ -1,7 +1,7 @@
 import { Plugin } from 'unified';
 import { ElementContent, Root as HastRoot } from 'hast';
 import { selectAll } from 'hast-util-select';
-import { createEmbedDataFromUrl } from '@/features/embed';
+import { createEmbedDataFromUrl } from '../createEmbedData';
 
 /**
  * 1つのURLのみからなる段落があるとき、そのURLを<custom-embed>要素に変換するrehypeプラグイン。

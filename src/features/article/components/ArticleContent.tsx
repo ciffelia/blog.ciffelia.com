@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import type { Root as HastRoot } from 'hast';
 import { unified } from 'unified';
 import rehypeReact, { Options as RehypeReactOptions } from 'rehype-react';
-import { Embed } from '@/features/embed';
+import { Embed } from './Embed';
 
 export interface ArticleContentProps {
   tree: HastRoot;

@@ -5,6 +5,6 @@ export interface EmbedCardData {
   url: string;
   title?: string;
   description?: string;
-  favicon?: string;
-  ogImage?: string;
+  faviconDataUrl?: string;
+  ogImageDataUrl?: string;
 }
