@@ -23,17 +23,17 @@ export const ArticleHeader: React.FC<ArticleHeaderProps> = ({
       <div className="flex justify-center items-center gap-x-4">
         {!isPublished && (
           <div className="flex justify-center items-center gap-x-2 text-red-500">
-            <FaPencilRuler />
+            <FaPencilRuler role="presentation" />
             <span>下書き</span>
           </div>
         )}
         <div className="flex justify-center items-center gap-x-2">
-          <FaRegEdit />
+          <FaRegEdit role="img" aria-label="公開日" />
           <Timestamp value={publishedAtDate} dateOnly />
         </div>
         {!isSameDay(publishedAtDate, modifiedAtDate) && (
           <div className="flex justify-center items-center gap-x-2">
-            <FaSync />
+            <FaSync role="img" aria-label="最終更新日" />
             <Timestamp value={modifiedAtDate} dateOnly />
           </div>
         )}
