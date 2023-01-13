@@ -16,7 +16,7 @@
   "dependencies": {
     "@next/font": "^13.1.1",
     "@tailwindcss/typography": "^0.5.8",
-    "@vercel/og": "^0.0.25",
+    "@vercel/og": "^0.0.27",
     "cheerio": "^1.0.0-rc.12",
     "date-fns": "^2.29.3",
     "got": "^12.5.3",
