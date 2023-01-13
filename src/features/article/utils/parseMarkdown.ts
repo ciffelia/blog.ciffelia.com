@@ -4,7 +4,6 @@ import { unified } from 'unified';
 import type { Root as HastRoot } from 'hast';
 import remarkParse from 'remark-parse';
 import remarkFrontmatter from 'remark-frontmatter';
-import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeHighlight from 'rehype-highlight';
 import rehypePresetMinify from 'rehype-preset-minify';
@@ -13,6 +12,7 @@ import {
   rehypeRemovePosition,
   remarkExtractFrontmatter,
   remarkExtractTitle,
+  remarkGfmSubset,
 } from './unifiedPlugins';
 
 /**
@@ -25,7 +25,7 @@ export const transformMarkdown = async (
   const processor = unified()
     .use(remarkParse)
     .use(remarkFrontmatter)
-    .use(remarkGfm)
+    .use(remarkGfmSubset)
     .use(remarkExtractFrontmatter)
     .use(remarkExtractTitle)
     .use(remarkRehype)
