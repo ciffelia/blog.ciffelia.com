@@ -9,6 +9,8 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   );
 
   return {
-    props: { articleList },
+    props: {
+      articleList: articleList.filter((meta) => meta.isPublished),
+    },
   };
 };

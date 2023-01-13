@@ -3,6 +3,7 @@ id: '2023-01-xx-beginning'
 title: 'ブログをつくった'
 description: 'ブログをつくりました。'
 tags: ['Web', 'Next.js', 'Vercel', 'TypeScript']
+isPublished: true
 publishedAt: '2021-11-10T20:13:00+09:00'
 modifiedAt: '2021-11-10T20:13:00+09:00'
 thumbnail:

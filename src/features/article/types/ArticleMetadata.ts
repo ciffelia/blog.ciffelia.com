@@ -20,6 +20,7 @@ export const ArticleMetadata = z.object({
   title: z.string(),
   description: z.string(),
   tags: z.string().array(),
+  isPublished: z.boolean(),
   publishedAt: ISO8601,
   modifiedAt: ISO8601,
   thumbnail: ArticleThumbnail,

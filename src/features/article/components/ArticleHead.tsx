@@ -16,6 +16,7 @@ export const ArticleHead: React.FC<ArticleHeadProps> = ({
     title,
     description,
     tags,
+    isPublished,
     publishedAt,
     modifiedAt,
     thumbnail,
@@ -31,6 +32,7 @@ export const ArticleHead: React.FC<ArticleHeadProps> = ({
         title={title}
         description={description}
         canonical={canonicalUrl}
+        noindex={!isPublished}
         openGraph={{
           type: 'article',
           images: [
