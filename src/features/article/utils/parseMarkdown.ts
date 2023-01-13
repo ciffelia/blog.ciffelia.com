@@ -10,9 +10,9 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypePresetMinify from 'rehype-preset-minify';
 import { ArticleMetadata } from '../types/ArticleMetadata';
 import {
-  remarkExtractTitle,
   rehypeRemovePosition,
   remarkExtractFrontmatter,
+  remarkExtractTitle,
 } from './unifiedPlugins';
 
 /**
