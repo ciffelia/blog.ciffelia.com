@@ -85,10 +85,7 @@ const extractFaviconUrl = (
   $: cheerio.CheerioAPI,
   pageUrl: URL,
 ): URL | undefined => {
-  const faviconHref = $('link[rel="icon"]').attr('href');
-  if (faviconHref === undefined || faviconHref === '') {
-    return undefined;
-  }
+  const faviconHref = $('link[rel~="icon"]').attr('href') ?? '/favicon.ico';
 
   const baseUrl = extractBaseUrl($, pageUrl);
   try {
