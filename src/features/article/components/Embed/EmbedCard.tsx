@@ -18,7 +18,7 @@ export const EmbedCard: React.FC<EmbedCardProps> = ({ data }) => {
   }, [url]);
 
   return (
-    <div className="not-prose tracking-normal">
+    <div className="not-prose tracking-normal text-start">
       <a
         className="my-5 w-full h-32 flex border rounded overflow-hidden hover:bg-slate-100 transition-colors"
         href={url}

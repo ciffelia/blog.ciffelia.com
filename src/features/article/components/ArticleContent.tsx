@@ -28,7 +28,7 @@ export const ArticleContent: React.FC<ArticleContentProps> = ({ tree }) => {
 
 const CustomPre: React.FC<React.ComponentPropsWithoutRef<'pre'>> = (props) => {
   return (
-    <div className="not-prose">
+    <div className="not-prose text-start">
       <pre {...props} />
     </div>
   );
