@@ -33,12 +33,14 @@ export const EmbedCard: React.FC<EmbedCardProps> = ({ data }) => {
           </span>
           <div className="flex items-center gap-1.5">
             {faviconDataUrl !== undefined && (
+              // eslint-disable-next-line @next/next/no-img-element
               <img className="w-3.5 h-3.5" src={faviconDataUrl} alt="" />
             )}
             <span className="text-sm text-slate-600 truncate">{host}</span>
           </div>
         </div>
         {ogImageDataUrl !== undefined && (
+          // eslint-disable-next-line @next/next/no-img-element
           <img
             className="h-full object-cover aspect-square sm:aspect-[1200/630]"
             src={ogImageDataUrl}

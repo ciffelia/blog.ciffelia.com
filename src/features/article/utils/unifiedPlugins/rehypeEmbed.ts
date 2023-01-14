@@ -50,14 +50,3 @@ export const rehypeEmbed: Plugin<[], HastRoot> = () => {
     }
   };
 };
-
-const createEmbedElementFromUrl = async (
-  url: URL,
-): Promise<ElementContent> => ({
-  type: 'element',
-  tagName: 'custom-embed',
-  properties: {
-    data: JSON.stringify(await createEmbedDataFromUrl(url)),
-  },
-  children: [],
-});
