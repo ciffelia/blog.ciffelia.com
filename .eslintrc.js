@@ -7,6 +7,8 @@ module.exports = {
         patterns: ['@/features/*/*'],
       },
     ],
+    // 現在のモダンブラウザでは不要
+    'react/jsx-no-target-blank': 'off',
   },
   overrides: [
     {

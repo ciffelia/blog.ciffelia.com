@@ -20,7 +20,6 @@
     "cheerio": "^1.0.0-rc.12",
     "date-fns": "^2.29.3",
     "got": "^12.5.3",
-    "hast-util-select": "^5.0.3",
     "highlight.js": "^11.7.0",
     "mdast-util-gfm-footnote": "^1.0.1",
     "mdast-util-gfm-strikethrough": "^1.0.2",
@@ -46,11 +45,13 @@
     "tsparticles-engine": "^2.7.1",
     "unified": "^10.1.2",
     "unist-util-remove-position": "^4.0.1",
+    "unist-util-visit": "^4.1.1",
     "vfile": "^5.3.6",
     "yaml": "^2.2.1",
     "zod": "^3.20.2"
   },
   "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@types/hast": "^2.3.4",
     "@types/mdast": "^3.0.10",
     "@types/node": "^18.11.18",

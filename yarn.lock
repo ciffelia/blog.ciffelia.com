@@ -308,6 +308,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tailwindcss/line-clamp@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "@tailwindcss/line-clamp@npm:0.4.2"
+  peerDependencies:
+    tailwindcss: ">=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1"
+  checksum: 26b8135df24fff51c3d3790ae795bdc12bc4a7113fa22dcab80568ae6ee00710e2ed4154048958c472bb654061f0f1573b7ac5e004ae6222cbd5ac6fcf199478
+  languageName: node
+  linkType: hard
+
 "@tailwindcss/typography@npm:^0.5.9":
   version: 0.5.9
   resolution: "@tailwindcss/typography@npm:0.5.9"
@@ -926,6 +935,7 @@ __metadata:
   resolution: "blog.ciffelia.com@workspace:."
   dependencies:
     "@next/font": ^13.1.2
+    "@tailwindcss/line-clamp": ^0.4.2
     "@tailwindcss/typography": ^0.5.9
     "@types/hast": ^2.3.4
     "@types/mdast": ^3.0.10
@@ -945,7 +955,6 @@ __metadata:
     eslint-plugin-n: ^15.6.1
     eslint-plugin-promise: ^6.1.1
     got: ^12.5.3
-    hast-util-select: ^5.0.3
     highlight.js: ^11.7.0
     mdast-util-gfm-footnote: ^1.0.1
     mdast-util-gfm-strikethrough: ^1.0.2
@@ -977,6 +986,7 @@ __metadata:
     typescript: 4.9.4
     unified: ^10.1.2
     unist-util-remove-position: ^4.0.1
+    unist-util-visit: ^4.1.1
     vfile: ^5.3.6
     yaml: ^2.2.1
     zod: ^3.20.2
@@ -2805,7 +2815,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hast-util-select@npm:^5.0.0, hast-util-select@npm:^5.0.3":
+"hast-util-select@npm:^5.0.0":
   version: 5.0.3
   resolution: "hast-util-select@npm:5.0.3"
   dependencies:
@@ -6842,7 +6852,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-visit@npm:^4.0.0":
+"unist-util-visit@npm:^4.0.0, unist-util-visit@npm:^4.1.1":
   version: 4.1.1
   resolution: "unist-util-visit@npm:4.1.1"
   dependencies:
