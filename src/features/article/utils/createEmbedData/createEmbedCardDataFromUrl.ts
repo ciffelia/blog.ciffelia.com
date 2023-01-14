@@ -2,7 +2,20 @@ import * as cheerio from 'cheerio';
 import { EmbedData } from '../../types/EmbedData';
 import { got } from '../../lib/got';
 import { warn } from './warn';
-import { fetchAndConvertImage } from './fetchAndConvertImage';
+import { fetchAndConvertImage, ImageSize } from './fetchAndConvertImage';
+
+const faviconSize = {
+  // 実際の表示サイズは16x16だが、HDPIを考慮して2倍にする
+  width: 32,
+  height: 32,
+} as const satisfies ImageSize;
+
+const ogImageSize = {
+  // 1200x630を高さ256pxにリサイズする
+  // 実際の表示サイズは高さ128pxだが、HDPIを考慮して2倍にする
+  width: 488,
+  height: 256,
+} as const satisfies ImageSize;
 
 export const createEmbedCardDataFromUrl = async (
   url: URL,
@@ -24,19 +37,19 @@ const createEmbedCardDataFromHtml = async (
 ): Promise<EmbedData> => {
   const $ = cheerio.load(html);
 
-  const title = extractTitle($)?.slice(0, 1024);
-  const description = extractDescription($)?.slice(0, 1024);
+  const title = extractTitle($)?.slice(0, 256);
+  const description = extractDescription($)?.slice(0, 256);
 
   const faviconUrl = extractFaviconUrl($, url);
   const faviconDataUrl =
     faviconUrl !== undefined
-      ? await fetchAndConvertImage(faviconUrl, url, { width: 16, height: 16 })
+      ? await fetchAndConvertImage(faviconUrl, url, faviconSize)
       : undefined;
 
   const ogImageUrl = extractOpenGraphImageUrl($);
   const ogImageDataUrl =
     ogImageUrl !== undefined
-      ? await fetchAndConvertImage(ogImageUrl, url, { width: 230, height: 120 }) // 1200x630を高さ120pxにリサイズ
+      ? await fetchAndConvertImage(ogImageUrl, url, ogImageSize)
       : undefined;
 
   return {
@@ -98,7 +111,7 @@ const extractFaviconUrl = (
 
 const extractBaseUrl = ($: cheerio.CheerioAPI, pageUrl: URL): URL => {
   const baseHref = $('base').attr('href');
-  if (baseHref === undefined || baseHref === '') {
+  if (baseHref === undefined) {
     return pageUrl;
   }
 
