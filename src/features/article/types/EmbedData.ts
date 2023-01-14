@@ -1,4 +1,4 @@
-export type EmbedData = EmbedCardData;
+export type EmbedData = EmbedCardData | EmbedTweetData;
 
 export interface EmbedCardData {
   type: 'card';
@@ -7,4 +7,9 @@ export interface EmbedCardData {
   description?: string;
   faviconDataUrl?: string;
   ogImageDataUrl?: string;
+}
+
+export interface EmbedTweetData {
+  type: 'tweet';
+  id: string;
 }

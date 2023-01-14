@@ -1,24 +1,11 @@
-import { EmbedCardData, EmbedData } from '../types/EmbedData';
-import { unreachable } from '@/utils/unreachable';
+import { EmbedCardData } from '../../types/EmbedData';
 import { useMemo } from 'react';
 
-export interface EmbedProps {
-  data: EmbedData;
-}
-
-export const Embed: React.FC<EmbedProps> = ({ data }) => {
-  if (data.type === 'card') {
-    return <EmbedCard data={data} />;
-  } else {
-    return unreachable(data.type);
-  }
-};
-
-interface EmbedCardProps {
+export interface EmbedCardProps {
   data: EmbedCardData;
 }
 
-const EmbedCard: React.FC<EmbedCardProps> = ({ data }) => {
+export const EmbedCard: React.FC<EmbedCardProps> = ({ data }) => {
   const { url, description, faviconDataUrl, ogImageDataUrl } = data;
   const title = data.title ?? data.url;
 
