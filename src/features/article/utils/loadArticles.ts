@@ -1,7 +1,7 @@
-import { fileURLToPath } from 'url';
-import path from 'path';
-import { promises as fs } from 'fs';
-import { strict as assert } from 'assert';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
 import type { Root as HastRoot } from 'hast';
 import { ArticleMetadata } from '../types/ArticleMetadata';
 import { transformMarkdown, extractMarkdownMetadata } from './parseMarkdown';

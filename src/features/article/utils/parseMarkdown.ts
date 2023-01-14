@@ -1,4 +1,4 @@
-import { strict as assert } from 'assert';
+import assert from 'node:assert/strict';
 import { VFile } from 'vfile';
 import { unified } from 'unified';
 import type { Root as HastRoot } from 'hast';
