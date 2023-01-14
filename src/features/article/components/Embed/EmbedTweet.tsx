@@ -15,7 +15,7 @@ export const EmbedTweet: React.FC<TweetProps> = ({ data }) => {
 
   return (
     <div
-      className="not-prose w-full min-h-[225px] grid place-items-center"
+      className="not-prose w-full min-h-[225px] overflow-x-auto grid place-items-center"
       dangerouslySetInnerHTML={{ __html: generateEmbedHtml(data.id) }}
       ref={ref}
     />

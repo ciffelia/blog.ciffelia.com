@@ -40,7 +40,7 @@ export const EmbedCard: React.FC<EmbedCardProps> = ({ data }) => {
         </div>
         {ogImageDataUrl !== undefined && (
           <img
-            className="h-full aspect-[1200/630]"
+            className="h-full object-cover aspect-square sm:aspect-[1200/630]"
             src={ogImageDataUrl}
             alt=""
           />
