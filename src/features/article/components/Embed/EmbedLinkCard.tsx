@@ -1,11 +1,11 @@
 import { EmbedLinkCardData } from '../../types/EmbedData';
 import { useMemo } from 'react';
 
-export interface EmbedCardProps {
+export interface EmbedLinkCardProps {
   data: EmbedLinkCardData;
 }
 
-export const EmbedCard: React.FC<EmbedCardProps> = ({ data }) => {
+export const EmbedLinkCard: React.FC<EmbedLinkCardProps> = ({ data }) => {
   const { url, description, faviconDataUrl, ogImageDataUrl } = data;
   const title = data.title ?? data.url;
 

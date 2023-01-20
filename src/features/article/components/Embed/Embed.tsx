@@ -1,6 +1,6 @@
 import { unreachable } from '@/utils/unreachable';
 import { EmbedData } from '../../types/EmbedData';
-import { EmbedCard } from './EmbedCard';
+import { EmbedLinkCard } from './EmbedLinkCard';
 import { EmbedTweet } from './EmbedTweet';
 
 export interface EmbedProps {
@@ -10,7 +10,7 @@ export interface EmbedProps {
 export const Embed: React.FC<EmbedProps> = ({ data }) => {
   const { type } = data;
   if (type === 'card') {
-    return <EmbedCard data={data} />;
+    return <EmbedLinkCard data={data} />;
   } else if (type === 'tweet') {
     return <EmbedTweet data={data} />;
   } else {
