@@ -1,7 +1,7 @@
 import { Plugin } from 'unified';
 import { Element, Root as HastRoot } from 'hast';
 import { SKIP, visit } from 'unist-util-visit';
-import { createEmbedDataFromUrl } from '../createEmbedData';
+import { createEmbedData } from '../createEmbedData';
 
 /**
  * 1つのURLのみからなる段落があるとき、そのURLを<custom-embed>要素に変換するrehypeプラグイン。
@@ -29,7 +29,7 @@ export const rehypeEmbed: Plugin<[], HastRoot> = () => {
 
     const nodeListWithEmbedData = await Promise.all(
       nodeListWithUrl.map(async ({ url, ...rest }) => ({
-        embedData: await createEmbedDataFromUrl(url),
+        embedData: await createEmbedData(url),
         ...rest,
       })),
     );

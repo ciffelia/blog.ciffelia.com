@@ -1,6 +1,6 @@
-export type EmbedData = EmbedCardData | EmbedTweetData;
+export type EmbedData = EmbedLinkCardData | EmbedTweetData;
 
-export interface EmbedCardData {
+export interface EmbedLinkCardData {
   type: 'card';
   url: string;
   title?: string;

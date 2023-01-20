@@ -1,8 +1,8 @@
-import { EmbedCardData } from '../../types/EmbedData';
+import { EmbedLinkCardData } from '../../types/EmbedData';
 import { useMemo } from 'react';
 
 export interface EmbedCardProps {
-  data: EmbedCardData;
+  data: EmbedLinkCardData;
 }
 
 export const EmbedCard: React.FC<EmbedCardProps> = ({ data }) => {

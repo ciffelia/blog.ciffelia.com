@@ -1,1 +1,1 @@
-export { createEmbedDataFromUrl } from './createEmbedDataFromUrl';
+export { createEmbedData } from './createEmbedData';
