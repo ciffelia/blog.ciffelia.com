@@ -14,7 +14,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@next/font": "^13.1.2",
+    "@next/font": "^13.1.4",
     "@tailwindcss/typography": "^0.5.9",
     "@vercel/og": "^0.0.27",
     "date-fns": "^2.29.3",
@@ -26,7 +26,7 @@
     "micromark-extension-gfm-footnote": "^1.0.4",
     "micromark-extension-gfm-strikethrough": "^1.0.4",
     "micromark-extension-gfm-table": "^1.0.5",
-    "next": "^13.1.2",
+    "next": "^13.1.4",
     "next-seo": "^5.15.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -59,7 +59,7 @@
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.32.0",
-    "eslint-config-next": "^13.1.2",
+    "eslint-config-next": "^13.1.4",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-standard-with-typescript": "^27.0.1",
     "eslint-plugin-import": "^2.27.5",
