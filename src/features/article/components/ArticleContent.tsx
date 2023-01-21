@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import Image, { StaticImageData } from 'next/image';
 import type { Root as HastRoot } from 'hast';
 import { unified } from 'unified';
 import rehypeReact, { Options as RehypeReactOptions } from 'rehype-react';
@@ -18,6 +19,8 @@ export const ArticleContent: React.FC<ArticleContentProps> = ({ tree }) => {
       },
     };
     // @ts-expect-error
+    options.components['custom-image'] = CustomImage;
+    // @ts-expect-error
     options.components['custom-embed'] = CustomEmbed;
 
     return unified().use(rehypeReact, options).freeze();
@@ -31,6 +34,21 @@ const CustomPre: React.FC<React.ComponentPropsWithoutRef<'pre'>> = (props) => {
     <div className="not-prose text-start">
       <pre {...props} />
     </div>
+  );
+};
+
+const CustomImage: React.FC<{
+  staticImageData: string;
+  alt: string;
+  width?: number;
+}> = ({ staticImageData: staticImageDataJson, alt, width }) => {
+  const staticImageData = JSON.parse(staticImageDataJson) as StaticImageData;
+  return (
+    <span className="flex justify-center">
+      <a href={staticImageData.src} target="_blank">
+        <Image src={staticImageData} alt={alt} width={width} />
+      </a>
+    </span>
   );
 };
 

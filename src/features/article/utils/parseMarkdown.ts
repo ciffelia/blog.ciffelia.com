@@ -10,6 +10,8 @@ import rehypePresetMinify from 'rehype-preset-minify';
 import { ArticleMetadata } from '../types/ArticleMetadata';
 import {
   rehypeEmbed,
+  rehypeArticleImages,
+  rehypeImageSize,
   rehypeRemovePosition,
   remarkExtractFrontmatter,
   remarkExtractTitle,
@@ -30,7 +32,9 @@ export const transformMarkdown = async (
     .use(remarkExtractFrontmatter)
     .use(remarkExtractTitle)
     .use(remarkRehype)
+    .use(rehypeImageSize)
     .use(rehypeEmbed)
+    .use(rehypeArticleImages)
     .use(rehypeHighlight)
     .use(rehypePresetMinify)
     .use(rehypeRemovePosition)

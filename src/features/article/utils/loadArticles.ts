@@ -1,25 +1,20 @@
-import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import type { Root as HastRoot } from 'hast';
+import { markdownDirPath } from '@/articles';
 import { ArticleMetadata } from '../types/ArticleMetadata';
 import { transformMarkdown, extractMarkdownMetadata } from './parseMarkdown';
 
-const articlesDir = path.join(
-  fileURLToPath(import.meta.url),
-  '../../../../articles',
-);
-
 export const listArticleId = async (): Promise<string[]> => {
-  const fileNames = await fs.readdir(articlesDir);
+  const fileNames = await fs.readdir(markdownDirPath);
   return fileNames.map((f) => f.replace(/\.md$/, ''));
 };
 
 export const getArticle = async (
   id: string,
 ): Promise<{ tree: HastRoot; metadata: ArticleMetadata }> => {
-  const articlePath = path.join(articlesDir, `${id}.md`);
+  const articlePath = path.join(markdownDirPath, `${id}.md`);
   const markdownText = await fs.readFile(articlePath, 'utf-8');
 
   try {
@@ -39,7 +34,7 @@ export const getArticle = async (
 export const getArticleMetadata = async (
   id: string,
 ): Promise<ArticleMetadata> => {
-  const articlePath = path.join(articlesDir, `${id}.md`);
+  const articlePath = path.join(markdownDirPath, `${id}.md`);
   const markdownText = await fs.readFile(articlePath, 'utf-8');
 
   try {
