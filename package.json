@@ -35,7 +35,7 @@
     "react-tsparticles": "^2.7.1",
     "rehype-highlight": "^6.0.0",
     "rehype-preset-minify": "^6.0.0",
-    "rehype-react": "^7.1.1",
+    "rehype-react": "^7.1.2",
     "remark-frontmatter": "^4.0.1",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
