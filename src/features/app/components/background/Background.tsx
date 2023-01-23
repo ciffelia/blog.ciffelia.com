@@ -18,9 +18,7 @@ export const Background: React.FC = () => (
   </div>
 );
 
-const FadeIn: React.FC<React.PropsWithChildren<Record<string, never>>> = ({
-  children,
-}) => {
+const FadeIn: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
