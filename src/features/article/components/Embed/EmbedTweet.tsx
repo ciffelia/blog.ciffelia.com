@@ -9,7 +9,7 @@ export const EmbedTweet: React.FC<TweetProps> = ({ data }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // @ts-expect-error
+    // @ts-expect-error we do not type window.twttr
     window.twttr?.widgets.load(ref.current);
   }, [data.id]);
 

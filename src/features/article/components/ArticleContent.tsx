@@ -21,9 +21,9 @@ export const ArticleContent: React.FC<ArticleContentProps> = ({ tree }) => {
         a: AOverride,
       },
     };
-    // @ts-expect-error
+    // @ts-expect-error overriding custom element
     options.components['custom-image'] = CustomImage;
-    // @ts-expect-error
+    // @ts-expect-error overriding custom element
     options.components['custom-embed'] = CustomEmbed;
 
     return unified().use(rehypeReact, options).freeze();
