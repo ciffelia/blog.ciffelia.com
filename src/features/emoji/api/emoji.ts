@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server';
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'edge',
 };
 
 export const handler = async (req: NextRequest): Promise<Response> => {

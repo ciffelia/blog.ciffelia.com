@@ -1,6 +1,6 @@
 // The config cannot be re-exported from other files.
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'edge',
 };
 
 export { handler as default } from '@/features/emoji/api/emoji';
