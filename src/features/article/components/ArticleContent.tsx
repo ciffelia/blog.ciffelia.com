@@ -15,7 +15,7 @@ export const ArticleContent: React.FC<ArticleContentProps> = ({ tree }) => {
       createElement: React.createElement,
       Fragment: React.Fragment,
       components: {
-        pre: CustomPre,
+        pre: PreOverride,
       },
     };
     // @ts-expect-error
@@ -29,7 +29,9 @@ export const ArticleContent: React.FC<ArticleContentProps> = ({ tree }) => {
   return useMemo(() => processor.stringify(tree), [processor, tree]);
 };
 
-const CustomPre: React.FC<React.ComponentPropsWithoutRef<'pre'>> = (props) => {
+const PreOverride: React.FC<React.ComponentPropsWithoutRef<'pre'>> = (
+  props,
+) => {
   return (
     <div className="not-prose text-start">
       <pre {...props} />
