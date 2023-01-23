@@ -1,9 +1,16 @@
 import rawGot, { CancelableRequest, Request } from 'got';
 
+const cache = new Map();
+
 /**
- * 10秒のタイムアウトと10MiBのダウンロードサイズ制限をかけたgot
+ * got
+ *
+ * - キャッシュの有効化
+ * - 10秒のタイムアウト
+ * - 10MiBのダウンロードサイズ制限
  */
 export const got = rawGot.extend({
+  cache,
   timeout: { request: 10000 },
   handlers: [
     // https://github.com/sindresorhus/got/blob/main/documentation/examples/advanced-creation.js#L40
