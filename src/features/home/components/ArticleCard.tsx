@@ -4,7 +4,7 @@ import { parseISO } from 'date-fns';
 import { FaRegEdit } from 'react-icons/fa';
 import { ArticleMetadata, ArticleThumbnail } from '@/features/article';
 import { Timestamp } from '@/components/Timestamp';
-import { EmojiImage } from '@/features/emoji';
+import { FluentEmojiImage } from '@/components/FluentEmojiImage';
 
 export interface ArticleCardProps {
   metadata: ArticleMetadata;
@@ -49,7 +49,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
   } else {
     return (
       <div className="w-full h-full flex justify-center items-center">
-        <EmojiImage emoji={thumbnail.emoji} className="w-32" />
+        <FluentEmojiImage emoji={thumbnail.emoji} className="w-32" />
       </div>
     );
   }
