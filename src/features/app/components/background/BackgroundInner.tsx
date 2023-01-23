@@ -1,7 +1,10 @@
 import React from 'react';
 import Particles from 'react-tsparticles';
 import type { Engine } from 'tsparticles-engine';
-import { loadFull } from 'tsparticles';
+import { loadCircleShape } from 'tsparticles-shape-circle';
+import { loadColorUpdater } from 'tsparticles-updater-color';
+import { loadOpacityUpdater } from 'tsparticles-updater-opacity';
+import { loadParticlesLinksInteraction } from 'tsparticles-interaction-particles-links';
 
 export const BackgroundInner: React.FC = () => (
   <Particles
@@ -42,5 +45,8 @@ export const BackgroundInner: React.FC = () => (
 );
 
 const particlesInit = async (engine: Engine): Promise<void> => {
-  await loadFull(engine);
+  await loadCircleShape(engine);
+  await loadColorUpdater(engine);
+  await loadOpacityUpdater(engine);
+  await loadParticlesLinksInteraction(engine);
 };
