@@ -5,6 +5,7 @@ import { FaRegEdit } from 'react-icons/fa';
 import { ArticleMetadata, ArticleThumbnail } from '@/features/article';
 import { Timestamp } from '@/components/Timestamp';
 import { FluentEmojiImage } from '@/components/FluentEmojiImage';
+import { unreachable } from '@/utils/unreachable';
 
 export interface ArticleCardProps {
   metadata: ArticleMetadata;
@@ -46,11 +47,13 @@ const Thumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
         sizes="100%"
       />
     );
-  } else {
+  } else if ('emoji' in thumbnail) {
     return (
       <div className="w-full h-full flex justify-center items-center">
         <FluentEmojiImage emoji={thumbnail.emoji} className="w-32" />
       </div>
     );
+  } else {
+    return unreachable(thumbnail);
   }
 };
