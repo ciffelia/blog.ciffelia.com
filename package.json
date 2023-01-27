@@ -47,7 +47,7 @@
     "tsparticles-updater-color": "^2.8.0",
     "tsparticles-updater-opacity": "^2.8.0",
     "unified": "^10.1.2",
-    "unist-util-remove-position": "^4.0.1",
+    "unist-util-remove-position": "^4.0.2",
     "unist-util-visit": "^4.1.1",
     "vfile": "^5.3.6",
     "yaml": "^2.2.1",
