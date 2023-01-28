@@ -1033,7 +1033,7 @@ __metadata:
     tsparticles-updater-opacity: ^2.8.0
     typescript: 4.9.4
     unified: ^10.1.2
-    unist-util-remove-position: ^4.0.1
+    unist-util-remove-position: ^4.0.2
     unist-util-visit: ^4.1.1
     vfile: ^5.3.6
     yaml: ^2.2.1
@@ -6364,13 +6364,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-remove-position@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "unist-util-remove-position@npm:4.0.1"
+"unist-util-remove-position@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "unist-util-remove-position@npm:4.0.2"
   dependencies:
     "@types/unist": ^2.0.0
     unist-util-visit: ^4.0.0
-  checksum: 7d2808662ac65f2b2f615822b78060419f738fb3b074b10cec77c596ea966b8f5c47553d2d322822a5975c49d2b21cdd64c198ae9fb02a9d54d1afa6342cdd6a
+  checksum: 989831da913d09a82a99ed9b47b78471b6409bde95942cde47e09da54b7736516f17e3c7e026af468684c1efcec5fb52df363381b2f9dc7fd96ce791c5a2fa4a
   languageName: node
   linkType: hard
 
