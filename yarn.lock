@@ -1003,7 +1003,7 @@ __metadata:
     highlight.js: ^11.7.0
     mdast-util-gfm-footnote: ^1.0.1
     mdast-util-gfm-strikethrough: ^1.0.2
-    mdast-util-gfm-table: ^1.0.6
+    mdast-util-gfm-table: ^1.0.7
     micromark-extension-gfm-footnote: ^1.0.4
     micromark-extension-gfm-strikethrough: ^1.0.4
     micromark-extension-gfm-table: ^1.0.5
@@ -3561,15 +3561,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdast-util-gfm-table@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "mdast-util-gfm-table@npm:1.0.6"
+"mdast-util-gfm-table@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "mdast-util-gfm-table@npm:1.0.7"
   dependencies:
     "@types/mdast": ^3.0.0
     markdown-table: ^3.0.0
     mdast-util-from-markdown: ^1.0.0
     mdast-util-to-markdown: ^1.3.0
-  checksum: 1b0469d9a9c9ca2f8d7cbd46f660963bb98984cb9b2b7e25dba05c0ea2743cc9fc46fbbfdb046735b84a3c67445f13c655dc449cefa5d38646c2edf944201f50
+  checksum: 8b8c401bb4162e53f072a2dff8efbca880fd78d55af30601c791315ab6722cb2918176e8585792469a0c530cebb9df9b4e7fede75fdc4d83df2839e238836692
   languageName: node
   linkType: hard
 
