@@ -1,8 +1,7 @@
-import { StaticImageData } from 'next/image';
 import { Plugin } from 'unified';
 import { Root as HastRoot } from 'hast';
 import { CONTINUE, visit } from 'unist-util-visit';
-import { images } from '@/articles';
+import { getImage } from '@/articles';
 
 /**
  * `<img src="images://<id>">`を`<custom-image>`に置き換えるRehypeプラグイン
@@ -17,12 +16,10 @@ export const rehypeArticleImages: Plugin<[], HastRoot> = () => {
       }
       const imageId = src.slice('image://'.length);
 
-      if (!(imageId in images)) {
+      const staticImageData = getImage(imageId);
+      if (staticImageData === undefined) {
         file.fail(`Image ${imageId} not found.`, node);
       }
-      const staticImageData = (images as Record<string, StaticImageData>)[
-        imageId
-      ];
 
       node.tagName = 'custom-image';
       node.properties = {
