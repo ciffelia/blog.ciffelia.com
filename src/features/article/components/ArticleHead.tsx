@@ -24,7 +24,9 @@ export const ArticleHead: React.FC<ArticleHeadProps> = ({
 }) => {
   const canonicalUrl = `${PRODUCTION_SITE_URL_BASE}/article/${id}`;
   const ogImageUrl =
-    'url' in thumbnail ? thumbnail.url : buildArticleOpengraphImageUrl(title);
+    'staticImageData' in thumbnail
+      ? thumbnail.staticImageData.src
+      : buildArticleOpengraphImageUrl(title);
 
   return (
     <>
