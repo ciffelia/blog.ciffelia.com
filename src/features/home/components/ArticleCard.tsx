@@ -37,10 +37,10 @@ interface ThumbnailProps {
 }
 
 const Thumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
-  if ('url' in thumbnail) {
+  if ('staticImageData' in thumbnail) {
     return (
       <Image
-        src={thumbnail.url}
+        src={thumbnail.staticImageData}
         alt=""
         className="object-cover"
         fill

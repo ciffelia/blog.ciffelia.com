@@ -7,10 +7,12 @@ isPublished: true
 publishedAt: '2023-01-20T00:00:00+09:00'
 modifiedAt: '2023-01-20T00:00:00+09:00'
 thumbnail:
-  emoji: '🤔'
+  imageId: testArticleThumbnail
 ---
 
 # テスト記事
+
+photo by [Tran Mau Tri Tam](https://unsplash.com/photos/FbhNdD1ow2g) on [Unsplash](https://unsplash.com/)
 
 これは本文です。
 
