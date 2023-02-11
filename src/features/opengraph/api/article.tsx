@@ -7,12 +7,19 @@ export const config = {
   runtime: 'edge',
 };
 
-// const quicksand600Data = fetch(
-//   new URL(
-//     '../assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf',
-//     import.meta.url,
-//   ),
-// ).then(async (res) => await res.arrayBuffer());
+const notoSansLatin400Data = fetch(
+  new URL(
+    '../assets/fonts/noto-sans/noto-sans-latin-400-normal.woff',
+    import.meta.url,
+  ),
+).then(async (res) => await res.arrayBuffer());
+
+const quicksand600Data = fetch(
+  new URL(
+    '../assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf',
+    import.meta.url,
+  ),
+).then(async (res) => await res.arrayBuffer());
 
 export const handler = async (
   req: NextRequest,
@@ -34,12 +41,7 @@ export const handler = async (
             <span tw="text-gray-50 text-8xl">{title}</span>
           </div>
           <div tw="w-full h-[20%] bg-[rgba(0,0,0,0.2)] flex items-center justify-center">
-            {/* カスタムフォントがうまく動かないので、ロゴは画像埋め込みにする */}
-            {/* もしかすると関連しているかも: https://github.com/vercel/satori/issues/334 */}
-            {/* <Logo /> */}
-            <img
-              src={new URL('../assets/logo.png', import.meta.url).toString()}
-            />
+            <Logo />
           </div>
         </div>
       </div>
@@ -47,18 +49,22 @@ export const handler = async (
     {
       width: 1200,
       height: 630,
-      // fonts: [
-      //   {
-      //     name: 'Quicksand',
-      //     weight: 600,
-      //     data: await quicksand600Data,
-      //   },
-      // ],
+      fonts: [
+        {
+          name: 'Noto Sans',
+          weight: 400,
+          data: await notoSansLatin400Data,
+        },
+        {
+          name: 'Quicksand',
+          weight: 600,
+          data: await quicksand600Data,
+        },
+      ],
     },
   );
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Logo: React.FC = () => (
   <div tw="flex items-center">
     <img
@@ -66,7 +72,10 @@ const Logo: React.FC = () => (
       tw="w-16 h-16 mr-4 rounded-full"
       src={new URL('@/assets/ciffelia.png', import.meta.url).toString()}
     />
-    <span tw="font-['Quicksand'] font-semibold text-5xl text-gray-50">
+    <span
+      tw="font-semibold text-5xl text-gray-50"
+      style={{ fontFamily: '"Quicksand"' }}
+    >
       blog.ciffelia.com
     </span>
   </div>

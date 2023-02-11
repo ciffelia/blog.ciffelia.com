@@ -49,8 +49,6 @@ const Logo: React.FC = () => (
       tw="w-32 h-32 mr-8 rounded-full"
       src={new URL('@/assets/ciffelia.png', import.meta.url).toString()}
     />
-    <span tw="font-['Quicksand'] font-semibold text-8xl text-gray-50">
-      blog.ciffelia.com
-    </span>
+    <span tw="font-semibold text-8xl text-gray-50">blog.ciffelia.com</span>
   </div>
 );
