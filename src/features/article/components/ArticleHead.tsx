@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { jsonLdScriptProps } from 'react-schemaorg';
 import { BlogPosting, BreadcrumbList } from 'schema-dts';
 import { NextSeo } from 'next-seo';
-import { PRODUCTION_SITE_URL_BASE } from '@/config';
+import { CURRENT_SITE_URL_BASE, PRODUCTION_SITE_URL_BASE } from '@/config';
 import { ArticleMetadata } from '@/features/article';
 import { buildArticleOpengraphImageUrl } from '@/features/opengraph';
 
@@ -25,7 +25,7 @@ export const ArticleHead: React.FC<ArticleHeadProps> = ({
   const canonicalUrl = `${PRODUCTION_SITE_URL_BASE}/article/${id}`;
   const ogImageUrl =
     'staticImageData' in thumbnail
-      ? thumbnail.staticImageData.src
+      ? new URL(thumbnail.staticImageData.src, CURRENT_SITE_URL_BASE).toString()
       : buildArticleOpengraphImageUrl(title);
 
   return (
