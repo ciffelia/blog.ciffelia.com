@@ -1,7 +1,7 @@
 import React from 'react';
 import Script from 'next/script';
 import type { Root as HastRoot } from 'hast';
-import { ArticleMetadata } from '../types/ArticleMetadata';
+import { type ArticleMetadata } from '../types/ArticleMetadata';
 import { ArticleHead } from '../components/ArticleHead';
 import { ArticleContainer } from '../components/ArticleContainer';
 import { ArticleContent } from '../components/ArticleContent';

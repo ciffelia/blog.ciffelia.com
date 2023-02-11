@@ -1,4 +1,4 @@
-import { AppProps } from 'next/app';
+import { type AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import { SITE_DESCRIPTION, SITE_NAME } from '@/config';
 import { buildCommonOpengraphImageUrl } from '@/features/opengraph';

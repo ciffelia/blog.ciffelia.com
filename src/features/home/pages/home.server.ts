@@ -1,6 +1,6 @@
-import { GetStaticProps } from 'next';
+import { type GetStaticProps } from 'next';
 import { getArticleMetadata, listArticleId } from '@/features/article';
-import { HomePageProps } from './home';
+import { type HomePageProps } from './home';
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   const ids = await listArticleId();

@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import Link from 'next/link';
-import Image, { StaticImageData } from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import type { Root as HastRoot } from 'hast';
 import { unified } from 'unified';
-import rehypeReact, { Options as RehypeReactOptions } from 'rehype-react';
+import rehypeReact, { type Options as RehypeReactOptions } from 'rehype-react';
 import { isValidUrl } from '@/utils/isValidUrl';
 import { Embed } from './Embed';
 

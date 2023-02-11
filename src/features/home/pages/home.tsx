@@ -1,7 +1,7 @@
 import { HomeHead } from '../components/HomeHead';
 import { ArticleCard } from '../components/ArticleCard';
 import { SilhouetteCard } from '../components/SilhouetteCard';
-import { ArticleMetadata } from '@/features/article';
+import { type ArticleMetadata } from '@/features/article';
 
 export interface HomePageProps {
   articleList: ArticleMetadata[];

@@ -1,4 +1,4 @@
-import { EmbedData } from '../../types/EmbedData';
+import { type EmbedData } from '../../types/EmbedData';
 import { createEmbedTweetData, isTweetUrl } from './createEmbedTweetData';
 import { createEmbedLinkCardData } from './createEmbedLinkCardData';
 

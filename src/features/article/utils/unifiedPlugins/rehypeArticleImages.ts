@@ -1,5 +1,5 @@
-import { Plugin } from 'unified';
-import { Root as HastRoot } from 'hast';
+import { type Plugin } from 'unified';
+import { type Root as HastRoot } from 'hast';
 import { CONTINUE, visit } from 'unist-util-visit';
 import { getImage } from '@/articles';
 

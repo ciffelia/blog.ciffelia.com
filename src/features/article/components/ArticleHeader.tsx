@@ -1,6 +1,6 @@
 import { isSameDay, parseISO } from 'date-fns';
 import { FaPencilRuler, FaRegEdit, FaSync } from 'react-icons/fa';
-import { ArticleMetadata } from '@/features/article';
+import { type ArticleMetadata } from '@/features/article';
 import { TagList } from '@/components/TagList';
 import { Timestamp } from '@/components/Timestamp';
 

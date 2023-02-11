@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { EmbedTweetData } from '../../types/EmbedData';
+import { type EmbedTweetData } from '../../types/EmbedData';
 
 export interface TweetProps {
   data: EmbedTweetData;

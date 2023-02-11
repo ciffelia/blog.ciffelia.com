@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { jsonLdScriptProps } from 'react-schemaorg';
-import { BlogPosting, BreadcrumbList } from 'schema-dts';
+import { type BlogPosting, type BreadcrumbList } from 'schema-dts';
 import { NextSeo } from 'next-seo';
 import { CURRENT_SITE_URL_BASE, PRODUCTION_SITE_URL_BASE } from '@/config';
-import { ArticleMetadata } from '@/features/article';
+import { type ArticleMetadata } from '@/features/article';
 import { buildArticleOpengraphImageUrl } from '@/features/opengraph';
 
 export interface ArticleHeadProps {

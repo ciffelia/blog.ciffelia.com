@@ -1,6 +1,6 @@
-import { EmbedLinkCardData } from '../../types/EmbedData';
+import { type EmbedLinkCardData } from '../../types/EmbedData';
 import { fetchLinkCard } from './fetchLinkCard';
-import { fetchAndConvertImage, ImageSize } from './fetchAndConvertImage';
+import { fetchAndConvertImage, type ImageSize } from './fetchAndConvertImage';
 
 const faviconSize = {
   // 実際の表示サイズは16x16だが、HDPIを考慮して2倍にする

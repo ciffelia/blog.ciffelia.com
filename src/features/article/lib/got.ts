@@ -1,4 +1,4 @@
-import rawGot, { CancelableRequest, Request } from 'got';
+import rawGot, { type CancelableRequest, type Request } from 'got';
 
 const cache = new Map();
 

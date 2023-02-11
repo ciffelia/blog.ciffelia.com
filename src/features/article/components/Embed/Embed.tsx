@@ -1,5 +1,5 @@
 import { unreachable } from '@/utils/unreachable';
-import { EmbedData } from '../../types/EmbedData';
+import { type EmbedData } from '../../types/EmbedData';
 import { EmbedLinkCard } from './EmbedLinkCard';
 import { EmbedTweet } from './EmbedTweet';
 

@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import type { Root as HastRoot } from 'hast';
 import { markdownDirPath } from '@/articles';
-import { ArticleMetadata } from '../types/ArticleMetadata';
+import { type ArticleMetadata } from '../types/ArticleMetadata';
 import { transformMarkdown, extractMarkdownMetadata } from './parseMarkdown';
 
 export const listArticleId = async (): Promise<string[]> => {

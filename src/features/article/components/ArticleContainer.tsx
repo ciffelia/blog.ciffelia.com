@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '@/components/Container';
-import { ArticleMetadata } from '../types/ArticleMetadata';
+import { type ArticleMetadata } from '../types/ArticleMetadata';
 import { ArticleHeader } from '../components/ArticleHeader';
 
 export interface ArticleContainerProps {

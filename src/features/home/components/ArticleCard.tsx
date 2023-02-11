@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { parseISO } from 'date-fns';
 import { FaRegEdit } from 'react-icons/fa';
-import { ArticleMetadata, ArticleThumbnail } from '@/features/article';
+import { type ArticleMetadata, type ArticleThumbnail } from '@/features/article';
 import { Timestamp } from '@/components/Timestamp';
 import { FluentEmojiImage } from '@/components/FluentEmojiImage';
 import { unreachable } from '@/utils/unreachable';

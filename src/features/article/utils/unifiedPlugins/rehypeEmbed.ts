@@ -1,5 +1,5 @@
-import { Plugin } from 'unified';
-import { Element, Root as HastRoot } from 'hast';
+import { type Plugin } from 'unified';
+import { type Element, type Root as HastRoot } from 'hast';
 import { SKIP, visit } from 'unist-util-visit';
 import { createEmbedData } from '../createEmbedData';
 

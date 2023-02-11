@@ -1,4 +1,4 @@
-import { EmbedTweetData } from '../../types/EmbedData';
+import { type EmbedTweetData } from '../../types/EmbedData';
 
 const tweetUrlRegExp =
   /^https:\/\/(?:mobile\.)?twitter\.com\/\w+\/status\/(\d+)/u;

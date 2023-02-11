@@ -1,5 +1,5 @@
-import { Plugin } from 'unified';
-import { Root as MdastRoot } from 'mdast';
+import { type Plugin } from 'unified';
+import { type Root as MdastRoot } from 'mdast';
 
 /**
  * A remark plugin to extract the content of the first heading.

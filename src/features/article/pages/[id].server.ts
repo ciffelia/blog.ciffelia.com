@@ -1,6 +1,6 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { type GetStaticPaths, type GetStaticProps } from 'next';
 import { getArticle, listArticleId } from '../utils/loadArticles';
-import { ArticlePageProps } from './[id]';
+import { type ArticlePageProps } from './[id]';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const ids = await listArticleId();

@@ -1,4 +1,4 @@
-import { EmbedLinkCardData } from '../../types/EmbedData';
+import { type EmbedLinkCardData } from '../../types/EmbedData';
 import { useMemo } from 'react';
 
 export interface EmbedLinkCardProps {
