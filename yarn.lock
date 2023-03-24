@@ -416,10 +416,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.15.0":
-  version: 18.15.0
-  resolution: "@types/node@npm:18.15.0"
-  checksum: d81372276dd5053b1743338b61a2178ff9722dc609189d01fc7d1c2acd539414039e0e4780678730514390dad3f29c366a28c29e8dbd5b0025651181f6dd6669
+"@types/node@npm:^18.15.7":
+  version: 18.15.7
+  resolution: "@types/node@npm:18.15.7"
+  checksum: 08d1dd1898be10cd274955ed7f491bcab5b7e70ce66b6a1e996a582d5467f7517046b0d9c5f4e15871df94dd72d1ad9e7be236d2cff1a1450ec906d7fa3062d2
   languageName: node
   linkType: hard
 
@@ -1070,7 +1070,7 @@ __metadata:
     "@tailwindcss/typography": ^0.5.9
     "@types/hast": ^2.3.4
     "@types/mdast": ^3.0.11
-    "@types/node": ^18.15.0
+    "@types/node": ^18.15.7
     "@types/react": ^18.0.28
     "@types/sharp": ^0.31.1
     "@typescript-eslint/eslint-plugin": ^5.54.1
