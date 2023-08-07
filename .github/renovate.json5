@@ -15,21 +15,6 @@
       dependencyDashboardApproval: true,
     },
     {
-      matchManagers: ['npm'],
-      matchPackagePatterns: [
-        '^yarn$',
-        '^@types/',
-        '^@typescript-eslint/',
-        '^eslint',
-        '^prettier$',
-        '^schema-dts$',
-      ],
-      matchUpdateTypes: ['minor', 'patch'],
-      matchCurrentVersion: '!/^0/',
-      dependencyDashboardApproval: false,
-      automerge: true,
-    },
-    {
       matchPackageNames: ['@types/node'],
       major: { enabled: false },
     },
