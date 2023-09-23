@@ -3,7 +3,7 @@ id: 'test'
 title: 'テスト記事'
 description: 'ブログの機能をテストするための記事です。'
 tags: ['Web', 'Next.js', 'Vercel', 'TypeScript']
-isPublished: true
+isPublished: false
 publishedAt: '2023-01-20T00:00:00+09:00'
 modifiedAt: '2023-01-20T00:00:00+09:00'
 thumbnail:
