@@ -36,7 +36,7 @@ const PreOverride: React.FC<React.ComponentPropsWithoutRef<'pre'>> = (
   props,
 ) => {
   return (
-    <div className="not-prose text-start">
+    <div className="not-prose text-start overflow-x-scroll">
       <pre {...props} />
     </div>
   );
