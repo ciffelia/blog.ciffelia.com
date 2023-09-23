@@ -1,13 +1,13 @@
 ---
 id: 'seccon2023-quals'
 title: 'SECCON CTF 2023 Quals Writeup'
-description: 'Next.jsでブログをつくりました。'
+description: 'SECCON CTF 2023 QualsにチームWani Hackaseで出場しました。世界75/653位、国内29/334位という結果でした。'
 tags: ['CTF', 'SECCON', 'Security', 'Web']
-isPublished: false
-publishedAt: '2023-01-20T00:00:00+09:00'
-modifiedAt: '2023-01-20T00:00:00+09:00'
+isPublished: true
+publishedAt: '2023-09-23T18:30:00+09:00'
+modifiedAt: '2023-09-23T18:30:00+09:00'
 thumbnail:
-  emoji: '📝'
+  imageId: seccon2023QualsResult
 ---
 
 # SECCON CTF 2023 Quals Writeup
