@@ -14,6 +14,7 @@ module.exports = {
             fontSize: '16px',
             letterSpacing: '0.1em',
             textAlign: 'justify',
+            wordBreak: 'break-all',
           },
         },
       },
