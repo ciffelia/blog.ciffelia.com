@@ -1192,7 +1192,7 @@ __metadata:
     prettier: "npm:^3.0.3"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-    react-icons: "npm:^4.7.1"
+    react-icons: "npm:^4.12.0"
     react-schemaorg: "npm:^2.0.0"
     react-tsparticles: "npm:^2.9.0"
     rehype-highlight: "npm:^6.0.0"
@@ -5247,12 +5247,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^4.7.1":
-  version: 4.7.1
-  resolution: "react-icons@npm:4.7.1"
+"react-icons@npm:^4.12.0":
+  version: 4.12.0
+  resolution: "react-icons@npm:4.12.0"
   peerDependencies:
     react: "*"
-  checksum: be1d82522feba668df7d6f4d1f6ea59f4d5aca58f761790a5e08fcef50ef27d563a9fe78d803576fa64910607172886d559f6ad1cd9c7857b683b4e16eb50eea
+  checksum: 2170f43031ee7365539f72d4075cbe6c7fbf9a66d6cf4494aa9393b194272da0564f5b19d1b24dbfc567c0ac89f5fe5b8974d92dd83f61e252388dde6a226fb8
   languageName: node
   linkType: hard
 
