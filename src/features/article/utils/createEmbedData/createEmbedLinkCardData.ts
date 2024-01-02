@@ -15,7 +15,23 @@ const ogImageSize = {
   height: 256,
 } as const satisfies ImageSize;
 
+const cache = new Map<string, Promise<EmbedLinkCardData>>();
+
 export const createEmbedLinkCardData = async (
+  url: URL,
+): Promise<EmbedLinkCardData> => {
+  const cacheKey = url.toString();
+  const cached = cache.get(cacheKey);
+  if (cached !== undefined) {
+    return await cached;
+  }
+
+  const promise = createEmbedLinkCardDataWithoutCache(url);
+  cache.set(cacheKey, promise);
+  return await promise;
+};
+
+const createEmbedLinkCardDataWithoutCache = async (
   url: URL,
 ): Promise<EmbedLinkCardData> => {
   const { faviconUrl, ogImageUrl, ...linkCard } = await fetchLinkCard(url);
