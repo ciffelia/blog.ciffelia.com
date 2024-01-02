@@ -109,7 +109,7 @@ https://twitter.com/ciffelia/status/1688150530307276800
 
 https://twitter.com/ciffelia/status/1703709774192480284
 
-- PFNのインターンが終わりました。
+- PFNでのインターンが終わりました。
 
 https://tech.preferred.jp/ja/blog/fairness_control_in_distributed_cache_systems/
 
