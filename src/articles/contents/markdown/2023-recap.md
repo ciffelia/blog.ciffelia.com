@@ -143,7 +143,7 @@ https://twitter.com/ciffelia/status/1738921377007304872
 ## 今年作ったもの
 
 - このブログ
-- TeXでレポートを書くためのテンプレートとDevContainer
+- TeXでレポートを書くためのDev Containersとテンプレートリポジトリ
 - AITuber
 - eBPFでTailscaleの通信経路をコントロールするツール
 
