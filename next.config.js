@@ -5,6 +5,7 @@
  **/
 const nextConfig = {
   reactStrictMode: true,
+  transpilePackages: ['react-tweet'],
 };
 
 module.exports = nextConfig;
