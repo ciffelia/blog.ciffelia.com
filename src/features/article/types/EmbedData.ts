@@ -1,3 +1,5 @@
+import type { Tweet } from 'react-tweet/api';
+
 export type EmbedData = EmbedLinkCardData | EmbedTweetData;
 
 export interface EmbedLinkCardData {
@@ -12,4 +14,5 @@ export interface EmbedLinkCardData {
 export interface EmbedTweetData {
   type: 'tweet';
   id: string;
+  tweet?: Tweet;
 }
