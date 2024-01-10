@@ -5,7 +5,7 @@ description: 'SECCON CTF 2023 Domestic Finalsにチームsouthballで出場し�
 tags: ['CTF', 'SECCON', 'Security', 'Web']
 isPublished: true
 publishedAt: '2023-12-28T15:10:30+09:00'
-modifiedAt: '2023-12-28T15:10:30+09:00'
+modifiedAt: '2024-01-11T01:16:00+09:00'
 thumbnail:
   imageId: seccon2023FinalsResult
 ---
@@ -30,7 +30,9 @@ https://github.com/southball/ctf-writeups/blob/main/SECCON-CTF-2023-Final/README
 >
 > nc landbox.dom.seccon.games 9999
 >
-> [landbox.tar.gz](https://bitbucket.org/ptr-yudai/writeups-2023/src/513dbfce68521f7ec13f7890d9ebac5581d26685/SECCON_CTF_Finals/misc/landbox/files/) b177abd17583ca0c1ca7eb6d253d1aac163c9228
+> landbox.tar.gz b177abd17583ca0c1ca7eb6d253d1aac163c9228
+
+https://github.com/SECCON/SECCON2023_final_CTF/tree/main/misc/landbox
 
 nsjail sandboxの中で任意のコードを実行できる問題です。この問題は状況設定を理解するのが大変でした。
 
@@ -347,6 +349,8 @@ int main() {
 >
 > babywaf.tar.gz 134a20fe95e96a596aef9245f5d870b73854e5dc
 
+https://github.com/SECCON/SECCON2023_final_CTF/tree/main/web/babywaf
+
 Expressで書かれたサーバーが動いており、`givemeflag`というキーが存在するJSONを送信するとフラグを返してくれます。ただしその前にFastifyで書かれたリバースプロキシが動いており、JSONに`givemeflag`というキーが存在するとリクエストを弾いてしまうという状況です。
 
 FastifyとExpressのJSONの処理に違いがあるのではと考え、それぞれのソースコードを読み漁ったものの、使えそうな箇所が見当たりませんでした。
@@ -367,6 +371,8 @@ https://github.com/southball/ctf-writeups/blob/main/SECCON-CTF-2023-Final/README
 >     Admin bot: http://cgi-2023.dom.seccon.games:1337/
 >
 > cgi-2023.tar.gz 20becdf2032ecbf431ba50aa4a2418ab6450b7d5
+
+https://github.com/SECCON/SECCON2023_final_CTF/tree/main/web/cgi-2023
 
 XSS問題です。Botからのアクセスに対してフラグを含むHTMLを返すウェブサーバーが動いています。Apache + mod_cgiという一般的な構成ですが、CGIがなんとGoで書かれています。
 
@@ -395,6 +401,8 @@ https://asnokaze.hatenablog.com/entry/20170224/1487863604
 >     Admin bot: http://domleakify.dom.seccon.games:1337/
 >
 > domleakify.tar.gz e6922f3179e1fabeb3615633e434d7b58fd1e6e6
+
+https://github.com/SECCON/SECCON2023_final_CTF/tree/main/web/DOMLeakify
 
 こちらもXSS問題です。Botからのアクセスに対してフラグを含むHTMLが返されます。フラグは次のようにHTMLに露出しており、特定のID/Classが存在するか探索できれば1bitずつ情報を盗めそうなことがわかります。
 
@@ -427,6 +435,8 @@ BotにアクセスさせるURLに細工することでページの一部に任�
 >     Admin bot: http://lemonmd.dom.seccon.games:1337/
 >
 > lemonmd.tar.gz da2c4c79422ace617c2f5e2b85f4d078d8002584
+
+https://github.com/SECCON/SECCON2023_final_CTF/tree/main/web/LemonMD
 
 こちらもXSS問題です。Markdown形式で記事を投稿できるウェブサイトで、Deno + Fresh製です。フラグはBotのCookieに入っているので、XSSを引き起こす記事を投稿しBotにアクセスさせることになります。Markdownのレンダリング時に基本的なサニタイズが行われているため、`<script>`タグや`onerror`属性は使えません。
 
