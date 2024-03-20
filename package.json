@@ -41,7 +41,7 @@
     "remark-frontmatter": "^4.0.1",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
-    "sharp": "^0.31.3",
+    "sharp": "^0.32.0",
     "tsparticles-engine": "^2.9.0",
     "tsparticles-interaction-particles-links": "^2.9.0",
     "tsparticles-shape-circle": "^2.9.0",
