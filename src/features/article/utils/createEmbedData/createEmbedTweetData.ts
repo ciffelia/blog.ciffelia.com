@@ -2,7 +2,7 @@ import { type EmbedTweetData } from '../../types/EmbedData';
 import { getTweet } from 'react-tweet/api';
 
 const tweetUrlRegExp =
-  /^https:\/\/(?:mobile\.)?twitter\.com\/\w+\/status\/(\d+)/u;
+  /^https:\/\/(?:mobile\.)?(?:twitter|x)\.com\/\w+\/status\/(\d+)/u;
 
 export const isTweetUrl = (url: URL): boolean => {
   return tweetUrlRegExp.test(url.toString());
