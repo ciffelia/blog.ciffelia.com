@@ -3,9 +3,9 @@ id: 'diverctf-2024'
 title: 'DIVER OSINT CTF 2024 Writeup'
 description: 'DIVER OSINT CTF 2024にチームWani Hackaseで参加し、3位を獲得しました。'
 tags: ['CTF', 'Security', 'OSINT']
-isPublished: false
-publishedAt: '2024-06-10T03:40:00+09:00'
-modifiedAt: '2024-06-10T03:40:00+09:00'
+isPublished: true
+publishedAt: '2024-06-10T04:00:00+09:00'
+modifiedAt: '2024-06-10T04:00:00+09:00'
 thumbnail:
   emoji: '🔍'
 ---
