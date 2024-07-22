@@ -19,7 +19,7 @@
     "@vercel/og": "^0.1.0",
     "date-fns": "^2.29.3",
     "date-fns-tz": "^2.0.0",
-    "got": "^12.5.3",
+    "got": "^12.6.1",
     "highlight.js": "^11.7.0",
     "mdast-util-gfm-footnote": "^1.0.2",
     "mdast-util-gfm-strikethrough": "^1.0.3",
