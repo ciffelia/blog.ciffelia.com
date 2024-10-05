@@ -47,6 +47,21 @@ importers:
       tailwindcss:
         specifier: ^3.4.13
         version: 3.4.13
+      tsparticles-engine:
+        specifier: ~2.10.1
+        version: 2.10.1
+      tsparticles-interaction-particles-links:
+        specifier: ~2.10.1
+        version: 2.10.1
+      tsparticles-shape-circle:
+        specifier: ~2.10.1
+        version: 2.10.1
+      tsparticles-updater-color:
+        specifier: ~2.10.1
+        version: 2.10.1
+      tsparticles-updater-opacity:
+        specifier: ~2.10.1
+        version: 2.10.1
       typescript:
         specifier: ^5.6.2
         version: 5.6.2
@@ -1957,6 +1972,26 @@ packages:
 
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
+
+  tsparticles-engine@2.10.1:
+    resolution: {integrity: sha512-DV2gYsbChyiXYIZYgnXtKHSAZdvnNMJpVf9Cw0gO7vjQ6pcgLAeyboRtvsaTfwKZNzzA7BeSf1lVhgGxorL4CQ==}
+    deprecated: starting from tsparticles v3 the packages are now moved to @tsparticles/package-name instead of tsparticles-package-name
+
+  tsparticles-interaction-particles-links@2.10.1:
+    resolution: {integrity: sha512-O6NkvV5muOsitJkicW3eqwPCjkRDWZzY5Twq8NkqCKTXkzpQtow8ByTMKcIWsW1GR6ltylrgyCId5KMwLRArbA==}
+    deprecated: starting from tsparticles v3 the packages are now moved to @tsparticles/package-name instead of tsparticles-package-name
+
+  tsparticles-shape-circle@2.10.1:
+    resolution: {integrity: sha512-oWfoF1rwBNDS8X8EBZVwt/UF9wBqh3OpV71LxCvTE9lh73FeUeQZ9aSW46t9XODIsNBMPbnAQNkP1wz4zNiw2A==}
+    deprecated: starting from tsparticles v3 the packages are now moved to @tsparticles/package-name instead of tsparticles-package-name
+
+  tsparticles-updater-color@2.10.1:
+    resolution: {integrity: sha512-/7FCR/VzpOuiE0ztGEzzN4vNeLGbS9QUBX78OM59GDZujlHfjfWh1jqedyNXrhkb6mf08B3FZWiQWGysPeL31Q==}
+    deprecated: starting from tsparticles v3 the packages are now moved to @tsparticles/package-name instead of tsparticles-package-name
+
+  tsparticles-updater-opacity@2.10.1:
+    resolution: {integrity: sha512-l1FOevfK9CMz9cBRT5prQpHACijYJ+3dHvIfx0Y5M5Do4etoT+PurZxDpQlQU6Yd0vXKm3r37paPiQbH5U3Vqg==}
+    deprecated: starting from tsparticles v3 the packages are now moved to @tsparticles/package-name instead of tsparticles-package-name
 
   type-fest@4.26.1:
     resolution: {integrity: sha512-yOGpmOAL7CkKe/91I5O3gPICmJNLJ1G4zFYVAsRHg7M64biSnPtRj0WNQt++bRkjYOqjWXrhnUw1utzmVErAdg==}
@@ -4493,6 +4528,24 @@ snapshots:
 
   tslib@2.7.0:
     optional: true
+
+  tsparticles-engine@2.10.1: {}
+
+  tsparticles-interaction-particles-links@2.10.1:
+    dependencies:
+      tsparticles-engine: 2.10.1
+
+  tsparticles-shape-circle@2.10.1:
+    dependencies:
+      tsparticles-engine: 2.10.1
+
+  tsparticles-updater-color@2.10.1:
+    dependencies:
+      tsparticles-engine: 2.10.1
+
+  tsparticles-updater-opacity@2.10.1:
+    dependencies:
+      tsparticles-engine: 2.10.1
 
   type-fest@4.26.1: {}
 

@@ -1,31 +1,52 @@
----
-import { getImage } from "astro:assets";
-import background from "../../assets/background@3x.webp";
+<div class="-z-10 fixed inset-0 bg-blue-900">
+  <div id="bg-particles" class="transition-opacity duration-500 opacity-0">
+  </div>
+</div>
 
-const optimizedBackground = await getImage({
-  src: background,
-  width: background.width / 3,
-  densities: [1, 2, 3],
-  format: "webp",
-});
+<script>
+  import { tsParticles } from "tsparticles-engine";
+  import { loadCircleShape } from "tsparticles-shape-circle";
+  import { loadColorUpdater } from "tsparticles-updater-color";
+  import { loadOpacityUpdater } from "tsparticles-updater-opacity";
+  import { loadParticlesLinksInteraction } from "tsparticles-interaction-particles-links";
 
-const imageUrls = Object.fromEntries(
-  optimizedBackground.srcSet.values.map((x) => [x.descriptor, x.url])
-);
-const imageUrl1x = `url(${JSON.stringify(imageUrls["1x"])})`;
-const imageUrl2x = `url(${JSON.stringify(imageUrls["2x"])})`;
-const imageUrl3x = `url(${JSON.stringify(imageUrls["3x"])})`;
----
+  await loadCircleShape(tsParticles);
+  await loadColorUpdater(tsParticles);
+  await loadOpacityUpdater(tsParticles);
+  await loadParticlesLinksInteraction(tsParticles);
 
-<div class="-z-10 fixed inset-0 bg-blue-900 bg-repeat"></div>
+  await tsParticles.load("bg-particles", {
+    particles: {
+      color: {
+        value: "#fff",
+      },
+      links: {
+        color: "#fff",
+        distance: 150,
+        enable: true,
+        opacity: 0.5,
+        width: 1,
+      },
+      number: {
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+        value: 80,
+      },
+      opacity: {
+        value: 0.5,
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        random: true,
+        value: 2,
+      },
+    },
+    detectRetina: true,
+  });
 
-<style define:vars={{ imageUrl1x, imageUrl2x, imageUrl3x }}>
-  div {
-    background-image: var(--imageUrl1x);
-    background-image: image-set(
-      var(--imageUrl1x) 1x,
-      var(--imageUrl2x) 2x,
-      var(--imageUrl3x) 3x
-    );
-  }
-</style>
+  document.getElementById("bg-particles")!.style.opacity = "1";
+</script>
