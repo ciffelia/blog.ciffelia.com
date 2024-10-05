@@ -1,27 +1,24 @@
-# Logs
-logs
-*.log
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Yarn
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
-node_modules
+# environment variables
+.env
+.env.production
 
-# TypeScript
-/tsconfig.tsbuildinfo
+# macOS-specific files
+.DS_Store
 
-# Next.js
-/.next
-/out
-/build
-
-# WebStorm
-/.idea
+# jetbrains setting folder
+.idea/
