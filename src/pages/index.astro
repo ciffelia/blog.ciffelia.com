@@ -1,12 +1,12 @@
 ---
 import { getCollection } from "astro:content";
+import { compareAsc } from "date-fns";
 import Layout from "../layouts/Layout.astro";
 import ArticleCard from "./_index/ArticleCard.astro";
 
-const articleList = await getCollection(
-  "article",
-  ({ data }) => data.isPublished,
-);
+const articleList = (
+  await getCollection("article", ({ data }) => data.isPublished)
+).sort((a, b) => compareAsc(b.data.publishedAt, a.data.publishedAt));
 ---
 
 <Layout>
