@@ -1,19 +1,31 @@
 ---
 import { getImage } from "astro:assets";
-import background from "../../assets/background.png";
+import background from "../../assets/background@3x.webp";
 
 const optimizedBackground = await getImage({
   src: background,
+  width: background.width / 3,
+  densities: [1, 2, 3],
   format: "webp",
 });
+
+const imageUrls = Object.fromEntries(
+  optimizedBackground.srcSet.values.map((x) => [x.descriptor, x.url])
+);
+const imageUrl1x = `url(${JSON.stringify(imageUrls["1x"])})`;
+const imageUrl2x = `url(${JSON.stringify(imageUrls["2x"])})`;
+const imageUrl3x = `url(${JSON.stringify(imageUrls["3x"])})`;
 ---
 
 <div class="-z-10 fixed inset-0 bg-blue-900 bg-repeat"></div>
 
-<style
-  define:vars={{ imageUrl: `url(${JSON.stringify(optimizedBackground.src)})` }}
->
+<style define:vars={{ imageUrl1x, imageUrl2x, imageUrl3x }}>
   div {
-    background-image: var(--imageUrl);
+    background-image: var(--imageUrl1x);
+    background-image: image-set(
+      var(--imageUrl1x) 1x,
+      var(--imageUrl2x) 2x,
+      var(--imageUrl3x) 3x
+    );
   }
 </style>
