@@ -14,6 +14,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/react": "^3.6.2",
     "@astrojs/tailwind": "^5.1.1",
+    "@fontsource-variable/quicksand": "^5.1.0",
     "@tailwindcss/typography": "^0.5.15",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",

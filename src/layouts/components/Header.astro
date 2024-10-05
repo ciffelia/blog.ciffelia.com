@@ -7,8 +7,6 @@ import twitterIcon from "../../assets/twitter.svg";
 import githubIcon from "../../assets/github.svg";
 import zennIcon from "../../assets/zenn.svg";
 import SocialLink from "./SocialLink.astro";
-
-const quicksandClassName = "font-quicksand"; // Assuming you have a global CSS class for Quicksand
 ---
 
 <header
@@ -22,7 +20,9 @@ const quicksandClassName = "font-quicksand"; // Assuming you have a global CSS c
       sizes="(min-width: 640px) 80px, 48px"
       loading="eager"
     />
-    <span class={`${quicksandClassName} text-4xl sm:text-5xl text-gray-50`}>
+    <span
+      class="font-quicksand font-semibold text-4xl sm:text-5xl text-gray-50"
+    >
       {SITE_NAME}
     </span>
   </a>
