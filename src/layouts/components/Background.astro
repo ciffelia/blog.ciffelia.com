@@ -1,14 +1,19 @@
 ---
-import { Image } from "astro:assets";
+import { getImage } from "astro:assets";
 import background from "../../assets/background.png";
+
+const optimizedBackground = await getImage({
+  src: background,
+  format: "webp",
+});
 ---
 
-<div class="-z-10 fixed inset-0 bg-blue-900">
-  <Image
-    src={background}
-    alt=""
-    class="w-full h-full object-cover"
-    sizes="100vw"
-    loading="eager"
-  />
-</div>
+<div class="-z-10 fixed inset-0 bg-blue-900 bg-repeat"></div>
+
+<style
+  define:vars={{ imageUrl: `url(${JSON.stringify(optimizedBackground.src)})` }}
+>
+  div {
+    background-image: var(--imageUrl);
+  }
+</style>
