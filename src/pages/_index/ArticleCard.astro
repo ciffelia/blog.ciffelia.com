@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { parseISO } from "date-fns";
 import { FaRegEdit } from "react-icons/fa";
 import Thumbnail from "./Thumbnail.astro";
 import Timestamp from "../../components/Timestamp.astro";
@@ -30,7 +29,7 @@ const {
       </div>
       <div class="flex justify-center items-center gap-2">
         <FaRegEdit />
-        <Timestamp value={parseISO(publishedAt)} dateOnly />
+        <Timestamp value={publishedAt} dateOnly />
       </div>
     </div>
   </a>

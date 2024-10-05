@@ -1,6 +1,10 @@
 import { z, defineCollection } from "astro:content";
+import { parseISO } from "date-fns";
 
-const ISO8601 = z.string().datetime({ offset: true });
+const ISO8601 = z
+  .string()
+  .datetime({ offset: true })
+  .transform((x) => parseISO(x));
 
 const segmenter = new Intl.Segmenter("ja", { granularity: "grapheme" });
 
