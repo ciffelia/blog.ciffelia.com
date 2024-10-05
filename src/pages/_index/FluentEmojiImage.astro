@@ -1,0 +1,18 @@
+---
+interface Props {
+  emoji: string;
+  class: string;
+}
+
+const { emoji, ...props } = Astro.props;
+
+const codePoints = [...emoji]
+  .map((cp) => cp.codePointAt(0)!.toString(16))
+  .join('-');
+---
+
+<img
+  src={`https://fluent-emoji.ciffelia.com/${codePoints}_color.svg`}
+  alt={emoji}
+  {...props}
+/>
