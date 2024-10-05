@@ -1,11 +1,11 @@
-import { z, defineCollection } from 'astro:content'
+import { z, defineCollection } from "astro:content";
 
-const ISO8601 = z.string().datetime({ offset: true })
+const ISO8601 = z.string().datetime({ offset: true });
 
-const segmenter = new Intl.Segmenter('ja', { granularity: 'grapheme' })
+const segmenter = new Intl.Segmenter("ja", { granularity: "grapheme" });
 
 const articleCollection = defineCollection({
-  type: 'content',
+  type: "content",
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -16,13 +16,13 @@ const articleCollection = defineCollection({
       modifiedAt: ISO8601,
       thumbnail: z.union([
         z.string().refine((x) => [...segmenter.segment(x)].length === 1, {
-          message: 'must be a single grapheme cluster',
+          message: "must be a single grapheme cluster",
         }),
         image(),
       ]),
     }),
-})
+});
 
 export const collections = {
   article: articleCollection,
-}
+};

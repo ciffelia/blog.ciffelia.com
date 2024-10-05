@@ -1,5 +1,5 @@
 ---
-import { addHours, format } from 'date-fns';
+import { addHours, format } from "date-fns";
 
 interface Props {
   value: Date;
@@ -13,5 +13,5 @@ const zonedDate = addHours(value, 9);
 ---
 
 <time datetime={value.toISOString()}>
-  {format(zonedDate, dateOnly ? 'yyyy-MM-dd' : 'yyyy-MM-dd HH:mm')}
+  {format(zonedDate, dateOnly ? "yyyy-MM-dd" : "yyyy-MM-dd HH:mm")}
 </time>

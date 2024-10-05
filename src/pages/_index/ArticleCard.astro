@@ -1,18 +1,25 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import { parseISO } from 'date-fns';
-import { FaRegEdit } from 'react-icons/fa';
-import Thumbnail from './Thumbnail.astro';
-import Timestamp from '../../components/Timestamp.astro';
+import type { CollectionEntry } from "astro:content";
+import { parseISO } from "date-fns";
+import { FaRegEdit } from "react-icons/fa";
+import Thumbnail from "./Thumbnail.astro";
+import Timestamp from "../../components/Timestamp.astro";
 
 interface Props {
-	article: CollectionEntry<'article'>;
+  article: CollectionEntry<"article">;
 }
 
-const { article: { slug, data: { title, publishedAt, thumbnail } } } = Astro.props;
+const {
+  article: {
+    slug,
+    data: { title, publishedAt, thumbnail },
+  },
+} = Astro.props;
 ---
 
-<li class="flex overflow-hidden rounded-2xl bg-gray-50 shadow-lg shadow-white/10 hover:shadow-white/25 transition-all duration-200">
+<li
+  class="flex overflow-hidden rounded-2xl bg-gray-50 shadow-lg shadow-white/10 hover:shadow-white/25 transition-all duration-200"
+>
   <a href={`/article/${slug}`} class="grow flex flex-col">
     <div class="relative w-full aspect-ogp border-b border-slate-200">
       <Thumbnail {thumbnail} />
