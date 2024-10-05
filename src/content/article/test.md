@@ -1,13 +1,11 @@
 ---
-id: 'test'
 title: 'テスト記事'
 description: 'ブログの機能をテストするための記事です。'
 tags: ['Web', 'Next.js', 'Vercel', 'TypeScript']
 isPublished: false
 publishedAt: '2023-01-20T00:00:00+09:00'
 modifiedAt: '2023-01-20T00:00:00+09:00'
-thumbnail:
-  imageId: testArticleThumbnail
+thumbnail: 'test/thumbnail.jpg'
 ---
 
 # テスト記事
@@ -75,19 +73,19 @@ echo 'Hello!' > world.txt
 
 ### w=100
 
-![山積みの金貨のイラスト](image://coinMedalGold 'w=100')
+![山積みの金貨のイラスト](test/coin_medal_gold.png 'w=100')
 
 ### w=small
 
-![山積みの金貨のイラスト](image://coinMedalGold 'w=small')
+![山積みの金貨のイラスト](test/coin_medal_gold.png 'w=small')
 
 ### w=medium
 
-![山積みの金貨のイラスト](image://coinMedalGold 'w=medium')
+![山積みの金貨のイラスト](test/coin_medal_gold.png 'w=medium')
 
 ### w=large
 
-![山積みの金貨のイラスト](image://coinMedalGold 'w=large')
+![山積みの金貨のイラスト](test/coin_medal_gold.png 'w=large')
 
 ## 見出しを深くする
 

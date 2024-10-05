@@ -1,13 +1,11 @@
 ---
-id: 'seccon2023-finals'
 title: 'SECCON CTF 2023 Finals Writeup'
 description: 'SECCON CTF 2023 Domestic Finalsにチームsouthballで出場し、3位を獲得しました。'
 tags: ['CTF', 'SECCON', 'Security', 'Web']
 isPublished: true
 publishedAt: '2023-12-28T15:10:30+09:00'
 modifiedAt: '2024-01-11T01:16:00+09:00'
-thumbnail:
-  imageId: seccon2023FinalsResult
+thumbnail: 'seccon2023-finals/result.jpg'
 ---
 
 # SECCON CTF 2023 Finals Writeup
