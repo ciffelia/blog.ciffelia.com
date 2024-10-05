@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import { SITE_NAME } from "../../constant";
+import ciffeliaIcon from "../../assets/ciffelia.png";
+import homeIcon from "../../assets/home.svg";
+import twitterIcon from "../../assets/twitter.svg";
+import githubIcon from "../../assets/github.svg";
+import zennIcon from "../../assets/zenn.svg";
+import SocialLink from "./SocialLink.astro";
+
+const quicksandClassName = "font-quicksand"; // Assuming you have a global CSS class for Quicksand
+---
+
+<header
+  class="flex flex-col lg:flex-row items-center justify-between gap-y-4 px-16 py-6"
+>
+  <a href="/" class="flex items-center gap-2 sm:gap-4">
+    <Image
+      src={ciffeliaIcon}
+      alt=""
+      class="w-12 h-12 sm:w-20 sm:h-20 max-w-none rounded-full"
+      sizes="(min-width: 640px) 5rem, 3rem"
+      loading="eager"
+    />
+    <span class={`${quicksandClassName} text-4xl sm:text-5xl text-gray-50`}>
+      {SITE_NAME}
+    </span>
+  </a>
+  <ul class="flex gap-x-4">
+    <li>
+      <SocialLink
+        name="Home Page"
+        url="https://ciffelia.com/"
+        color="#3585ff"
+        icon={homeIcon}
+      />
+    </li>
+    <li>
+      <SocialLink
+        name="Twitter"
+        url="https://twitter.com/ciffelia"
+        color="#1da1f2"
+        icon={twitterIcon}
+      />
+    </li>
+    <li>
+      <SocialLink
+        name="GitHub"
+        url="https://github.com/ciffelia"
+        color="#231f20"
+        icon={githubIcon}
+      />
+    </li>
+    <li>
+      <SocialLink
+        name="Zenn"
+        url="https://zenn.dev/ciffelia"
+        color="#ffffff"
+        icon={zennIcon}
+      />
+    </li>
+  </ul>
+</header>

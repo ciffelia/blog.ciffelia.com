@@ -1,0 +1,27 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  name: string;
+  url: string;
+  color: string;
+  icon: ImageMetadata;
+}
+
+const { name, url, color, icon } = Astro.props;
+---
+
+<a href={url} target="_blank">
+  <div
+    style={{ backgroundColor: color }}
+    class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full"
+  >
+    <Image
+      src={icon}
+      alt={name}
+      class="w-8 h-8 object-contain"
+      loading="eager"
+    />
+  </div>
+</a>

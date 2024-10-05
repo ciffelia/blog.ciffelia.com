@@ -1,5 +1,6 @@
 ---
 import { SITE_NAME } from "../constant";
+import Header from "./components/Header.astro";
 
 interface Props {
   title?: string;
@@ -18,7 +19,7 @@ const { title } = Astro.props;
   <body>
     <!-- <Background /> -->
     <div class="min-h-screen flex flex-col font-serif">
-      <!-- <Header /> -->
+      <Header />
       <slot />
       <div class="mt-auto">
         <!-- <Footer /> -->
