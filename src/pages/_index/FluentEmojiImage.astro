@@ -7,6 +7,7 @@ interface Props {
 const { emoji, ...props } = Astro.props;
 
 const codePoints = [...emoji]
+  // biome-ignore lint/style/noNonNullAssertion: cp.codePointAt(0) is always defined
   .map((cp) => cp.codePointAt(0)!.toString(16))
   .join("-");
 ---
