@@ -1,0 +1,1 @@
+export { rehypeImageSize } from "./rehypeImageSize";

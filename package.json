@@ -28,14 +28,17 @@
     "tsparticles-shape-circle": "~2.10.1",
     "tsparticles-updater-color": "~2.10.1",
     "tsparticles-updater-opacity": "~2.10.1",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@biomejs/biome": "1.9.3",
+    "@types/hast": "^3.0.4",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
     "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "unified": "^11.0.5"
   }
 }
