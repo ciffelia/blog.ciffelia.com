@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "check": "tsc && astro check",
+    "check": "astro check && tsc",
     "build": "astro build",
     "preview": "astro preview",
     "format:check": "prettier --check .",
