@@ -1,5 +1,12 @@
+---
+const particlesElementId = "bg-particles";
+---
+
 <div class="-z-10 fixed inset-0 bg-blue-900">
-  <div id="bg-particles" class="transition-opacity duration-500 opacity-0">
+  <div
+    id={particlesElementId}
+    class="transition-opacity duration-500 opacity-0"
+  >
   </div>
 </div>
 
@@ -10,12 +17,14 @@
   import { loadOpacityUpdater } from "tsparticles-updater-opacity";
   import { loadParticlesLinksInteraction } from "tsparticles-interaction-particles-links";
 
+  const particlesElementId = "bg-particles";
+
   await loadCircleShape(tsParticles);
   await loadColorUpdater(tsParticles);
   await loadOpacityUpdater(tsParticles);
   await loadParticlesLinksInteraction(tsParticles);
 
-  await tsParticles.load("bg-particles", {
+  await tsParticles.load(particlesElementId, {
     particles: {
       color: {
         value: "#fff",
@@ -48,5 +57,5 @@
     detectRetina: true,
   });
 
-  document.getElementById("bg-particles")!.style.opacity = "1";
+  document.getElementById(particlesElementId)!.style.opacity = "1";
 </script>
