@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import type { EmbedLinkCardData } from "./createEmbedLinkCardData";
+
+interface Props {
+  data: EmbedLinkCardData;
+}
+
+const { data } = Astro.props;
+
+const { url, description, faviconUrl, ogImageUrl } = data;
+const title = data.title ?? data.url;
+const host = URL.canParse(url) ? new URL(url).host : undefined;
+---
+
+<div class="not-prose tracking-normal text-start">
+  <a
+    class="my-5 w-full h-32 flex border rounded overflow-hidden hover:bg-slate-100 transition-colors"
+    href={url}
+    target="_blank"
+  >
+    <div class="grow px-5 py-3 flex flex-col gap-1.5 overflow-hidden">
+      <span class="text-lg font-bold tracking-wide line-clamp-2">
+        {title}
+      </span>
+      <span class="grow text-sm tracking-wide text-slate-500 truncate">
+        {description}
+      </span>
+      <div class="flex items-center gap-1.5">
+        {
+          faviconUrl !== undefined && (
+            <Image
+              src={faviconUrl}
+              alt=""
+              densities={[1, 2, 3]}
+              width={14}
+              height={14}
+            />
+          )
+        }
+        <span class="text-sm text-slate-600 truncate">{host}</span>
+      </div>
+    </div>
+    {
+      ogImageUrl !== undefined && (
+        <Image
+          class="object-cover aspect-square sm:aspect-[1200/630]"
+          src={ogImageUrl}
+          alt=""
+          densities={[1, 2, 3]}
+          width={240}
+          height={126}
+        />
+      )
+    }
+  </a>
+</div>
