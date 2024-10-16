@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 import {
   rehypeImageSize,
   remarkRemoveTitle,
-} from "./src/markdown/unifiedPlugins";
+} from "./src/pages/article/_[...slug]/markdown/unifiedPlugins";
 
 // https://astro.build/config
 export default defineConfig({
