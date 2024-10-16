@@ -17,6 +17,16 @@ export default {
             letterSpacing: "0.1em",
             textAlign: "justify",
             wordBreak: "break-all",
+            code: {
+              paddingLeft: "0.25rem",
+              paddingRight: "0.25rem",
+            },
+            // Don't insert backticks before and after inline <code>
+            "code::before": false,
+            "code::after": false,
+            // Don't insert quotes before and after <blockquote>
+            "blockquote p:first-of-type::before": false,
+            "blockquote p:last-of-type::after": false,
           },
         },
       },
