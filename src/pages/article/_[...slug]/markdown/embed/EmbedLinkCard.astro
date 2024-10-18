@@ -1,6 +1,8 @@
 ---
-import { Image } from "astro:assets";
+import type { GetImageResult, UnresolvedImageTransform } from "astro";
+import { getImage } from "astro:assets";
 import type { EmbedLinkCardData } from "./createEmbedLinkCardData";
+import { got } from "./got";
 
 interface Props {
   data: EmbedLinkCardData;
@@ -11,6 +13,44 @@ const { data } = Astro.props;
 const { url, description, faviconUrl, ogImageUrl } = data;
 const title = data.title ?? data.url;
 const host = URL.canParse(url) ? new URL(url).host : undefined;
+
+async function tryGetImage(
+  options: Omit<UnresolvedImageTransform, "src"> & { src: string | undefined }
+): Promise<GetImageResult | undefined> {
+  if (options.src === undefined) {
+    return undefined;
+  }
+
+  try {
+    const imageResp = await got(options.src, {
+      responseType: "buffer",
+    });
+    return await getImage({
+      ...options,
+      src: `data:${imageResp.headers["content-type"]};base64,${imageResp.body.toString("base64")}`,
+    });
+  } catch (err) {
+    console.error(
+      `failed to fetch and transform an image in link card: ${err}`
+    );
+    return undefined;
+  }
+}
+
+const faviconImage = await tryGetImage({
+  src: faviconUrl,
+  alt: "",
+  densities: [1, 2, 3],
+  width: 14,
+  height: 14,
+});
+const ogImage = await tryGetImage({
+  src: ogImageUrl,
+  alt: "",
+  densities: [1, 2, 3],
+  width: 240,
+  height: 126,
+});
 ---
 
 <div class="not-prose tracking-normal text-start">
@@ -28,13 +68,11 @@ const host = URL.canParse(url) ? new URL(url).host : undefined;
       </span>
       <div class="flex items-center gap-1.5">
         {
-          faviconUrl !== undefined && (
-            <Image
-              src={faviconUrl}
-              alt=""
-              densities={[1, 2, 3]}
-              width={14}
-              height={14}
+          faviconImage !== undefined && (
+            <img
+              src={faviconImage.src}
+              srcset={faviconImage.srcSet.attribute}
+              {...faviconImage.attributes}
             />
           )
         }
@@ -42,14 +80,11 @@ const host = URL.canParse(url) ? new URL(url).host : undefined;
       </div>
     </div>
     {
-      ogImageUrl !== undefined && (
-        <Image
-          class="object-cover aspect-square sm:aspect-[1200/630]"
-          src={ogImageUrl}
-          alt=""
-          densities={[1, 2, 3]}
-          width={240}
-          height={126}
+      ogImage !== undefined && (
+        <img
+          src={ogImage.src}
+          srcset={ogImage.srcSet.attribute}
+          {...ogImage.attributes}
         />
       )
     }

@@ -4,13 +4,17 @@ import rawGot, {
   type Request,
 } from "got";
 
+const cache = new Map();
+
 /**
  * gotの拡張
  *
+ * - キャッシュの有効化
  * - タイムアウト：10秒
  * - ダウンロードサイズ制限：10MiB
  */
 export const got = rawGot.extend({
+  cache,
   timeout: { request: 10000 },
   handlers: [
     // https://github.com/sindresorhus/got/blob/main/documentation/examples/advanced-creation.js#L40
