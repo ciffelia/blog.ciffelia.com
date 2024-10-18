@@ -13,9 +13,6 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind(), mdx()],
-  image: {
-    remotePatterns: [{ protocol: "http" }, { protocol: "https" }],
-  },
   markdown: {
     remarkPlugins: [remarkRemoveTitle],
     rehypePlugins: [rehypeImageSize, rehypeEmbed],
