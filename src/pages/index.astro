@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { compareAsc } from "date-fns";
 import Layout from "../layouts/Layout.astro";
 import ArticleCard from "./_index/ArticleCard.astro";
+import { SITE_DESCRIPTION, SITE_NAME } from "../constant";
 
 const articleList = (
   await getCollection("article", ({ data }) => data.isPublished)
@@ -10,7 +11,14 @@ const articleList = (
 ---
 
 <Layout>
-  <!-- <HomeHead /> -->
+  <Fragment slot="head">
+    <title>{SITE_NAME}</title>
+    <meta name="description" content={SITE_DESCRIPTION} />
+    <meta property="og:title" content={SITE_NAME} />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={SITE_DESCRIPTION} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </Fragment>
   <div class="flex justify-center w-screen md:px-16">
     <ul
       class="grid grid-cols-[repeat(auto-fit,min(400px,100%))] justify-center gap-10 w-full"
