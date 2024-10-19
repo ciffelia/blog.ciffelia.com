@@ -1,11 +1,11 @@
 ---
 import { getCollection } from "astro:content";
 import type { BlogPosting, BreadcrumbList, WithContext } from "schema-dts";
-import Layout from "../../layouts/Layout.astro";
-import { SITE_NAME } from "../../constant";
-import Section from "./_[...slug]/Section.astro";
-import ArticleHeader from "./_[...slug]/ArticleHeader.astro";
-import ArticleContent from "./_[...slug]/ArticleContent.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { SITE_NAME } from "../../../constant";
+import Section from "./_index/Section.astro";
+import ArticleHeader from "./_index/ArticleHeader.astro";
+import ArticleContent from "./_index/ArticleContent.astro";
 
 export async function getStaticPaths() {
   const articles = await getCollection("article");
