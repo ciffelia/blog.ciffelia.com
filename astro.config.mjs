@@ -22,6 +22,9 @@ export default defineConfig({
     rehypePlugins: [rehypeImageSize, rehypeEmbed],
   },
   vite: {
+    optimizeDeps: {
+      exclude: ["@resvg/resvg-js"],
+    },
     ssr: {
       noExternal: ["react-tweet"],
     },
