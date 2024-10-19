@@ -4,6 +4,8 @@ import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
 import type {} from "./types.d.ts";
 
+// NOTE: Productionビルド時にはこのソースファイルはdistディレクトリ内にバンドルされた状態で実行される。
+// そのため、import.meta.urlを用いて相対パスでファイルを読み込むことはできない。
 export const backgroundPng = (
   await fs.readFile("./src/opengraph/assets/background.png")
 ).buffer;
@@ -22,7 +24,8 @@ const bizUdpGothic700Data = await (
   )
 ).arrayBuffer();
 
-// static font files for Quicksand are not available on GitHub
+// GitHubに存在するQuicksandのフォントファイルは可変フォントのみ。
+// Satoriは可変フォントをサポートしていないため、ローカルのフォントファイルを使用する。
 const quicksand600Data = await fs.readFile(
   "./src/opengraph/assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf",
 );
