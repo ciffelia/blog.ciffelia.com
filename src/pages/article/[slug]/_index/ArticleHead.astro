@@ -11,7 +11,7 @@ const { article } = Astro.props;
 
 if (Astro.site === undefined) {
   throw new Error(
-    "Site URL is unset. Please set the site URL in the Astro config."
+    "Site URL is unset. Please set the site URL in the Astro config.",
   );
 }
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
