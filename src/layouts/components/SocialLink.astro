@@ -7,9 +7,10 @@ interface Props {
   url: string;
   color: string;
   icon: ImageMetadata;
+  smallerIcon?: boolean;
 }
 
-const { name, url, color, icon } = Astro.props;
+const { name, url, color, icon, smallerIcon = false } = Astro.props;
 ---
 
 <a href={url} target="_blank">
@@ -20,7 +21,8 @@ const { name, url, color, icon } = Astro.props;
     <Image
       src={icon}
       alt={name}
-      class="w-8 h-8 object-contain"
+      class="object-contain"
+      class:list={{ "w-7 h-7": smallerIcon, "w-8 h-8": !smallerIcon }}
       loading="eager"
     />
   </div>
