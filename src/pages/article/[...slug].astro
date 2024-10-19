@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import type { BlogPosting, BreadcrumbList, WithContext } from "schema-dts";
 import Layout from "../../layouts/Layout.astro";
 import { SITE_NAME } from "../../constant";
 import Section from "./_[...slug]/Section.astro";
@@ -15,6 +16,13 @@ export async function getStaticPaths() {
 }
 
 const { article } = Astro.props;
+
+if (Astro.site === undefined) {
+  throw new Error(
+    "Site URL is unset. Please set the site URL in the Astro config."
+  );
+}
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 
 <Layout>
@@ -40,6 +48,39 @@ const { article } = Astro.props;
     }
     <meta name="twitter:card" content="summary_large_image" />
     {!article.data.isPublished && <meta name="robots" content="noindex" />}
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: article.data.title,
+            item: canonicalUrl,
+          },
+        ],
+      } satisfies WithContext<BreadcrumbList>)}
+    />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: article.data.title,
+        datePublished: article.data.publishedAt.toISOString(),
+        dateModified: article.data.modifiedAt.toISOString(),
+        image: [
+          // TODO
+        ],
+        author: {
+          "@type": "Person",
+          name: "ciffelia",
+          url: "https://ciffelia.com",
+        },
+      } satisfies WithContext<BlogPosting>)}
+    />
   </Fragment>
   <article class="flex flex-col gap-5">
     <Section>
