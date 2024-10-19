@@ -1,0 +1,17 @@
+---
+import { addHours, format } from "date-fns";
+
+interface Props {
+  value: Date;
+  dateOnly: boolean;
+}
+
+const { value, dateOnly } = Astro.props;
+
+// Asia/Tokyo: UTC+9
+const zonedDate = addHours(value, 9);
+---
+
+<time datetime={value.toISOString()}>
+  {format(zonedDate, dateOnly ? "yyyy-MM-dd" : "yyyy-MM-dd HH:mm")}
+</time>

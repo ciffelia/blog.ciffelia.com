@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import ArticleHead from "./_index/ArticleHead.astro";
+import Section from "./_index/Section.astro";
+import ArticleHeader from "./_index/ArticleHeader.astro";
+import ArticleContent from "./_index/ArticleContent.astro";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("article");
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+---
+
+<Layout>
+  <ArticleHead slot="head" {article} />
+  <article class="flex flex-col gap-5">
+    <Section>
+      <ArticleHeader {article} />
+    </Section>
+    <Section>
+      <ArticleContent {article} />
+    </Section>
+  </article>
+</Layout>

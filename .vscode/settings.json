@@ -1,0 +1,5 @@
+{
+  "[astro][javascript][typescript][json][jsonc][json5][css][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

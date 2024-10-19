@@ -1,0 +1,16 @@
+---
+import { EmbeddedTweet } from "react-tweet";
+import type { EmbedTweetData } from "./createEmbedTweetData";
+
+interface Props {
+  data: EmbedTweetData;
+}
+
+const { data } = Astro.props;
+---
+
+<div
+  class="not-prose tracking-normal w-full overflow-x-auto flex justify-center"
+>
+  <EmbeddedTweet tweet={data.tweet} />
+</div>

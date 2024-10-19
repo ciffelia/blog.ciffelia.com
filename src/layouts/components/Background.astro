@@ -1,0 +1,61 @@
+---
+const particlesElementId = "bg-particles";
+---
+
+<div class="-z-10 fixed inset-0 bg-blue-900">
+  <div
+    id={particlesElementId}
+    class="transition-opacity duration-500 opacity-0"
+  >
+  </div>
+</div>
+
+<script>
+  import { tsParticles } from "tsparticles-engine";
+  import { loadCircleShape } from "tsparticles-shape-circle";
+  import { loadColorUpdater } from "tsparticles-updater-color";
+  import { loadOpacityUpdater } from "tsparticles-updater-opacity";
+  import { loadParticlesLinksInteraction } from "tsparticles-interaction-particles-links";
+
+  const particlesElementId = "bg-particles";
+
+  await loadCircleShape(tsParticles);
+  await loadColorUpdater(tsParticles);
+  await loadOpacityUpdater(tsParticles);
+  await loadParticlesLinksInteraction(tsParticles);
+
+  await tsParticles.load(particlesElementId, {
+    particles: {
+      color: {
+        value: "#fff",
+      },
+      links: {
+        color: "#fff",
+        distance: 150,
+        enable: true,
+        opacity: 0.5,
+        width: 1,
+      },
+      number: {
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+        value: 80,
+      },
+      opacity: {
+        value: 0.5,
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        random: true,
+        value: 2,
+      },
+    },
+    detectRetina: true,
+  });
+
+  document.getElementById(particlesElementId)!.style.opacity = "1";
+</script>

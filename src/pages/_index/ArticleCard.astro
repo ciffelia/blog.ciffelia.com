@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { FaRegEdit } from "react-icons/fa";
+import Thumbnail from "./Thumbnail.astro";
+import Timestamp from "../../components/Timestamp.astro";
+
+interface Props {
+  article: CollectionEntry<"article">;
+}
+
+const {
+  article: {
+    slug,
+    data: { title, publishedAt, thumbnail },
+  },
+} = Astro.props;
+---
+
+<li
+  class="flex overflow-hidden rounded-2xl bg-gray-50 shadow-lg shadow-white/10 hover:shadow-white/25 transition-all duration-200"
+>
+  <a href={`/article/${slug}`} class="grow flex flex-col">
+    <div class="relative w-full aspect-ogp border-b border-slate-200">
+      <Thumbnail {thumbnail} />
+    </div>
+    <div class="grow p-4 flex flex-col gap-1">
+      <div class="grow flex justify-center items-center">
+        <span class="text-xl font-bold">{title}</span>
+      </div>
+      <div class="flex justify-center items-center gap-2">
+        <FaRegEdit />
+        <Timestamp value={publishedAt} dateOnly />
+      </div>
+    </div>
+  </a>
+</li>

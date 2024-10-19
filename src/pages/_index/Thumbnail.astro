@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import FluentEmojiImage from "./FluentEmojiImage.astro";
+
+interface Props {
+  thumbnail: CollectionEntry<"article">["data"]["thumbnail"];
+}
+
+const { thumbnail } = Astro.props;
+---
+
+{
+  typeof thumbnail === "string" ? (
+    <div class="w-full h-full flex justify-center items-center">
+      <FluentEmojiImage emoji={thumbnail} class="w-32" />
+    </div>
+  ) : (
+    <Image src={thumbnail} alt="" class="w-full h-full object-cover" />
+  )
+}

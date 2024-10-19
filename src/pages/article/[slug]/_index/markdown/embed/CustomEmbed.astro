@@ -1,0 +1,23 @@
+---
+import { unreachable } from "../../../../../../utils";
+import type { EmbedData } from "./createEmbedData";
+import EmbedLinkCard from "./EmbedLinkCard.astro";
+import EmbedTweet from "./EmbedTweet.astro";
+
+interface Props {
+  data: string;
+}
+
+const { data: dataJson } = Astro.props;
+const data = JSON.parse(dataJson) as EmbedData;
+---
+
+{
+  data.type === "card" ? (
+    <EmbedLinkCard {data} />
+  ) : data.type === "tweet" ? (
+    <EmbedTweet {data} />
+  ) : (
+    unreachable(data)
+  )
+}
