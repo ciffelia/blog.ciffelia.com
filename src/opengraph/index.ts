@@ -12,13 +12,13 @@ export const logoPng = (await fs.readFile("./src/assets/ciffelia.png")).buffer;
 
 const bizUdpGothic400Data = await (
   await fetch(
-    "https://github.com/googlefonts/morisawa-biz-ud-gothic/raw/18934af56b9c003ca58c54bffbf226848cb11032/fonts/ttf/BIZUDPGothic-Regular.ttf",
+    "https://github.com/google/fonts/raw/c8db839e73c32d7f18a01ab998e05650bd7567f9/ofl/bizudpgothic/BIZUDPGothic-Regular.ttf",
   )
 ).arrayBuffer();
 
 const bizUdpGothic700Data = await (
   await fetch(
-    "https://github.com/googlefonts/morisawa-biz-ud-gothic/raw/18934af56b9c003ca58c54bffbf226848cb11032/fonts/ttf/BIZUDPGothic-Bold.ttf",
+    "https://github.com/google/fonts/raw/c8db839e73c32d7f18a01ab998e05650bd7567f9/ofl/bizudpgothic/BIZUDPGothic-Bold.ttf",
   )
 ).arrayBuffer();
 
