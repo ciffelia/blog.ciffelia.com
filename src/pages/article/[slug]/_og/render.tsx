@@ -10,7 +10,12 @@ export async function render(
 ): Promise<Buffer> {
   return await renderElement(
     <div lang="ja-JP" tw="relative w-full h-full flex">
-      <img tw="absolute" src={backgroundPng} alt="" />
+      <img
+        tw="absolute"
+        // @ts-expect-error
+        src={backgroundPng}
+        alt=""
+      />
       <div tw="absolute w-full h-full flex flex-col">
         <div tw="w-full h-[80%] flex items-center justify-center text-center">
           <span tw="text-gray-50 text-8xl leading-tight font-bold">
@@ -27,7 +32,12 @@ export async function render(
 
 const Logo: React.FC = () => (
   <div tw="flex items-center" style={{ gap: "16px" }}>
-    <img tw="w-16 h-16 rounded-full" src={logoPng} alt="" />
+    <img
+      tw="w-16 h-16 rounded-full"
+      // @ts-expect-error
+      src={logoPng}
+      alt=""
+    />
     <span
       tw="font-semibold text-5xl text-gray-50"
       style={{ fontFamily: "Quicksand" }}

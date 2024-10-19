@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import type React from "react";
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
+import type {} from "./types.d.ts";
 
 export const backgroundPng = (
   await fs.readFile(new URL("./assets/background.png", import.meta.url))
