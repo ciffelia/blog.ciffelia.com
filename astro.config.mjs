@@ -8,7 +8,7 @@ import {
   rehypeEmbed,
   rehypeImageSize,
   remarkRemoveTitle,
-} from "./src/pages/article/[...slug]/_index/markdown/unifiedPlugins";
+} from "./src/pages/article/[slug]/_index/markdown/unifiedPlugins";
 
 // https://astro.build/config
 export default defineConfig({
