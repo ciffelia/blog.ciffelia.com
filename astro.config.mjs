@@ -14,6 +14,9 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   site: "https://blog.ciffelia.com",
   integrations: [react(), tailwind(), mdx()],
+  prefetch: {
+    prefetchAll: true,
+  },
   markdown: {
     remarkPlugins: [remarkRemoveTitle],
     rehypePlugins: [rehypeImageSize, rehypeEmbed],
