@@ -15,12 +15,15 @@ if (Astro.site === undefined) {
   );
 }
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+
+const ogImageUrl = new URL("og.png", Astro.url).toString();
 ---
 
 <title>{article.data.title} | {SITE_NAME}</title>
 <meta name="description" content={article.data.description} />
 <meta property="og:title" content={article.data.title} />
 <meta property="og:type" content="article" />
+<meta property="og:image" content={ogImageUrl} />
 <meta property="og:description" content={article.data.description} />
 <meta
   property="article:published_time"
@@ -59,9 +62,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
     headline: article.data.title,
     datePublished: article.data.publishedAt.toISOString(),
     dateModified: article.data.modifiedAt.toISOString(),
-    image: [
-      // TODO
-    ],
+    image: [ogImageUrl],
     author: {
       "@type": "Person",
       name: "ciffelia",
