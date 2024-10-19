@@ -5,12 +5,10 @@ import { Resvg } from "@resvg/resvg-js";
 import type {} from "./types.d.ts";
 
 export const backgroundPng = (
-  await fs.readFile(new URL("./assets/background.png", import.meta.url))
+  await fs.readFile("./src/opengraph/assets/background.png")
 ).buffer;
 
-export const logoPng = (
-  await fs.readFile(new URL("../assets/ciffelia.png", import.meta.url))
-).buffer;
+export const logoPng = (await fs.readFile("./src/assets/ciffelia.png")).buffer;
 
 const bizUdpGothic400Data = await (
   await fetch(
@@ -26,10 +24,7 @@ const bizUdpGothic700Data = await (
 
 // static font files for Quicksand are not available on GitHub
 const quicksand600Data = await fs.readFile(
-  new URL(
-    "./assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf",
-    import.meta.url,
-  ),
+  "./src/opengraph/assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf",
 );
 
 export async function render(element: React.ReactNode): Promise<Buffer> {
