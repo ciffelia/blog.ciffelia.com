@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { compareAsc } from "date-fns";
 import Layout from "../layouts/Layout.astro";
 import ArticleCard from "./_index/ArticleCard.astro";
+import SilhouetteCard from "./_index/SilhouetteCard.astro";
 import { SITE_DESCRIPTION, SITE_NAME } from "../constant";
 
 const articleList = (
@@ -25,7 +26,7 @@ const articleList = (
       class="grid grid-cols-[repeat(auto-fit,min(400px,100%))] justify-center gap-10 w-full"
     >
       {articleList.map((article) => <ArticleCard {article} />)}
-      <!-- <SilhouetteCard /> -->
+      <SilhouetteCard />
     </ul>
   </div>
 </Layout>
