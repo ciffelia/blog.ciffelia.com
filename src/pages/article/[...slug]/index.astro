@@ -49,6 +49,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
     <meta name="twitter:card" content="summary_large_image" />
     {!article.data.isPublished && <meta name="robots" content="noindex" />}
     <script
+      is:inline
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
@@ -64,6 +65,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
       } satisfies WithContext<BreadcrumbList>)}
     />
     <script
+      is:inline
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
