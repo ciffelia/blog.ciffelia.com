@@ -16,6 +16,6 @@ if (!article.id.endsWith(".mdx")) {
 const { Content } = await article.render();
 ---
 
-<div class="prose prose-blue">
+<div class="prose prose-blue dark:prose-invert">
   <Content components={{ "custom-embed": CustomEmbed }} />
 </div>

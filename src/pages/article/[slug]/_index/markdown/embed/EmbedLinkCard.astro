@@ -14,7 +14,7 @@ const host = URL.canParse(url) ? new URL(url).host : undefined;
 
 <div class="not-prose tracking-normal text-start">
   <a
-    class="my-5 w-full h-32 flex border rounded overflow-hidden hover:bg-slate-100 transition-colors"
+    class="my-5 w-full h-32 flex border border-slate-200 dark:border-slate-800 rounded overflow-hidden bg-slate-50 dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
     href={url}
     target="_blank"
   >
@@ -22,7 +22,9 @@ const host = URL.canParse(url) ? new URL(url).host : undefined;
       <span class="text-lg font-bold tracking-wide line-clamp-2">
         {title}
       </span>
-      <span class="grow text-sm tracking-wide text-slate-500 truncate">
+      <span
+        class="grow text-sm tracking-wide text-slate-500 dark:text-slate-400 truncate"
+      >
         {description}
       </span>
       <div class="flex items-center gap-1.5">
@@ -38,7 +40,7 @@ const host = URL.canParse(url) ? new URL(url).host : undefined;
             />
           )
         }
-        <span class="text-sm text-slate-600 truncate">{host}</span>
+        <span class="text-sm truncate">{host}</span>
       </div>
     </div>
     {

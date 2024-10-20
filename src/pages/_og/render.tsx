@@ -29,7 +29,7 @@ const Logo: React.FC = () => (
       alt=""
     />
     <span
-      tw="font-semibold text-8xl text-gray-50"
+      tw="font-semibold text-8xl text-slate-50"
       style={{ fontFamily: "Quicksand" }}
     >
       blog.ciffelia.com

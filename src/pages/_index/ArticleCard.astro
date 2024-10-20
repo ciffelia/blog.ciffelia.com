@@ -17,10 +17,12 @@ const {
 ---
 
 <li
-  class="flex overflow-hidden rounded-2xl bg-gray-50 shadow-lg shadow-white/10 hover:shadow-white/25 transition-all duration-200"
+  class="flex overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-900 shadow-lg shadow-white/10 dark:shadow-black/10 hover:shadow-white/25 dark:hover:shadow-black/25 transition-all duration-200"
 >
   <a href={`/article/${slug}`} class="grow flex flex-col">
-    <div class="relative w-full aspect-ogp border-b border-slate-200">
+    <div
+      class="relative w-full aspect-ogp border-b border-slate-200 dark:border-slate-800"
+    >
       <Thumbnail {thumbnail} />
     </div>
     <div class="grow p-4 flex flex-col gap-1">

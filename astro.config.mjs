@@ -20,6 +20,12 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkRemoveTitle],
     rehypePlugins: [rehypeImageSize, rehypeEmbed],
+    shikiConfig: {
+      themes: {
+        light: "github-light",
+        dark: "github-dark",
+      },
+    },
   },
   vite: {
     optimizeDeps: {

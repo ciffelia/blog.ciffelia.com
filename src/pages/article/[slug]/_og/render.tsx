@@ -18,7 +18,7 @@ export async function render(
       />
       <div tw="absolute w-full h-full flex flex-col">
         <div tw="w-full h-[80%] flex items-center justify-center text-center">
-          <span tw="text-gray-50 text-8xl leading-tight font-bold">
+          <span tw="text-slate-50 text-8xl leading-tight font-bold">
             {article.data.title}
           </span>
         </div>
@@ -39,7 +39,7 @@ const Logo: React.FC = () => (
       alt=""
     />
     <span
-      tw="font-semibold text-5xl text-gray-50"
+      tw="font-semibold text-5xl text-slate-50"
       style={{ fontFamily: "Quicksand" }}
     >
       blog.ciffelia.com
