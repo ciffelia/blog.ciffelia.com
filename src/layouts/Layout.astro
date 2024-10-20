@@ -42,6 +42,10 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 </html>
 
 <style is:global>
+  @view-transition {
+    navigation: auto;
+  }
+
   :root {
     color-scheme: light dark;
   }
