@@ -12,10 +12,10 @@ const { thumbnail } = Astro.props;
 
 {
   typeof thumbnail === "string" ? (
-    <div class="w-full h-full flex justify-center items-center">
+    <div class="aspect-ogp flex justify-center items-center">
       <FluentEmojiImage emoji={thumbnail} class="w-32" />
     </div>
   ) : (
-    <Image src={thumbnail} alt="" class="w-full h-full object-cover" />
+    <Image src={thumbnail} alt="" class="aspect-ogp object-cover" />
   )
 }
