@@ -16,6 +16,13 @@ const { thumbnail } = Astro.props;
       <FluentEmojiImage emoji={thumbnail} class="w-32" />
     </div>
   ) : (
-    <Image src={thumbnail} alt="" class="aspect-ogp object-cover" />
+    <Image
+      src={thumbnail}
+      alt=""
+      width={400}
+      height={400 * (630 / 1200)}
+      densities={[1, 2, 3]}
+      class="aspect-ogp object-cover"
+    />
   )
 }
