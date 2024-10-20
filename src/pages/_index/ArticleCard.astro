@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { FaRegEdit } from "react-icons/fa";
 import Thumbnail from "./Thumbnail.astro";
+import Card from "../../components/Card.astro";
 import Timestamp from "../../components/Timestamp.astro";
 
 interface Props {
@@ -16,9 +17,7 @@ const {
 } = Astro.props;
 ---
 
-<li
-  class="flex overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-900 shadow-lg shadow-white/10 dark:shadow-black/10 hover:shadow-white/25 dark:hover:shadow-black/25 transition-all duration-200"
->
+<Card as="li" class="flex overflow-hidden" rounded hoverTransition>
   <a href={`/article/${slug}`} class="grow flex flex-col">
     <div class="border-b border-slate-200 dark:border-slate-800">
       <Thumbnail {thumbnail} />
@@ -33,4 +32,4 @@ const {
       </div>
     </div>
   </a>
-</li>
+</Card>
