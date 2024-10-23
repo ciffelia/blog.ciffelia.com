@@ -12,17 +12,13 @@ export const backgroundPng = (
 
 export const logoPng = (await fs.readFile("./src/assets/ciffelia.png")).buffer;
 
-const bizUdpGothic400Data = await (
-  await fetch(
-    "https://github.com/google/fonts/raw/c8db839e73c32d7f18a01ab998e05650bd7567f9/ofl/bizudpgothic/BIZUDPGothic-Regular.ttf",
-  )
-).arrayBuffer();
+const bizUdpGothic400Data = await fetch(
+  "https://github.com/google/fonts/raw/c8db839e73c32d7f18a01ab998e05650bd7567f9/ofl/bizudpgothic/BIZUDPGothic-Regular.ttf",
+).then((res) => res.arrayBuffer());
 
-const bizUdpGothic700Data = await (
-  await fetch(
-    "https://github.com/google/fonts/raw/c8db839e73c32d7f18a01ab998e05650bd7567f9/ofl/bizudpgothic/BIZUDPGothic-Bold.ttf",
-  )
-).arrayBuffer();
+const bizUdpGothic700Data = await fetch(
+  "https://github.com/google/fonts/raw/c8db839e73c32d7f18a01ab998e05650bd7567f9/ofl/bizudpgothic/BIZUDPGothic-Bold.ttf",
+).then((res) => res.arrayBuffer());
 
 // GitHubに存在するQuicksandのフォントファイルは可変フォントのみ。
 // Satoriは可変フォントをサポートしていないため、ローカルのフォントファイルを使用する。
