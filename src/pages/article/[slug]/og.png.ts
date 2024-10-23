@@ -3,7 +3,9 @@ import { getCollection } from "astro:content";
 import { render } from "./_og/render";
 
 export async function getStaticPaths() {
-  const articles = await getCollection("article");
+  const articles = await getCollection("article", ({ data }) => {
+    return import.meta.env.DEV || data.isPublished;
+  });
   return articles.map((article) => ({
     params: { slug: article.slug },
     props: { article },

@@ -7,7 +7,9 @@ import ArticleHeader from "./_index/ArticleHeader.astro";
 import ArticleContent from "./_index/ArticleContent.astro";
 
 export async function getStaticPaths() {
-  const articles = await getCollection("article");
+  const articles = await getCollection("article", ({ data }) => {
+    return import.meta.env.DEV || data.isPublished;
+  });
   return articles.map((article) => ({
     params: { slug: article.slug },
     props: { article },
