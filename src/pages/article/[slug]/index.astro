@@ -22,10 +22,15 @@ const { article } = Astro.props;
 <Layout>
   <ArticleHead slot="head" {article} />
   <article class="flex flex-col gap-5">
-    <Section>
-      <ArticleHeader {article} />
+    <Section style={{ viewTransitionName: `article-card-${article.slug}` }}>
+      <div
+        class="p-7 md:p-10"
+        style={{ viewTransitionName: `article-card-inner-${article.slug}` }}
+      >
+        <ArticleHeader {article} />
+      </div>
     </Section>
-    <Section>
+    <Section class="p-7 md:p-10">
       <ArticleContent {article} />
     </Section>
   </article>

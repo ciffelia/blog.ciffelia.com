@@ -17,14 +17,28 @@ const {
 } = Astro.props;
 ---
 
-<Card as="li" class="flex overflow-hidden" rounded hoverTransition>
-  <a href={`/article/${slug}`} class="grow flex flex-col">
+<Card
+  as="li"
+  class="flex overflow-hidden"
+  rounded
+  hoverTransition
+  style={{ viewTransitionName: `article-card-${slug}` }}
+>
+  <a
+    href={`/article/${slug}`}
+    class="grow flex flex-col rounded-2xl overflow-hidden"
+    style={{ viewTransitionName: `article-card-inner-${slug}` }}
+  >
     <div class="border-b border-slate-200 dark:border-slate-800">
       <Thumbnail {thumbnail} />
     </div>
     <div class="grow p-4 flex flex-col gap-1">
       <div class="grow flex justify-center items-center">
-        <span class="text-xl font-bold">{title}</span>
+        <span
+          class="text-xl font-bold"
+          style={{ viewTransitionName: `article-card-title-${slug}` }}
+          >{title}</span
+        >
       </div>
       <div class="flex justify-center items-center gap-2">
         <FaRegEdit />

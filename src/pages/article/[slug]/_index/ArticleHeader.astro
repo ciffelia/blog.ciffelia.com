@@ -11,13 +11,17 @@ interface Props {
 
 const {
   article: {
+    slug,
     data: { title, isPublished, publishedAt, modifiedAt, tags },
   },
 } = Astro.props;
 ---
 
 <div class="flex flex-col gap-y-5">
-  <h1 class="text-center text-4xl font-extrabold tracking-wide">
+  <h1
+    class="text-center text-4xl font-extrabold tracking-wide"
+    style={{ viewTransitionName: `article-card-title-${slug}` }}
+  >
     {title}
   </h1>
   <TagList tags={tags} />

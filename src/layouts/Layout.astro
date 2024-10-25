@@ -46,6 +46,24 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
     navigation: auto;
   }
 
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    height: 100%;
+  }
+
+  ::view-transition-old(article-card-inner-seccon2023-quals),
+  ::view-transition-new(article-card-inner-seccon2023-quals) {
+    object-fit: none;
+    overflow: clip;
+  }
+  ::view-transition-old(article-card-inner-seccon2023-quals) {
+    animation-duration: 0.125s;
+  }
+  ::view-transition-new(article-card-inner-seccon2023-quals) {
+    animation-delay: 0.125s;
+    animation-duration: 0.125s;
+  }
+
   :root {
     color-scheme: light dark;
   }
