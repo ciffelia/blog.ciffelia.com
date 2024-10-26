@@ -24,7 +24,7 @@ https://github.com/wani-hackase/wanictf2024-writeup/
 
 CTFにおけるスコアサーバーは、参加者による参加登録やフラグの提出を受け付け、順位表を提供するWebサーバーです。ユーザーからのリクエストは以下の図に示すように処理されます。
 
-{/* ![AWS上で構築されたWebサービスのアーキテクチャ。ユーザーからのアクセスは、Amazon Route 53とAmazon CloudFrontを経由して単一リージョン内のAmazon S3やApplication Load Balancerに到達する。リージョンには1つのVPCが存在する。VPC内には2つのアベイラビリティゾーンがあり、各ゾーンにパブリックサブネットとプライベートサブネットがある。パブリックサブネットにはApplication Load BalancerとNATゲートウェイが配置されている。プライベートサブネットにはAmazon ECSタスク、Amazon RDS (MySQL)、Amazon ElastiCache (Redis)が配置されている。Application Load BalancerはECSタスクにトラフィックを分散する。Amazon ECSタスクはAmazon ECSクラスタ内で動作しており、AWS Fargateを利用している。片方のアベイラビリティゾーンに配置されたAmazon RDSとAmazon ElastiCacheはPrimaryで、もう片方はSecondaryである。Amazon ECSタスクはPrimaryのAmazon RDSとAmazon ElastiCacheにアクセスする。](./wanictf2024/architecture-score-traffic.webp 'w=large') */}
+![AWS上で構築されたWebサービスのアーキテクチャ。ユーザーからのアクセスは、Amazon Route 53とAmazon CloudFrontを経由して単一リージョン内のAmazon S3やApplication Load Balancerに到達する。リージョンには1つのVPCが存在する。VPC内には2つのアベイラビリティゾーンがあり、各ゾーンにパブリックサブネットとプライベートサブネットがある。パブリックサブネットにはApplication Load BalancerとNATゲートウェイが配置されている。プライベートサブネットにはAmazon ECSタスク、Amazon RDS (MySQL)、Amazon ElastiCache (Redis)が配置されている。Application Load BalancerはECSタスクにトラフィックを分散する。Amazon ECSタスクはAmazon ECSクラスタ内で動作しており、AWS Fargateを利用している。片方のアベイラビリティゾーンに配置されたAmazon RDSとAmazon ElastiCacheはPrimaryで、もう片方はSecondaryである。Amazon ECSタスクはPrimaryのAmazon RDSとAmazon ElastiCacheにアクセスする。](./wanictf2024/architecture-score-traffic.webp 'w=large')
 
 スコアサーバーはSPAとして作られています。静的ファイルはAmazon S3にホストされており、APIリクエストはALBを経由してAmazon ECS上のAPIサーバーに送られます。
 
@@ -36,7 +36,7 @@ CTFにおけるスコアサーバーは、参加者による参加登録やフ�
 
 APIサーバーのデプロイと運用の流れは以下の通りです。
 
-{/* ![AWS上で動作するアプリケーションのデプロイと運用の流れを示す図。GitHub Actionsで実行されるCI/CDパイプラインは、GitHubのOIDCプロバイダーからIDトークンを受け取りAWSにアクセスする。パイプラインはコンテナイメージをAmazon ECRレジストリにプッシュし、静的アセットをAmazon S3に保存し、キャッシュ無効化リクエストをAmazon CloudFrontに送信する。AWS内にはAmazon ECSタスクが存在する。ECSタスクではアプリケーションコンテナ、OpenTelemetry Collectorコンテナ、およびFluent Bitコンテナが実行されている。アプリケーションコンテナはECRレジストリ上のイメージから作成される。OpenTelemetry CollectorコンテナとFluent Bitコンテナは、それぞれメトリクスとログをGrafana Cloud上のPrometheusとGrafana Lokiに送信する。](./wanictf2024/architecture-score-ops.webp 'w=large') */}
+![AWS上で動作するアプリケーションのデプロイと運用の流れを示す図。GitHub Actionsで実行されるCI/CDパイプラインは、GitHubのOIDCプロバイダーからIDトークンを受け取りAWSにアクセスする。パイプラインはコンテナイメージをAmazon ECRレジストリにプッシュし、静的アセットをAmazon S3に保存し、キャッシュ無効化リクエストをAmazon CloudFrontに送信する。AWS内にはAmazon ECSタスクが存在する。ECSタスクではアプリケーションコンテナ、OpenTelemetry Collectorコンテナ、およびFluent Bitコンテナが実行されている。アプリケーションコンテナはECRレジストリ上のイメージから作成される。OpenTelemetry CollectorコンテナとFluent Bitコンテナは、それぞれメトリクスとログをGrafana Cloud上のPrometheusとGrafana Lokiに送信する。](./wanictf2024/architecture-score-ops.webp 'w=large')
 
 アプリケーションのデプロイ時にはGitHub ActionsからAWSの各サービスにアクセスしています。GitHubのOIDCプロバイダを利用し、安全にIAMロールをAssumeRoleできるようにしています。
 
@@ -48,7 +48,7 @@ APIサーバーのデプロイと運用の流れは以下の通りです。
 
 #### リクエスト数
 
-{/* ![時間帯ごとのリクエスト数を示す折れ線グラフ。期間は6月21日から6月25日まで。](./wanictf2024/metrics-cf-requests.webp 'w=large') */}
+![時間帯ごとのリクエスト数を示す折れ線グラフ。期間は6月21日から6月25日まで。](./wanictf2024/metrics-cf-requests.webp 'w=large')
 
 こちらのグラフはCloudFrontに対するリクエスト数を示しています。縦軸は5分間のリクエスト数です。一瞬のスパイクを除いたピーク時のリクエスト数は3000 req/min程度でした。
 
@@ -56,7 +56,7 @@ APIサーバーのデプロイと運用の流れは以下の通りです。
 
 ### 転送量
 
-{/* ![時間帯ごとの上りと下りの転送量を示す折れ線グラフ。期間は6月21日から6月25日まで。](./wanictf2024/metrics-cf-transfer.webp 'w=large') */}
+![時間帯ごとの上りと下りの転送量を示す折れ線グラフ。期間は6月21日から6月25日まで。](./wanictf2024/metrics-cf-transfer.webp 'w=large')
 
 こちらのグラフはCloudFrontの転送量を示しています。青の線が上り、オレンジの線が下りで、縦軸は5分間の転送量（bytes）です。上りの転送量は下りと比較するとほぼ0です。ピーク時の下り転送量は3Gbps程度でした。
 
@@ -66,7 +66,7 @@ APIサーバーのデプロイと運用の流れは以下の通りです。
 
 CTFにおける問題サーバーは、参加者が攻撃する対象となるサービスを提供するサーバーです。以下の図に示すような単純な構成です。
 
-{/* ![AWS上で構築されたサービスのアーキテクチャ図。AWSクラウド内には1つのリージョンが存在する。リージョン内には1つのAWS LambdaとVPCがある。VPC内には2つのアベイラビリティゾーンがあり、それぞれパブリックサブネット内に1つのAmazon EC2インスタンスが配置されている。ユーザーとAWS Lambdaは2つのEC2インスタンスに直接アクセスする。](./wanictf2024/architecture-chal-traffic.webp 'w=large') */}
+![AWS上で構築されたサービスのアーキテクチャ図。AWSクラウド内には1つのリージョンが存在する。リージョン内には1つのAWS LambdaとVPCがある。VPC内には2つのアベイラビリティゾーンがあり、それぞれパブリックサブネット内に1つのAmazon EC2インスタンスが配置されている。ユーザーとAWS Lambdaは2つのEC2インスタンスに直接アクセスする。](./wanictf2024/architecture-chal-traffic.webp 'w=large')
 
 ロードバランサは使用せず、参加者がEC2インスタンスに直接アクセスする構成としています。それぞれのIPアドレスに対応するDNSレコードを設定しており、参加者はいずれか1つのインスタンスを選んでアクセスします。
 
