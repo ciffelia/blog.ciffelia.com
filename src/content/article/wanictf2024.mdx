@@ -1,0 +1,40 @@
+---
+title: 'WaniCTF 2024開催記'
+description: ''
+tags: ['WaniCTF', 'AWS']
+isPublished: false
+publishedAt: '2024-10-27T19:00:00+09:00'
+modifiedAt: '2024-10-27T19:00:00+09:00'
+thumbnail: '🐊'
+---
+
+# WaniCTF 2024開催記
+
+私の所属している大阪大学CTFサークルWani Hackaseは、6月にCTF大会「WaniCTF 2024」を開催しました。WaniCTFは2020年からオンラインで開催されており、今回で5回目となります。
+
+この記事ではWaniCTF 2024を支えたインフラについて振り返ります。
+
+## スコアサーバー
+
+### リクエストの流れ
+
+CTFにおけるスコアサーバーは、参加者による参加登録やフラグの提出を受け付け、順位表を提供するWebサーバーです。ユーザーからのリクエストは以下の図に示すように処理されます。
+
+![AWS上で構築されたWebサービスのアーキテクチャ。ユーザーからのアクセスは、Amazon Route 53とAmazon CloudFrontを経由して単一リージョン内のAmazon S3やApplication Load Balancerに到達する。リージョンには1つのVPCが存在する。VPC内には2つのアベイラビリティゾーンがあり、各ゾーンにパブリックサブネットとプライベートサブネットがある。パブリックサブネットにはApplication Load BalancerとNATゲートウェイが配置されている。プライベートサブネットにはAmazon ECSタスク、Amazon RDS (MySQL)、Amazon ElastiCache (Redis)が配置されている。Application Load BalancerはECSタスクにトラフィックを分散する。Amazon ECSタスクはAmazon ECSクラスタ内で動作しており、AWS Fargateを利用している。片方のアベイラビリティゾーンに配置されたAmazon RDSとAmazon ElastiCacheはPrimaryで、もう片方はSecondaryである。Amazon ECSタスクはPrimaryのAmazon RDSとAmazon ElastiCacheにアクセスする。](./wanictf2024/architecture-score-traffic.webp w=large)
+
+- スコアサーバーはSPAとして作られています。静的ファイルはAmazon S3にホストされており、APIリクエストはALBを経由してAmazon ECS上のAPIサーバーに送られます。
+- 各コンポーネントはAZ障害に耐えられるように冗長化しています。ECSタスクは2つのAZに分散して配置され、RDSとElastiCacheはマルチAZ構成を採用しています。
+  - ただし、ALBは本来3つのAZに配置しないとAZ障害時に正しく動作しないようです。大会終了後に気づきました。
+
+### 運用とデプロイ
+
+APIサーバーのデプロイと運用の流れは以下の通りです。
+
+![AWS上で動作するアプリケーションのデプロイと運用の流れを示す図。GitHub Actionsで実行されるCI/CDパイプラインは、GitHubのOIDCプロバイダーからIDトークンを受け取りAWSにアクセスする。パイプラインはコンテナイメージをAmazon ECRレジストリにプッシュし、静的アセットをAmazon S3に保存し、キャッシュ無効化リクエストをAmazon CloudFrontに送信する。AWS内にはAmazon ECSタスクが存在する。ECSタスクではアプリケーションコンテナ、OpenTelemetry Collectorコンテナ、およびFluent Bitコンテナが実行されている。アプリケーションコンテナはECRレジストリ上のイメージから作成される。OpenTelemetry CollectorコンテナとFluent Bitコンテナは、それぞれメトリクスとログをGrafana Cloud上のPrometheusとGrafana Lokiに送信する。](./wanictf2024/architecture-ops-score.webp w=large)
+
+- アプリケーションのデプロイ時にはGitHub ActionsからAWSの各サービスにアクセスしています。GitHubのOIDCプロバイダを利用し、安全にIAMロールをAssumeRoleできるようにしています。
+- メトリクスとログはGrafana Cloudに集約しています。Grafana Cloudの無料プランには保存期間やアクティブユーザー数の制限がありますが、インフラは私一人で管理していたこと、大会が実際に開催されるのは2日間だけだったこともあり、問題なく利用できました。
+
+## 問題サーバー
+
+CTFにおける問題サーバーは、参加者が攻撃する対象となるサービスを提供します。
