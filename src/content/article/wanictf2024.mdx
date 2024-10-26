@@ -37,4 +37,47 @@ APIサーバーのデプロイと運用の流れは以下の通りです。
 
 ## 問題サーバー
 
-CTFにおける問題サーバーは、参加者が攻撃する対象となるサービスを提供します。
+CTFにおける問題サーバーは、参加者が攻撃する対象となるサービスを提供するサーバーです。以下の図に示すような単純な構成です。
+
+![AWS上で構築されたサービスのアーキテクチャ図。AWSクラウド内には1つのリージョンが存在する。リージョン内には1つのAWS LambdaとVPCがある。VPC内には2つのアベイラビリティゾーンがあり、それぞれパブリックサブネット内に1つのAmazon EC2インスタンスが配置されている。ユーザーとAWS Lambdaは2つのEC2インスタンスに直接アクセスする。](./wanictf2024/architecture-chal-traffic.webp w=large)
+
+- ロードバランサは使用せず、参加者がEC2インスタンスに直接アクセスする構成としています。それぞれのIPアドレスに対応するDNSレコードを設定しており、参加者がいずれか1つのインスタンスを選んでアクセスできるようにしています。
+- AWS Lambdaから各問題のヘルスチェックを行っています。ヘルスチェック結果はスコアサーバーやDiscordに送信され、ユーザーや運営が不具合発生を把握できるようにしています。
+
+## 踏み台サーバー
+
+運営がVPC内のサーバーに容易にアクセスするための踏み台サーバーも用意しました。ECS上でTailscaleのクライアントを起動し、[subnet router](https://tailscale.com/kb/1019/subnets)として動作させています。
+
+```terraform
+resource "aws_ecs_task_definition" "bastion" {
+  family = "bastion"
+
+  cpu    = 256
+  memory = 512
+
+  execution_role_arn       = aws_iam_role.bastion_ecs_task_execution.arn
+  network_mode             = "awsvpc"
+  requires_compatibilities = ["FARGATE"]
+  task_role_arn            = aws_iam_role.bastion_ecs_task.arn
+
+  container_definitions = jsonencode([
+    {
+      name  = "tailscale"
+      image = "ghcr.io/tailscale/tailscale:v1.66.3"
+      environment = [
+        { name = "TS_ROUTES", value = aws_vpc.main.cidr_block },
+      ]
+      secrets = [
+        { name = "TS_AUTHKEY", valueFrom = var.tailscale_authkey_param_arn },
+      ]
+      linuxParameters = {
+        initProcessEnabled = true
+      }
+    },
+  ])
+}
+```
+
+## コスト削減の工夫
+
+
