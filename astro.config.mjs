@@ -4,6 +4,8 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import { rehypeHeadingIds } from "@astrojs/markdown-remark";
+import rehypeAutoLinkHeadings from "rehype-autolink-headings";
 import {
   rehypeEmbed,
   rehypeImageSize,
@@ -19,7 +21,17 @@ export default defineConfig({
   },
   markdown: {
     remarkPlugins: [remarkRemoveTitle],
-    rehypePlugins: [rehypeImageSize, rehypeEmbed],
+    rehypePlugins: [
+      rehypeHeadingIds,
+      [
+        rehypeAutoLinkHeadings,
+        {
+          content: { type: "text", value: "#" },
+        },
+      ],
+      rehypeImageSize,
+      rehypeEmbed,
+    ],
     shikiConfig: {
       themes: {
         light: "github-light",
