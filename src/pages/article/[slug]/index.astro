@@ -32,7 +32,7 @@ const { Content, headings } = await article.render();
     <div class="flex flex-row-reverse items-start gap-5 w-full">
       <Card
         as="aside"
-        class="hidden lg:block flex-1 w-0 sticky top-5 rounded-2xl p-7"
+        class="hidden lg:block flex-1 w-0 max-h-[calc(100dvh-2.5rem)] sticky top-5 rounded-2xl p-7 overflow-y-scroll"
       >
         <ArticleToC {headings} />
       </Card>
