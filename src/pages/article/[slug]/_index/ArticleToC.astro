@@ -1,0 +1,57 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  headings: Awaited<
+    ReturnType<CollectionEntry<"article">["render"]>
+  >["headings"];
+}
+
+const { headings } = Astro.props;
+
+const minDepth = Math.min(...headings.map(({ depth }) => depth));
+---
+
+<section class="flex flex-col gap-2">
+  <h2 class="text-lg font-bold">目次</h2>
+  <ol>
+    {
+      headings.map(({ depth, slug, text }) => {
+        if (depth > minDepth + 1) {
+          return null;
+        }
+
+        return (
+          <li class="group">
+            <a class="flex" href={`#${slug}`}>
+              <div class="w-4 pr-2 flex flex-col items-center">
+                <div class="w-0.5 h-3 bg-slate-300 group-first:bg-transparent" />
+                <div
+                  class:list={[
+                    "rounded-full bg-blue-900 dark:bg-slate-950",
+                    {
+                      "size-2": depth === minDepth,
+                      "size-1 border border-transparent": depth > minDepth,
+                    },
+                  ]}
+                />
+                <div class="flex-1 w-0.5 bg-slate-300 group-last:bg-transparent" />
+              </div>
+              <span
+                class:list={[
+                  "my-1",
+                  {
+                    "font-bold": depth === minDepth,
+                    "text-sm opacity-80": depth > minDepth,
+                  },
+                ]}
+              >
+                {text}
+              </span>
+            </a>
+          </li>
+        );
+      })
+    }
+  </ol>
+</section>

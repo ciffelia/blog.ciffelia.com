@@ -1,9 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
+import Card from "../../../components/Card.astro";
 import ArticleHead from "./_index/ArticleHead.astro";
-import Section from "./_index/Section.astro";
 import ArticleHeader from "./_index/ArticleHeader.astro";
+import ArticleToC from "./_index/ArticleToC.astro";
 import ArticleContent from "./_index/ArticleContent.astro";
 
 export async function getStaticPaths() {
@@ -17,16 +18,30 @@ export async function getStaticPaths() {
 }
 
 const { article } = Astro.props;
+const { Content, headings } = await article.render();
 ---
 
 <Layout>
   <ArticleHead slot="head" {article} />
-  <article class="flex flex-col gap-5">
-    <Section>
+  <article
+    class="flex flex-col gap-5 w-screen max-w-screen-md lg:max-w-screen-lg mx-auto"
+  >
+    <Card as="div" class="w-full md:rounded-2xl p-7 md:p-10">
       <ArticleHeader {article} />
-    </Section>
-    <Section>
-      <ArticleContent {article} />
-    </Section>
+    </Card>
+    <div class="flex flex-row-reverse items-start gap-5 w-full">
+      <Card
+        as="aside"
+        class="hidden lg:block flex-1 w-0 sticky top-5 rounded-2xl p-7"
+      >
+        <ArticleToC {headings} />
+      </Card>
+      <Card
+        as="main"
+        class="w-screen max-w-screen-md md:rounded-2xl p-7 md:p-10"
+      >
+        <ArticleContent {article} {Content} />
+      </Card>
+    </div>
   </article>
 </Layout>
