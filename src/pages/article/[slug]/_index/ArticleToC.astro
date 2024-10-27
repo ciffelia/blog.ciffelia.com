@@ -12,7 +12,7 @@ const { headings } = Astro.props;
 const minDepth = Math.min(...headings.map(({ depth }) => depth));
 ---
 
-<section class="flex flex-col gap-2">
+<section class="article-toc flex flex-col gap-2">
   <h2 class="text-lg font-bold">目次</h2>
   <ol>
     {
@@ -22,13 +22,13 @@ const minDepth = Math.min(...headings.map(({ depth }) => depth));
         }
 
         return (
-          <li class="group">
+          <li class="group" data-toc-slug={slug} data-active="true">
             <a class="flex" href={`#${slug}`}>
               <div class="w-4 pr-2 flex flex-col items-center">
                 <div class="w-0.5 h-3 bg-slate-300 dark:bg-slate-700 group-first:bg-transparent" />
                 <div
                   class:list={[
-                    "rounded-full bg-blue-900 dark:bg-slate-400",
+                    "rounded-full opacity-60 group-hover:opacity-100 group-data-[active=true]:opacity-100 bg-blue-900 dark:bg-slate-400",
                     {
                       "size-2": depth === minDepth,
                       "size-1": depth > minDepth,
@@ -39,7 +39,7 @@ const minDepth = Math.min(...headings.map(({ depth }) => depth));
               </div>
               <span
                 class:list={[
-                  "my-1",
+                  "my-1 opacity-60 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-opacity",
                   {
                     "font-bold": depth === minDepth,
                     "text-sm opacity-80": depth > minDepth,
@@ -55,3 +55,46 @@ const minDepth = Math.min(...headings.map(({ depth }) => depth));
     }
   </ol>
 </section>
+
+<script>
+  for (const toc of document.querySelectorAll(".article-toc")) {
+    const tocItems = toc.querySelectorAll<HTMLLIElement>("li[data-toc-slug]");
+
+    const update = () => {
+      let activeSlug: string | undefined;
+      for (const item of tocItems) {
+        const slug = item.dataset.tocSlug;
+        if (slug === undefined) {
+          continue;
+        }
+
+        const heading = document.getElementById(slug);
+        if (heading === null) {
+          continue;
+        }
+
+        if (heading.offsetTop <= window.scrollY + 100) {
+          activeSlug = slug;
+        } else if (activeSlug !== undefined) {
+          break;
+        }
+      }
+
+      for (const item of tocItems) {
+        const slug = item.dataset.tocSlug;
+        if (slug === undefined) {
+          continue;
+        }
+
+        if (activeSlug === undefined || slug === activeSlug) {
+          item.dataset.active = "true";
+        } else {
+          item.dataset.active = "false";
+        }
+      }
+    };
+
+    document.addEventListener("scroll", update);
+    update();
+  }
+</script>
