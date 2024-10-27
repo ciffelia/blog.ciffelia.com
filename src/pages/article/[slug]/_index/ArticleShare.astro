@@ -1,0 +1,49 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import { SITE_NAME } from "../../../../constant";
+import xIcon from "../../../../assets/x.svg";
+import facebookIcon from "../../../../assets/facebook.svg";
+
+interface Props {
+  article: CollectionEntry<"article">;
+}
+
+const {
+  article: {
+    data: { title },
+  },
+} = Astro.props;
+
+const xShareUrl = new URL("https://twitter.com/intent/tweet");
+xShareUrl.searchParams.append("text", `${title} | ${SITE_NAME}`);
+xShareUrl.searchParams.append("url", Astro.url.href);
+xShareUrl.searchParams.append("via", "ciffelia");
+
+const facebookShareUrl = new URL("http://www.facebook.com/sharer/sharer.php");
+facebookShareUrl.searchParams.append("u", Astro.url.href);
+---
+
+<section class="flex flex-col gap-2">
+  <h2 class="text-lg font-bold">シェア</h2>
+  <ul class="flex justify-center gap-5">
+    <li>
+      <a href={xShareUrl} target="_blank">
+        <div
+          class="flex items-center justify-center w-12 h-12 rounded-full bg-black"
+        >
+          <Image src={xIcon} alt="X" class="object-contain w-6 h-6" />
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href={facebookShareUrl} target="_blank">
+        <Image
+          src={facebookIcon}
+          alt="Facebook"
+          class="object-contain w-12 h-12"
+        />
+      </a>
+    </li>
+  </ul>
+</section>

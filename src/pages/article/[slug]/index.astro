@@ -4,6 +4,7 @@ import Layout from "../../../layouts/Layout.astro";
 import Card from "../../../components/Card.astro";
 import ArticleHead from "./_index/ArticleHead.astro";
 import ArticleHeader from "./_index/ArticleHeader.astro";
+import ArticleShare from "./_index/ArticleShare.astro";
 import ArticleToC from "./_index/ArticleToC.astro";
 import ArticleContent from "./_index/ArticleContent.astro";
 
@@ -30,12 +31,19 @@ const { Content, headings } = await article.render();
       <ArticleHeader {article} />
     </Card>
     <div class="flex flex-col lg:flex-row-reverse lg:items-start gap-5">
-      <Card
-        as="aside"
-        class="lg:sticky lg:top-5 lg:flex-1 lg:w-0 max-h-[50svh] lg:max-h-[calc(100dvh-2.5rem)] md:rounded-2xl p-7 md:px-10 lg:p-5 overflow-x-hidden overflow-y-scroll"
+      <aside
+        class="lg:sticky lg:top-5 flex flex-col gap-5 lg:flex-1 lg:w-0 max-h-[50svh] lg:max-h-[calc(100dvh-2.5rem)]"
       >
-        <ArticleToC {headings} />
-      </Card>
+        <Card as="div" class="hidden lg:block rounded-2xl p-5">
+          <ArticleShare {article} />
+        </Card>
+        <Card
+          as="div"
+          class="md:rounded-2xl p-7 md:px-10 lg:p-5 overflow-x-hidden overflow-y-scroll"
+        >
+          <ArticleToC {headings} />
+        </Card>
+      </aside>
       <Card
         as="main"
         class="lg:w-full lg:max-w-screen-md md:rounded-2xl p-7 md:p-10"
