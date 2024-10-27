@@ -14,5 +14,10 @@ const data = await getImage({ src, width, densities: [1, 2, 3] });
 ---
 
 <a href={src.src} target="_blank">
-  <img src={src.src} alt={alt} srcset={data.srcSet.attribute} {...data.attributes}  />
+  <img
+    src={src.src}
+    alt={alt}
+    srcset={data.srcSet.attribute}
+    {...data.attributes}
+  />
 </a>
