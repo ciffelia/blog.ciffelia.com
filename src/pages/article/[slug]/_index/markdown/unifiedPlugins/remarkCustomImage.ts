@@ -12,7 +12,6 @@ export const remarkCustomImage: Plugin<[], MdastRoot> = () => {
   return (tree, _file) => {
     visit(tree, { type: "image" } as const, (node, index, parent) => {
       const replacementTree = generateReplacementTree(node);
-      console.dir(replacementTree, { depth: null });
 
       // biome-ignore lint/style/noNonNullAssertion: image nodes always have a parent
       parent!.children.splice(index!, 1, ...replacementTree.children);
