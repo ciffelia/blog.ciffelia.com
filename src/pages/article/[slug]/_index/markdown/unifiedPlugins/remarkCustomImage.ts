@@ -37,11 +37,9 @@ const generateImportTree = (componentIdentifier: string): MdastRoot => {
     },
   );
 
+  // Nodes that are generated (not in the original source document) must not have a position.
   visit(tree, (node) => {
-    // Nodes that are generated (not in the original source document) must not have a position.
     node.position = undefined;
-
-    // TODO: remove location information from estree
   });
 
   return tree;
@@ -64,11 +62,9 @@ const generateReplacementTree = (
     },
   );
 
+  // Nodes that are generated (not in the original source document) must not have a position.
   visit(tree, (node) => {
-    // Nodes that are generated (not in the original source document) must not have a position.
     node.position = undefined;
-
-    // TODO: remove location information from estree
   });
 
   return tree;
