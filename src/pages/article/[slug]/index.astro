@@ -26,19 +26,19 @@ const { Content, headings } = await article.render();
   <article
     class="flex flex-col gap-5 w-screen max-w-screen-md lg:max-w-screen-lg mx-auto"
   >
-    <Card as="div" class="w-full md:rounded-2xl p-7 md:p-10">
+    <Card as="div" class="md:rounded-2xl p-7 md:p-10">
       <ArticleHeader {article} />
     </Card>
-    <div class="flex flex-row-reverse items-start gap-5 w-full">
+    <div class="flex flex-col lg:flex-row-reverse gap-5">
       <Card
         as="aside"
-        class="hidden lg:block flex-1 w-0 max-h-[calc(100dvh-2.5rem)] sticky top-5 rounded-2xl p-7 overflow-y-scroll"
+        class="lg:sticky lg:top-5 lg:flex-1 lg:w-0 max-h-[50svh] lg:max-h-[calc(100dvh-2.5rem)] md:rounded-2xl p-7 md:px-10 lg:p-5 overflow-x-hidden overflow-y-scroll"
       >
         <ArticleToC {headings} />
       </Card>
       <Card
         as="main"
-        class="w-screen max-w-screen-md md:rounded-2xl p-7 md:p-10"
+        class="lg:w-full lg:max-w-screen-md md:rounded-2xl p-7 md:p-10"
       >
         <ArticleContent {article} {Content} />
       </Card>
