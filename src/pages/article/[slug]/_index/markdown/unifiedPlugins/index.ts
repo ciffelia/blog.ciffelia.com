@@ -1,3 +1,4 @@
 export { rehypeEmbed } from "./rehypeEmbed";
-export { rehypeImageSize } from "./rehypeImageSize";
+export { remarkCustomImage } from "./remarkCustomImage";
+export { remarkExtractImageSize } from "./remarkExtractImageSize";
 export { remarkRemoveTitle } from "./remarkRemoveTitle";
