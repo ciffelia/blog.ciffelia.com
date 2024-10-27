@@ -10,8 +10,15 @@ import { mdxFromMarkdown } from "mdast-util-mdx";
  */
 export const remarkCustomImage: Plugin<[], MdastRoot> = () => {
   return (tree, _file) => {
+    const componentIdentifier = `CustomImage_${crypto.randomUUID().replaceAll("-", "")}`;
+    const importTree = generateImportTree(componentIdentifier);
+    tree.children.unshift(...importTree.children);
+
     visit(tree, { type: "image" } as const, (node, index, parent) => {
-      const replacementTree = generateReplacementTree(node);
+      const replacementTree = generateReplacementTree(
+        node,
+        componentIdentifier,
+      );
 
       // biome-ignore lint/style/noNonNullAssertion: image nodes always have a parent
       parent!.children.splice(index!, 1, ...replacementTree.children);
@@ -21,15 +28,36 @@ export const remarkCustomImage: Plugin<[], MdastRoot> = () => {
   };
 };
 
-const generateReplacementTree = (imageNode: Image): MdastRoot => {
+const generateImportTree = (componentIdentifier: string): MdastRoot => {
+  const tree = fromMarkdown(
+    `import ${componentIdentifier} from "../../pages/article/[slug]/_index/markdown/image/CustomImage.astro";`,
+    {
+      extensions: [mdxjs()],
+      mdastExtensions: [mdxFromMarkdown()],
+    },
+  );
+
+  visit(tree, (node) => {
+    // Nodes that are generated (not in the original source document) must not have a position.
+    node.position = undefined;
+
+    // TODO: remove location information from estree
+  });
+
+  return tree;
+};
+
+const generateReplacementTree = (
+  imageNode: Image,
+  componentIdentifier: string,
+): MdastRoot => {
   const imageIdentifier = `markdownImage_${crypto.randomUUID().replaceAll("-", "")}`;
   const width = imageNode.data?.width ?? 768;
 
   const tree = fromMarkdown(
-    `import CustomImage from "../../pages/article/[slug]/_index/markdown/image/CustomImage.astro";
-import ${imageIdentifier} from ${JSON.stringify(imageNode.url)};
+    `import ${imageIdentifier} from ${JSON.stringify(imageNode.url)};
 
-<CustomImage src={${imageIdentifier}} alt={${JSON.stringify(imageNode.alt)}} width={${width}} />`,
+<${componentIdentifier} src={${imageIdentifier}} alt={${JSON.stringify(imageNode.alt)}} width={${width}} />`,
     {
       extensions: [mdxjs({ acornOptions: { ranges: false } })],
       mdastExtensions: [mdxFromMarkdown()],
