@@ -25,17 +25,17 @@ const minDepth = Math.min(...headings.map(({ depth }) => depth));
           <li class="group">
             <a class="flex" href={`#${slug}`}>
               <div class="w-4 pr-2 flex flex-col items-center">
-                <div class="w-0.5 h-3 bg-slate-300 group-first:bg-transparent" />
+                <div class="w-0.5 h-3 bg-slate-300 dark:bg-slate-700 group-first:bg-transparent" />
                 <div
                   class:list={[
-                    "rounded-full bg-blue-900 dark:bg-slate-950",
+                    "rounded-full bg-blue-900 dark:bg-slate-400",
                     {
                       "size-2": depth === minDepth,
-                      "size-1 border border-transparent": depth > minDepth,
+                      "size-1": depth > minDepth,
                     },
                   ]}
                 />
-                <div class="flex-1 w-0.5 bg-slate-300 group-last:bg-transparent" />
+                <div class="flex-1 w-0.5 bg-slate-300 dark:bg-slate-700 group-last:bg-transparent" />
               </div>
               <span
                 class:list={[
