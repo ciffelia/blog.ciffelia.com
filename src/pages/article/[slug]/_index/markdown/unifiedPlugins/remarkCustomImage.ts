@@ -59,7 +59,7 @@ const generateReplacementTree = (
 
 <${componentIdentifier} src={${imageIdentifier}} alt={${JSON.stringify(imageNode.alt)}} width={${width}} />`,
     {
-      extensions: [mdxjs({ acornOptions: { ranges: false } })],
+      extensions: [mdxjs()],
       mdastExtensions: [mdxFromMarkdown()],
     },
   );
