@@ -12,9 +12,5 @@ const { src, ...attributes } = Astro.props;
 ---
 
 <a href={src.src} target="_blank">
-  <Image
-    {src}
-    densities={[1, 2, 3]}
-    {...attributes}
-  />
+  <Image {src} densities={[1, 2, 3]} {...attributes} />
 </a>
