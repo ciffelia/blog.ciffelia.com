@@ -49,7 +49,7 @@ const generateReplacementTree = (
   imageNode: Image,
   componentIdentifier: string,
 ): MdastRoot => {
-  const imageIdentifier = `markdownImage_${crypto.randomUUID().replaceAll("-", "")}`;
+  const imageIdentifier = `image_${crypto.randomUUID().replaceAll("-", "")}`;
   const width = imageNode.data?.width ?? 768;
 
   const tree = fromMarkdown(
