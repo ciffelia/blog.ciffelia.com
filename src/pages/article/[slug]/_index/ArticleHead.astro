@@ -16,7 +16,7 @@ if (Astro.site === undefined) {
 }
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 
-const ogImageUrl = new URL("og.png", Astro.url).toString();
+const ogImageUrl = `${Astro.url}/og.png`;
 ---
 
 <title>{article.data.title} | {SITE_NAME}</title>
