@@ -1,6 +1,6 @@
 ---
 import type { ImageMetadata } from "astro";
-import { getImage } from "astro:assets";
+import { Image } from "astro:assets";
 
 interface Props {
   src: ImageMetadata;
@@ -8,16 +8,13 @@ interface Props {
   width: number;
 }
 
-const { src, alt, width } = Astro.props;
-
-const data = await getImage({ src, width, densities: [1, 2, 3] });
+const { src, ...attributes } = Astro.props;
 ---
 
 <a href={src.src} target="_blank">
-  <img
-    src={src.src}
-    alt={alt}
-    srcset={data.srcSet.attribute}
-    {...data.attributes}
+  <Image
+    {src}
+    densities={[1, 2, 3]}
+    {...attributes}
   />
 </a>
