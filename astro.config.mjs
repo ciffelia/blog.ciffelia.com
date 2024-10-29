@@ -8,7 +8,8 @@ import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import rehypeAutoLinkHeadings from "rehype-autolink-headings";
 import {
   rehypeEmbed,
-  rehypeImageSize,
+  remarkExtractImageSize,
+  remarkCustomImage,
   remarkRemoveTitle,
 } from "./src/pages/article/[slug]/_index/markdown/unifiedPlugins";
 
@@ -20,7 +21,11 @@ export default defineConfig({
     prefetchAll: true,
   },
   markdown: {
-    remarkPlugins: [remarkRemoveTitle],
+    remarkPlugins: [
+      remarkRemoveTitle,
+      remarkExtractImageSize,
+      remarkCustomImage,
+    ],
     rehypePlugins: [
       rehypeHeadingIds,
       [
@@ -29,7 +34,6 @@ export default defineConfig({
           content: { type: "text", value: "#" },
         },
       ],
-      rehypeImageSize,
       rehypeEmbed,
     ],
     shikiConfig: {
