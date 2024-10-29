@@ -16,6 +16,7 @@ import {
 // https://astro.build/config
 export default defineConfig({
   site: "https://blog.ciffelia.com",
+  trailingSlash: "never",
   integrations: [react(), tailwind(), mdx(), sitemap()],
   prefetch: {
     prefetchAll: true,
