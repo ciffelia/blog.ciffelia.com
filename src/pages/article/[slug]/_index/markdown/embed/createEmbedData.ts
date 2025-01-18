@@ -7,32 +7,24 @@ import {
   createEmbedLinkCardData,
   type EmbedLinkCardData,
 } from "./createEmbedLinkCardData";
+import { CachedFetcher } from "./cache";
 
 export type EmbedData = EmbedLinkCardData | EmbedTweetData;
 
-const cache = new Map<string, Promise<EmbedData>>();
-
 export const createEmbedData = async (url: URL): Promise<EmbedData> => {
-  const cacheKey = url.toString();
-  const cached = cache.get(cacheKey);
-  if (cached !== undefined) {
-    return await cached;
-  }
-
-  const promise = createEmbedDataWithoutCache(url);
-  cache.set(cacheKey, promise);
-  return await promise;
+  return await cache.fetch(url);
 };
 
-export const createEmbedDataWithoutCache = async (
-  url: URL,
-): Promise<EmbedData> => {
-  if (isTweetUrl(url)) {
-    const data = await createEmbedTweetData(url);
-    if (data !== undefined) {
-      return data;
+const cache = new CachedFetcher<EmbedData>({
+  async fetcher(url) {
+    if (isTweetUrl(url)) {
+      const data = await createEmbedTweetData(url);
+      if (data !== undefined) {
+        return data;
+      }
     }
-  }
 
-  return await createEmbedLinkCardData(url);
-};
+    return await createEmbedLinkCardData(url);
+  },
+  cacheDir: "src/embed-cache",
+});
