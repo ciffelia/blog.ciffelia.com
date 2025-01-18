@@ -1,10 +1,8 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import type { RenderResult } from "astro:content";
 
 interface Props {
-  headings: Awaited<
-    ReturnType<CollectionEntry<"article">["render"]>
-  >["headings"];
+  headings: RenderResult["headings"];
 }
 
 const { headings } = Astro.props;

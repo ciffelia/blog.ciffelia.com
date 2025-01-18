@@ -30,7 +30,7 @@ export const remarkCustomImage: Plugin<[], MdastRoot> = () => {
 
 const generateImportTree = (componentIdentifier: string): MdastRoot => {
   const tree = fromMarkdown(
-    `import ${componentIdentifier} from "../../pages/article/[slug]/_index/markdown/image/CustomImage.astro";`,
+    `import ${componentIdentifier} from "../../pages/article/[id]/_index/markdown/image/CustomImage.astro";`,
     {
       extensions: [mdxjs()],
       mdastExtensions: [mdxFromMarkdown()],

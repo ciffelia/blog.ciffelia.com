@@ -1,18 +1,12 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import type { RenderResult } from "astro:content";
 import CustomEmbed from "./markdown/embed/CustomEmbed.astro";
 
 interface Props {
-  article: CollectionEntry<"article">;
-  Content: Awaited<ReturnType<CollectionEntry<"article">["render"]>>["Content"];
+  Content: RenderResult["Content"];
 }
 
-const { article, Content } = Astro.props;
-if (!article.id.endsWith(".mdx")) {
-  // It looks like custom components is only supported for MDX files.
-  // https://docs.astro.build/en/guides/integrations-guide/mdx/#custom-components-with-imported-mdx
-  throw new Error(`Article ${article.id} is not an MDX file.`);
-}
+const { Content } = Astro.props;
 ---
 
 <div class="prose prose-blue dark:prose-invert prose-img:mx-auto md-root">

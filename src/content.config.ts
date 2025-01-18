@@ -1,4 +1,5 @@
 import { z, defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
 import { parseISO } from "date-fns";
 
 const ISO8601 = z
@@ -9,7 +10,7 @@ const ISO8601 = z
 const segmenter = new Intl.Segmenter("ja", { granularity: "grapheme" });
 
 const articleCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "*.mdx", base: "./src/content/article" }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),

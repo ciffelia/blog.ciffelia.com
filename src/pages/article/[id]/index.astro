@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
 import Card from "../../../components/Card.astro";
 import ArticleHead from "./_index/ArticleHead.astro";
@@ -13,13 +13,13 @@ export async function getStaticPaths() {
     return import.meta.env.DEV || data.isPublished;
   });
   return articles.map((article) => ({
-    params: { slug: article.slug },
+    params: { id: article.id },
     props: { article },
   }));
 }
 
 const { article } = Astro.props;
-const { Content, headings } = await article.render();
+const { Content, headings } = await render(article);
 ---
 
 <Layout>
@@ -48,7 +48,7 @@ const { Content, headings } = await article.render();
         as="main"
         class="lg:w-full lg:max-w-screen-md md:rounded-2xl p-7 md:p-10"
       >
-        <ArticleContent {article} {Content} />
+        <ArticleContent {Content} />
       </Card>
     </div>
   </article>

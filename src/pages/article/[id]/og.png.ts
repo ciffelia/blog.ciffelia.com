@@ -7,7 +7,7 @@ export async function getStaticPaths() {
     return import.meta.env.DEV || data.isPublished;
   });
   return articles.map((article) => ({
-    params: { slug: article.slug },
+    params: { id: article.id },
     props: { article },
   }));
 }

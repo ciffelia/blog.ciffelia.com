@@ -11,14 +11,14 @@ interface Props {
 
 const {
   article: {
-    slug,
+    id,
     data: { title, publishedAt, thumbnail },
   },
 } = Astro.props;
 ---
 
 <Card as="li" class="flex overflow-hidden" rounded hoverTransition>
-  <a href={`/article/${slug}`} class="grow flex flex-col">
+  <a href={`/article/${id}`} class="grow flex flex-col">
     <div class="border-b border-slate-200 dark:border-slate-800">
       <Thumbnail {thumbnail} />
     </div>
