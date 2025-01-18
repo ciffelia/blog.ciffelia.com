@@ -21,10 +21,10 @@ const bizUdpGothic700Data = await fetch(
 ).then((res) => res.arrayBuffer());
 
 // GitHubに存在するQuicksandのフォントファイルは可変フォントのみ。
-// Satoriは可変フォントをサポートしていないため、ローカルのフォントファイルを使用する。
-const quicksand600Data = await fs.readFile(
-  "./src/opengraph/assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf",
-);
+// Satoriは可変フォントをサポートしていないため、Fontsource CDNから標準フォントのファイルを取得する。
+const quicksand600Data = await fetch(
+  "https://cdn.jsdelivr.net/fontsource/fonts/quicksand@5.1.1/latin-600-normal.ttf",
+).then((res) => res.arrayBuffer());
 
 export async function render(element: React.ReactNode): Promise<Buffer> {
   const svg = await satori(element, {
