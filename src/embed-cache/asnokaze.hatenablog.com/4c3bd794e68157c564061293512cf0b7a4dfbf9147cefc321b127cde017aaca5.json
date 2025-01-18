@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://asnokaze.hatenablog.com/entry/20170224/1487863604",
+  "title": "CSPの仕様に report-sample が追加された - ASnoKaze blog",
+  "description": "まだ、WIPではあるもののCSPの仕様に \"report-sample\" と言う機能が追加されました(URL)。 これは、違反したインラインのScriptやStyleの最初の40文字がレポートに追加されます。外部ファイルの場合はレポートされません。昨年から議論がされていましたが、もともとはFirefoxに以前実装されていたscript-sampleプロパティと同等の機能ですが、Styleも対象になります。 これにより、今までレポートは送られてくるもの攻撃なのかそうじゃないのか分からなかったというケースが、多",
+  "faviconUrl": "https://asnokaze.hatenablog.com/icon/favicon",
+  "ogImageUrl": "https://ogimage.blog.st-hatena.com/10328749687239380661/10328749687239380836/1493032639"
+}

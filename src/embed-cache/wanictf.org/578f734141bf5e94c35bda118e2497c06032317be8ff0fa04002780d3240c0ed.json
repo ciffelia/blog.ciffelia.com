@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://wanictf.org/jp.html",
+  "title": "WaniCTF 2024",
+  "description": "WaniCTF 2024は大阪大学CTFサークルWani Hackaseが開催する初心者～中級者向けのCTFです。",
+  "faviconUrl": "https://wanictf.org/favicon.ico",
+  "ogImageUrl": "https://wanictf.org/assets/images/ogp_2024.jpg"
+}

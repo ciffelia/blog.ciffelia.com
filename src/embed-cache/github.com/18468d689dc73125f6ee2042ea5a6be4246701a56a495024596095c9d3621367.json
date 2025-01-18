@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://github.com/swc-project/plugins/pulls?q=is%3Apr+author%3Aciffelia",
+  "title": "Pull requests · swc-project/plugins",
+  "description": "Plugins for swc, written in rust. Contribute to swc-project/plugins development by creating an account on GitHub.",
+  "faviconUrl": "https://github.githubassets.com/favicons/favicon.png",
+  "ogImageUrl": "https://opengraph.githubassets.com/637dd15acc4decb4a774e14791f41922a5adadbf0e19d8f65128b8b16aeb6184/swc-project/plugins"
+}

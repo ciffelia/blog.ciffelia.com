@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://github.com/fastify/secure-json-parse/blob/master/index.js",
+  "title": "secure-json-parse/index.js at master · fastify/secure-json-parse",
+  "description": "JSON.parse() drop-in replacement with prototype poisoning protection - fastify/secure-json-parse",
+  "faviconUrl": "https://github.githubassets.com/favicons/favicon.png",
+  "ogImageUrl": "https://opengraph.githubassets.com/69116d5445de432f321780458ecaab8c19ae2ca712c1d0886f070b338dabbe39/fastify/secure-json-parse"
+}

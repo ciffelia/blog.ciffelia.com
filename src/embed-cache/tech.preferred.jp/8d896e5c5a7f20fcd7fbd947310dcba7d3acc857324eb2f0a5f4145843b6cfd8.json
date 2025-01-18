@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://tech.preferred.jp/ja/blog/fairness_control_in_distributed_cache_systems/",
+  "title": "分散キャッシュシステムにおける公平制御の実現 - Preferred Networks Research & Development",
+  "description": "本記事は、2023年夏季インターンシッププログラムで勤務された石森大路さんによる寄稿です。 こんにちは。PFN2023",
+  "faviconUrl": "https://tech.preferred.jp/wp-content/uploads/2019/10/favicon.ico",
+  "ogImageUrl": "https://tech.preferred.jp/wp-content/uploads/2023/10/image6-1.png"
+}

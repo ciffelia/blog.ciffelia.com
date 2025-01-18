@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://inside.pixiv.blog/2023/07/18/180000",
+  "title": "Next.jsのプレビュー環境をプルリクから自動で構築する - pixiv inside",
+  "description": "こんにちは、アルバイトのciffeliaです。 pixivは、2022年にNext.jsによるフロントエンドのリプレイスを開始しました。2023年現在では、10人以上の開発者がNext.jsによるフロントエンド開発に参加しています。 この記事では、Next.jsプロジェクトにおけるプルリクエスト*1の動作確認を効率化する、PRプレビュー環境自動構築の仕組みについてご紹介します。 何をしたのか プルリクエストを作成すると、対象ブランチの動作確認をするためのURLが自動で発行される仕組みを作りました。 赤枠で囲",
+  "faviconUrl": "https://inside.pixiv.blog/icon/favicon",
+  "ogImageUrl": "https://cdn.image.st-hatena.com/image/scale/7ea49570686f902e0b49d18d81789436f7ded5fc/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fd%2Fdevpixiv%2F20240322%2F20240322174310.png"
+}

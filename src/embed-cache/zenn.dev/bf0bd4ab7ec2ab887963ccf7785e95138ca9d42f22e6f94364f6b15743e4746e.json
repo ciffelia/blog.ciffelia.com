@@ -1,0 +1,7 @@
+{
+  "type": "card",
+  "url": "https://zenn.dev/ciffelia/articles/f11d26e9b72a5d",
+  "title": "docker buildx bakeで複数のイメージを並列でビルドする",
+  "faviconUrl": "https://static.zenn.studio/images/logo-transparent.png",
+  "ogImageUrl": "https://res.cloudinary.com/zenn/image/upload/s--GOicf4Sz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:docker%2520buildx%2520bake%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0%25E3%2581%25AE%25E3%2582%25A4%25E3%2583%25A1%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%2592%25E4%25B8%25A6%25E5%2588%2597%25E3%2581%25A7%25E3%2583%2593%25E3%2583%25AB%25E3%2583%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Ciffelia%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hJT3JUR3ZLcmVqQUhJQmFkeFl4MWtGZXplRUxWczV1aVNtcWt1RHc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+}

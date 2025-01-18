@@ -1,0 +1,393 @@
+{
+  "type": "tweet",
+  "tweet": {
+    "__typename": "Tweet",
+    "lang": "ja",
+    "favorite_count": 58,
+    "possibly_sensitive": false,
+    "created_at": "2023-12-24T13:55:38.000Z",
+    "display_text_range": [
+      0,
+      52
+    ],
+    "entities": {
+      "hashtags": [],
+      "urls": [],
+      "user_mentions": [],
+      "symbols": [],
+      "media": [
+        {
+          "display_url": "pic.x.com/ogjHykW6fd",
+          "expanded_url": "https://x.com/ciffelia/status/1738921377007304872/video/1",
+          "indices": [
+            52,
+            75
+          ],
+          "url": "https://t.co/ogjHykW6fd"
+        }
+      ]
+    },
+    "id_str": "1738921377007304872",
+    "text": "SECCON CTF 2023 Domestic Finals\nチームsouthballで3位でした🥉 https://t.co/ogjHykW6fd",
+    "user": {
+      "id_str": "4637307672",
+      "name": "Ciffelia",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1590340501655683072/D_G0W9KL_normal.jpg",
+      "screen_name": "ciffelia",
+      "verified": false,
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1738921377007304872"
+      ],
+      "editable_until_msecs": "1703429738000",
+      "is_edit_eligible": false,
+      "edits_remaining": "5"
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/ogjHykW6fd",
+        "expanded_url": "https://x.com/ciffelia/status/1738921377007304872/video/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          52,
+          75
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/GCHjwtNbQAADamK.jpg",
+        "original_info": {
+          "height": 3024,
+          "width": 4032,
+          "focus_rects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 4032,
+              "h": 2258
+            },
+            {
+              "x": 1008,
+              "y": 0,
+              "w": 3024,
+              "h": 3024
+            },
+            {
+              "x": 1194,
+              "y": 0,
+              "w": 2653,
+              "h": 3024
+            },
+            {
+              "x": 1764,
+              "y": 0,
+              "w": 1512,
+              "h": 3024
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 4032,
+              "h": 3024
+            }
+          ]
+        },
+        "sizes": {
+          "large": {
+            "h": 1536,
+            "resize": "fit",
+            "w": 2048
+          },
+          "medium": {
+            "h": 900,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 510,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/ogjHykW6fd"
+      },
+      {
+        "display_url": "pic.x.com/ogjHykW6fd",
+        "expanded_url": "https://x.com/ciffelia/status/1738921377007304872/video/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          52,
+          75
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/GCHjxKubgAAaA_N.jpg",
+        "original_info": {
+          "height": 4000,
+          "width": 2787,
+          "focus_rects": [
+            {
+              "x": 0,
+              "y": 2439,
+              "w": 2787,
+              "h": 1561
+            },
+            {
+              "x": 0,
+              "y": 1213,
+              "w": 2787,
+              "h": 2787
+            },
+            {
+              "x": 0,
+              "y": 823,
+              "w": 2787,
+              "h": 3177
+            },
+            {
+              "x": 787,
+              "y": 0,
+              "w": 2000,
+              "h": 4000
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 2787,
+              "h": 4000
+            }
+          ]
+        },
+        "sizes": {
+          "large": {
+            "h": 2048,
+            "resize": "fit",
+            "w": 1427
+          },
+          "medium": {
+            "h": 1200,
+            "resize": "fit",
+            "w": 836
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 474
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/ogjHykW6fd"
+      },
+      {
+        "additional_media_info": {},
+        "display_url": "pic.x.com/ogjHykW6fd",
+        "expanded_url": "https://x.com/ciffelia/status/1738921377007304872/video/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          52,
+          75
+        ],
+        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1738921368857739264/pu/img/EjmVqi0v8pUmyGcI.jpg",
+        "original_info": {
+          "height": 1280,
+          "width": 720,
+          "focus_rects": []
+        },
+        "sizes": {
+          "large": {
+            "h": 1280,
+            "resize": "fit",
+            "w": 720
+          },
+          "medium": {
+            "h": 1200,
+            "resize": "fit",
+            "w": 675
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 383
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "video",
+        "url": "https://t.co/ogjHykW6fd",
+        "video_info": {
+          "aspect_ratio": [
+            9,
+            16
+          ],
+          "duration_millis": 1499,
+          "variants": [
+            {
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/ext_tw_video/1738921368857739264/pu/pl/OHdid7w4R69BpPnS.m3u8?tag=12"
+            },
+            {
+              "bitrate": 632000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1738921368857739264/pu/vid/avc1/320x568/k87SsUMXnsG27vh6.mp4?tag=12"
+            },
+            {
+              "bitrate": 950000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1738921368857739264/pu/vid/avc1/480x852/GU9wijzbUNPn9MJ8.mp4?tag=12"
+            },
+            {
+              "bitrate": 2176000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1738921368857739264/pu/vid/avc1/720x1280/Zz_F4PbuYjikWRg5.mp4?tag=12"
+            }
+          ]
+        }
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 4032,
+            "h": 2258
+          },
+          {
+            "x": 1008,
+            "y": 0,
+            "w": 3024,
+            "h": 3024
+          },
+          {
+            "x": 1194,
+            "y": 0,
+            "w": 2653,
+            "h": 3024
+          },
+          {
+            "x": 1764,
+            "y": 0,
+            "w": 1512,
+            "h": 3024
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 4032,
+            "h": 3024
+          }
+        ],
+        "expandedUrl": "https://x.com/ciffelia/status/1738921377007304872/video/1",
+        "url": "https://pbs.twimg.com/media/GCHjwtNbQAADamK.jpg",
+        "width": 4032,
+        "height": 3024
+      },
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "x": 0,
+            "y": 2439,
+            "w": 2787,
+            "h": 1561
+          },
+          {
+            "x": 0,
+            "y": 1213,
+            "w": 2787,
+            "h": 2787
+          },
+          {
+            "x": 0,
+            "y": 823,
+            "w": 2787,
+            "h": 3177
+          },
+          {
+            "x": 787,
+            "y": 0,
+            "w": 2000,
+            "h": 4000
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2787,
+            "h": 4000
+          }
+        ],
+        "expandedUrl": "https://x.com/ciffelia/status/1738921377007304872/video/1",
+        "url": "https://pbs.twimg.com/media/GCHjxKubgAAaA_N.jpg",
+        "width": 2787,
+        "height": 4000
+      }
+    ],
+    "video": {
+      "aspectRatio": [
+        9,
+        16
+      ],
+      "contentType": "media_entity",
+      "durationMs": 1499,
+      "mediaAvailability": {
+        "status": "available"
+      },
+      "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1738921368857739264/pu/img/EjmVqi0v8pUmyGcI.jpg",
+      "variants": [
+        {
+          "type": "application/x-mpegURL",
+          "src": "https://video.twimg.com/ext_tw_video/1738921368857739264/pu/pl/OHdid7w4R69BpPnS.m3u8?tag=12"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1738921368857739264/pu/vid/avc1/320x568/k87SsUMXnsG27vh6.mp4?tag=12"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1738921368857739264/pu/vid/avc1/480x852/GU9wijzbUNPn9MJ8.mp4?tag=12"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1738921368857739264/pu/vid/avc1/720x1280/Zz_F4PbuYjikWRg5.mp4?tag=12"
+        }
+      ],
+      "videoId": {
+        "type": "tweet",
+        "id": "1738921377007304872"
+      },
+      "viewCount": 0
+    },
+    "conversation_count": 1,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false
+  }
+}

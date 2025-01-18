@@ -1,0 +1,388 @@
+{
+  "type": "tweet",
+  "tweet": {
+    "__typename": "Tweet",
+    "lang": "en",
+    "favorite_count": 27,
+    "possibly_sensitive": false,
+    "created_at": "2023-11-26T18:19:58.000Z",
+    "display_text_range": [
+      0,
+      131
+    ],
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "display_url": "github.com/vercel/next.js…",
+          "expanded_url": "https://github.com/vercel/next.js/pull/58517",
+          "indices": [
+            108,
+            131
+          ],
+          "url": "https://t.co/HuK3Bjj7tR"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "1395924404610093060",
+          "indices": [
+            38,
+            45
+          ],
+          "name": "SWC",
+          "screen_name": "swc_rs"
+        },
+        {
+          "id_str": "4637307672",
+          "indices": [
+            83,
+            92
+          ],
+          "name": "Ciffelia",
+          "screen_name": "ciffelia"
+        }
+      ],
+      "symbols": []
+    },
+    "id_str": "1728841040353018287",
+    "text": "The styled-components Wasm plugin for @swc_rs now supports all options. Thank you, @ciffelia .\n\nnext.js PR: https://t.co/HuK3Bjj7tR",
+    "user": {
+      "id_str": "716328412042756096",
+      "name": "▲ Donny (강동윤)",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1781972192512847872/X6iZvLeP_normal.jpg",
+      "screen_name": "kdy1dev",
+      "verified": false,
+      "is_blue_verified": true,
+      "profile_image_shape": "Circle"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1728841040353018287"
+      ],
+      "editable_until_msecs": "1701026398000",
+      "is_edit_eligible": true,
+      "edits_remaining": "5"
+    },
+    "conversation_count": 1,
+    "news_action_type": "conversation",
+    "card": {
+      "card_platform": {
+        "platform": {
+          "audience": {
+            "name": "production"
+          },
+          "device": {
+            "name": "iPhone",
+            "version": "13"
+          }
+        }
+      },
+      "name": "summary_large_image",
+      "url": "https://t.co/HuK3Bjj7tR",
+      "binding_values": {
+        "photo_image_full_size_large": {
+          "image_value": {
+            "height": 419,
+            "width": 800,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=800x419"
+          },
+          "type": "IMAGE"
+        },
+        "thumbnail_image": {
+          "image_value": {
+            "height": 200,
+            "width": 400,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=400x400"
+          },
+          "type": "IMAGE"
+        },
+        "description": {
+          "string_value": "What? Update swc crates. Diff: swc-project/swc@09b3003...c566b73 Why? To fix bugs, and improve minification. How? turbopack counterpart: vercel/turborepo#6472 Closes PACK-1972 Closes Port babel...",
+          "type": "STRING"
+        },
+        "domain": {
+          "string_value": "github.com",
+          "type": "STRING"
+        },
+        "thumbnail_image_large": {
+          "image_value": {
+            "height": 300,
+            "width": 600,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=600x600"
+          },
+          "type": "IMAGE"
+        },
+        "summary_photo_image_small": {
+          "image_value": {
+            "height": 202,
+            "width": 386,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=386x202"
+          },
+          "type": "IMAGE"
+        },
+        "thumbnail_image_original": {
+          "image_value": {
+            "height": 600,
+            "width": 1200,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=orig"
+          },
+          "type": "IMAGE"
+        },
+        "site": {
+          "scribe_key": "publisher_id",
+          "type": "USER",
+          "user_value": {
+            "id_str": "13334762",
+            "path": []
+          }
+        },
+        "photo_image_full_size_small": {
+          "image_value": {
+            "height": 202,
+            "width": 386,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=386x202"
+          },
+          "type": "IMAGE"
+        },
+        "summary_photo_image_large": {
+          "image_value": {
+            "height": 419,
+            "width": 800,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=800x419"
+          },
+          "type": "IMAGE"
+        },
+        "thumbnail_image_small": {
+          "image_value": {
+            "height": 72,
+            "width": 144,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=144x144"
+          },
+          "type": "IMAGE"
+        },
+        "thumbnail_image_x_large": {
+          "image_value": {
+            "height": 600,
+            "width": 1200,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=png&name=2048x2048_2_exp"
+          },
+          "type": "IMAGE"
+        },
+        "photo_image_full_size_original": {
+          "image_value": {
+            "height": 600,
+            "width": 1200,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=orig"
+          },
+          "type": "IMAGE"
+        },
+        "photo_image_full_size_alt_text": {
+          "string_value": "What? Update swc crates. Diff: swc-project/swc@09b3003...c566b73 Why? To fix bugs, and improve minification. How? turbopack counterpart: vercel/turborepo#6472 Closes PACK-1972 Closes Port babel...",
+          "type": "STRING"
+        },
+        "vanity_url": {
+          "scribe_key": "vanity_url",
+          "string_value": "github.com",
+          "type": "STRING"
+        },
+        "photo_image_full_size": {
+          "image_value": {
+            "height": 314,
+            "width": 600,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=600x314"
+          },
+          "type": "IMAGE"
+        },
+        "summary_photo_image_alt_text": {
+          "string_value": "What? Update swc crates. Diff: swc-project/swc@09b3003...c566b73 Why? To fix bugs, and improve minification. How? turbopack counterpart: vercel/turborepo#6472 Closes PACK-1972 Closes Port babel...",
+          "type": "STRING"
+        },
+        "thumbnail_image_color": {
+          "image_color_value": {
+            "palette": [
+              {
+                "rgb": {
+                  "blue": 255,
+                  "green": 255,
+                  "red": 255
+                },
+                "percentage": 90.89
+              },
+              {
+                "rgb": {
+                  "blue": 111,
+                  "green": 118,
+                  "red": 122
+                },
+                "percentage": 3.75
+              },
+              {
+                "rgb": {
+                  "blue": 90,
+                  "green": 225,
+                  "red": 241
+                },
+                "percentage": 1.83
+              },
+              {
+                "rgb": {
+                  "blue": 198,
+                  "green": 120,
+                  "red": 49
+                },
+                "percentage": 1.17
+              },
+              {
+                "rgb": {
+                  "blue": 158,
+                  "green": 237,
+                  "red": 247
+                },
+                "percentage": 0.96
+              }
+            ]
+          },
+          "type": "IMAGE_COLOR"
+        },
+        "title": {
+          "string_value": "Update `swc_core` to `v0.86.81` by kdy1 · Pull Request #58517 · vercel/next.js",
+          "type": "STRING"
+        },
+        "summary_photo_image_color": {
+          "image_color_value": {
+            "palette": [
+              {
+                "rgb": {
+                  "blue": 255,
+                  "green": 255,
+                  "red": 255
+                },
+                "percentage": 90.89
+              },
+              {
+                "rgb": {
+                  "blue": 111,
+                  "green": 118,
+                  "red": 122
+                },
+                "percentage": 3.75
+              },
+              {
+                "rgb": {
+                  "blue": 90,
+                  "green": 225,
+                  "red": 241
+                },
+                "percentage": 1.83
+              },
+              {
+                "rgb": {
+                  "blue": 198,
+                  "green": 120,
+                  "red": 49
+                },
+                "percentage": 1.17
+              },
+              {
+                "rgb": {
+                  "blue": 158,
+                  "green": 237,
+                  "red": 247
+                },
+                "percentage": 0.96
+              }
+            ]
+          },
+          "type": "IMAGE_COLOR"
+        },
+        "summary_photo_image_x_large": {
+          "image_value": {
+            "height": 600,
+            "width": 1200,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=png&name=2048x2048_2_exp"
+          },
+          "type": "IMAGE"
+        },
+        "summary_photo_image": {
+          "image_value": {
+            "height": 314,
+            "width": 600,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=600x314"
+          },
+          "type": "IMAGE"
+        },
+        "photo_image_full_size_color": {
+          "image_color_value": {
+            "palette": [
+              {
+                "rgb": {
+                  "blue": 255,
+                  "green": 255,
+                  "red": 255
+                },
+                "percentage": 90.89
+              },
+              {
+                "rgb": {
+                  "blue": 111,
+                  "green": 118,
+                  "red": 122
+                },
+                "percentage": 3.75
+              },
+              {
+                "rgb": {
+                  "blue": 90,
+                  "green": 225,
+                  "red": 241
+                },
+                "percentage": 1.83
+              },
+              {
+                "rgb": {
+                  "blue": 198,
+                  "green": 120,
+                  "red": 49
+                },
+                "percentage": 1.17
+              },
+              {
+                "rgb": {
+                  "blue": 158,
+                  "green": 237,
+                  "red": 247
+                },
+                "percentage": 0.96
+              }
+            ]
+          },
+          "type": "IMAGE_COLOR"
+        },
+        "photo_image_full_size_x_large": {
+          "image_value": {
+            "height": 600,
+            "width": 1200,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=png&name=2048x2048_2_exp"
+          },
+          "type": "IMAGE"
+        },
+        "card_url": {
+          "scribe_key": "card_url",
+          "string_value": "https://t.co/HuK3Bjj7tR",
+          "type": "STRING"
+        },
+        "summary_photo_image_original": {
+          "image_value": {
+            "height": 600,
+            "width": 1200,
+            "url": "https://pbs.twimg.com/card_img/1879441087695032320/QHNwKach?format=jpg&name=orig"
+          },
+          "type": "IMAGE"
+        }
+      }
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  }
+}

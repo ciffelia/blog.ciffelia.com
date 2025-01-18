@@ -1,0 +1,83 @@
+{
+  "type": "tweet",
+  "tweet": {
+    "__typename": "Tweet",
+    "in_reply_to_screen_name": "oldconnie",
+    "in_reply_to_status_id_str": "1730222512791797808",
+    "in_reply_to_user_id_str": "65313112",
+    "lang": "ja",
+    "favorite_count": 51,
+    "created_at": "2023-11-30T14:42:40.000Z",
+    "display_text_range": [
+      0,
+      42
+    ],
+    "entities": {
+      "hashtags": [],
+      "urls": [],
+      "user_mentions": [],
+      "symbols": []
+    },
+    "id_str": "1730235904592134469",
+    "text": "2機は岩国に戻ったようなので、事故機はGUNDAM22(12-0065)でほぼ確定。",
+    "user": {
+      "id_str": "65313112",
+      "name": "石川潤一 JunichiIshikawa",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/875644047594881024/FDbTCRnG_normal.jpg",
+      "screen_name": "oldconnie",
+      "verified": false,
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1730235904592134469"
+      ],
+      "editable_until_msecs": "1701358960000",
+      "is_edit_eligible": false,
+      "edits_remaining": "5"
+    },
+    "conversation_count": 1,
+    "news_action_type": "conversation",
+    "parent": {
+      "lang": "ja",
+      "reply_count": 1,
+      "retweet_count": 88,
+      "favorite_count": 146,
+      "created_at": "2023-11-30T13:49:27.000Z",
+      "display_text_range": [
+        0,
+        76
+      ],
+      "entities": {
+        "hashtags": [],
+        "urls": [],
+        "user_mentions": [],
+        "symbols": []
+      },
+      "id_str": "1730222512791797808",
+      "text": "墜落したCV-22Bオスプレイ。コールサイン「ガンダム22」は間違いないみたいだけど、シリアルナンバーが違う可能性がある。嘉手納ウォッチャーの情報待ち。",
+      "user": {
+        "id_str": "65313112",
+        "name": "石川潤一 JunichiIshikawa",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/875644047594881024/FDbTCRnG_normal.jpg",
+        "screen_name": "oldconnie",
+        "verified": false,
+        "is_blue_verified": false,
+        "profile_image_shape": "Circle"
+      },
+      "edit_control": {
+        "edit_tweet_ids": [
+          "1730222512791797808"
+        ],
+        "editable_until_msecs": "1701355767000",
+        "is_edit_eligible": false,
+        "edits_remaining": "5"
+      },
+      "isEdited": false,
+      "isStaleEdit": false
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  }
+}

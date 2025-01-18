@@ -1,0 +1,173 @@
+{
+  "type": "tweet",
+  "tweet": {
+    "__typename": "Tweet",
+    "lang": "ja",
+    "favorite_count": 38,
+    "possibly_sensitive": false,
+    "created_at": "2024-06-09T04:16:11.000Z",
+    "display_text_range": [
+      0,
+      198
+    ],
+    "entities": {
+      "hashtags": [],
+      "urls": [],
+      "user_mentions": [],
+      "symbols": [],
+      "media": [
+        {
+          "display_url": "pic.x.com/eFoP0vnayj",
+          "expanded_url": "https://x.com/DIVER_OSINT_CTF/status/1799656714033369112/photo/1",
+          "indices": [
+            198,
+            221
+          ],
+          "url": "https://t.co/eFoP0vnayj"
+        }
+      ]
+    },
+    "id_str": "1799656714033369112",
+    "text": "The final result of DIVER OSINT CTF.\n\n1st: KAKITSUBATA (11251 pts)\n2nd: 25時、ディスコードで。 (9751 pts)\n3rd: Wani Hackase (8290 pts)\n4th: Gai (7798 pts)\n5th: La Casa de Papel (7785 pts)\n\nCongratulations! 🎉 https://t.co/eFoP0vnayj",
+    "user": {
+      "id_str": "1774498162545463296",
+      "name": "DIVER OSINT CTF",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1774499367472472064/tQF2eZgQ_normal.jpg",
+      "screen_name": "DIVER_OSINT_CTF",
+      "verified": false,
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1799656714033369112"
+      ],
+      "editable_until_msecs": "1717910171000",
+      "is_edit_eligible": true,
+      "edits_remaining": "5"
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/eFoP0vnayj",
+        "expanded_url": "https://x.com/DIVER_OSINT_CTF/status/1799656714033369112/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          198,
+          221
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/GPmpI9-bwAEqItc.jpg",
+        "original_info": {
+          "height": 1245,
+          "width": 1327,
+          "focus_rects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 1327,
+              "h": 743
+            },
+            {
+              "x": 41,
+              "y": 0,
+              "w": 1245,
+              "h": 1245
+            },
+            {
+              "x": 117,
+              "y": 0,
+              "w": 1092,
+              "h": 1245
+            },
+            {
+              "x": 352,
+              "y": 0,
+              "w": 623,
+              "h": 1245
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 1327,
+              "h": 1245
+            }
+          ]
+        },
+        "sizes": {
+          "large": {
+            "h": 1245,
+            "resize": "fit",
+            "w": 1327
+          },
+          "medium": {
+            "h": 1126,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 638,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/eFoP0vnayj"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1327,
+            "h": 743
+          },
+          {
+            "x": 41,
+            "y": 0,
+            "w": 1245,
+            "h": 1245
+          },
+          {
+            "x": 117,
+            "y": 0,
+            "w": 1092,
+            "h": 1245
+          },
+          {
+            "x": 352,
+            "y": 0,
+            "w": 623,
+            "h": 1245
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1327,
+            "h": 1245
+          }
+        ],
+        "expandedUrl": "https://x.com/DIVER_OSINT_CTF/status/1799656714033369112/photo/1",
+        "url": "https://pbs.twimg.com/media/GPmpI9-bwAEqItc.jpg",
+        "width": 1327,
+        "height": 1245
+      }
+    ],
+    "conversation_count": 0,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false
+  }
+}

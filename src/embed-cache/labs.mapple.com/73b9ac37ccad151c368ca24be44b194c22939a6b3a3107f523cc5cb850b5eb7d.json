@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://labs.mapple.com/mapplexml.html",
+  "title": "MAPPLE法務局地図ビューア",
+  "description": "「MAPPLE法務局地図ビューア」では、マップルの地図上で法務局地図（登記所備付地図データ）を無料でご覧いただけます。また、地番検索ができます。",
+  "faviconUrl": "https://labs.mapple.com/favicon/favicon_16.png",
+  "ogImageUrl": "https://labs.mapple.com/img/MAPPLEXMLOGP.png"
+}

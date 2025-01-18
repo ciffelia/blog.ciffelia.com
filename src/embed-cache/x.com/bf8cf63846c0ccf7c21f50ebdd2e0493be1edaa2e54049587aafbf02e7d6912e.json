@@ -1,0 +1,212 @@
+{
+  "type": "tweet",
+  "tweet": {
+    "__typename": "Tweet",
+    "lang": "ja",
+    "favorite_count": 2166,
+    "created_at": "2023-12-06T09:29:25.000Z",
+    "display_text_range": [
+      0,
+      49
+    ],
+    "entities": {
+      "hashtags": [],
+      "urls": [],
+      "user_mentions": [],
+      "symbols": []
+    },
+    "id_str": "1732331400278520246",
+    "text": "墜落により乗員全員が殉職した在日米軍のオスプレイは「ガンダム22」というコールサインだったらしい。",
+    "user": {
+      "id_str": "3175488314",
+      "name": "mssn65",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/888413808473001984/3Oq5r3g5_normal.jpg",
+      "screen_name": "jpg2t785",
+      "verified": false,
+      "is_blue_verified": true,
+      "profile_image_shape": "Circle"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1732331400278520246"
+      ],
+      "editable_until_msecs": "1701858565000",
+      "is_edit_eligible": true,
+      "edits_remaining": "5"
+    },
+    "conversation_count": 9,
+    "news_action_type": "conversation",
+    "quoted_tweet": {
+      "lang": "en",
+      "reply_count": 23,
+      "retweet_count": 295,
+      "favorite_count": 861,
+      "possibly_sensitive": false,
+      "created_at": "2023-12-06T03:13:41.000Z",
+      "display_text_range": [
+        0,
+        280
+      ],
+      "entities": {
+        "hashtags": [],
+        "urls": [],
+        "user_mentions": [],
+        "symbols": [],
+        "media": [
+          {
+            "display_url": "pic.x.com/fQrqPN6Il4",
+            "expanded_url": "https://x.com/INDOPACOM/status/1732236842022637751/photo/1",
+            "indices": [
+              281,
+              304
+            ],
+            "url": "https://t.co/fQrqPN6Il4"
+          }
+        ]
+      },
+      "id_str": "1732236842022637751",
+      "text": "We pause to mourn, remember, and pray for our fallen teammates, and grieve with the families, loved ones, friends and fellow service members of these heroes. We are exceedingly grateful for our Japanese Allies and neighbors for their commitment to search and rescue, and recovery. https://t.co/fQrqPN6Il4",
+      "user": {
+        "id_str": "24112747",
+        "name": "U.S. Indo-Pacific Command",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1612580467718639621/t91_3uYq_normal.jpg",
+        "screen_name": "INDOPACOM",
+        "verified": false,
+        "verified_type": "Government",
+        "is_blue_verified": false,
+        "profile_image_shape": "Square"
+      },
+      "edit_control": {
+        "edit_tweet_ids": [
+          "1732236842022637751"
+        ],
+        "editable_until_msecs": "1701836021000",
+        "is_edit_eligible": false,
+        "edits_remaining": "5"
+      },
+      "mediaDetails": [
+        {
+          "display_url": "pic.x.com/fQrqPN6Il4",
+          "expanded_url": "https://x.com/INDOPACOM/status/1732236842022637751/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "indices": [
+            281,
+            304
+          ],
+          "media_url_https": "https://pbs.twimg.com/media/GAoinaLbwAAs3us.jpg",
+          "original_info": {
+            "height": 924,
+            "width": 1640,
+            "focus_rects": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1640,
+                "h": 918
+              },
+              {
+                "x": 153,
+                "y": 0,
+                "w": 924,
+                "h": 924
+              },
+              {
+                "x": 210,
+                "y": 0,
+                "w": 811,
+                "h": 924
+              },
+              {
+                "x": 384,
+                "y": 0,
+                "w": 462,
+                "h": 924
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1640,
+                "h": 924
+              }
+            ]
+          },
+          "sizes": {
+            "large": {
+              "h": 924,
+              "resize": "fit",
+              "w": 1640
+            },
+            "medium": {
+              "h": 676,
+              "resize": "fit",
+              "w": 1200
+            },
+            "small": {
+              "h": 383,
+              "resize": "fit",
+              "w": 680
+            },
+            "thumb": {
+              "h": 150,
+              "resize": "crop",
+              "w": 150
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/fQrqPN6Il4"
+        }
+      ],
+      "photos": [
+        {
+          "backgroundColor": {
+            "red": 204,
+            "green": 214,
+            "blue": 221
+          },
+          "cropCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 1640,
+              "h": 918
+            },
+            {
+              "x": 153,
+              "y": 0,
+              "w": 924,
+              "h": 924
+            },
+            {
+              "x": 210,
+              "y": 0,
+              "w": 811,
+              "h": 924
+            },
+            {
+              "x": 384,
+              "y": 0,
+              "w": 462,
+              "h": 924
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 1640,
+              "h": 924
+            }
+          ],
+          "expandedUrl": "https://x.com/INDOPACOM/status/1732236842022637751/photo/1",
+          "url": "https://pbs.twimg.com/media/GAoinaLbwAAs3us.jpg",
+          "width": 1640,
+          "height": 924
+        }
+      ],
+      "isEdited": false,
+      "isStaleEdit": false
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "type": "tweet",
+  "tweet": {
+    "__typename": "Tweet",
+    "lang": "ja",
+    "favorite_count": 22,
+    "possibly_sensitive": false,
+    "created_at": "2023-09-18T09:57:18.000Z",
+    "display_text_range": [
+      0,
+      49
+    ],
+    "entities": {
+      "hashtags": [],
+      "urls": [],
+      "user_mentions": [],
+      "symbols": [],
+      "media": [
+        {
+          "display_url": "pic.x.com/6YBLHgTHBR",
+          "expanded_url": "https://x.com/ciffelia/status/1703709774192480284/photo/1",
+          "indices": [
+            50,
+            73
+          ],
+          "url": "https://t.co/6YBLHgTHBR"
+        }
+      ]
+    },
+    "id_str": "1703709774192480284",
+    "text": "JALの格納庫見学してきました もうすぐ売却されるらしい最後の777-200を近くで見れてよかった https://t.co/6YBLHgTHBR",
+    "user": {
+      "id_str": "4637307672",
+      "name": "Ciffelia",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1590340501655683072/D_G0W9KL_normal.jpg",
+      "screen_name": "ciffelia",
+      "verified": false,
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1703709774192480284"
+      ],
+      "editable_until_msecs": "1695034638000",
+      "is_edit_eligible": false,
+      "edits_remaining": "5"
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/6YBLHgTHBR",
+        "expanded_url": "https://x.com/ciffelia/status/1703709774192480284/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          50,
+          73
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/F6TK_qoa4AED1Lk.jpg",
+        "original_info": {
+          "height": 2457,
+          "width": 3276,
+          "focus_rects": [
+            {
+              "x": 0,
+              "y": 622,
+              "w": 3276,
+              "h": 1835
+            },
+            {
+              "x": 164,
+              "y": 0,
+              "w": 2457,
+              "h": 2457
+            },
+            {
+              "x": 315,
+              "y": 0,
+              "w": 2155,
+              "h": 2457
+            },
+            {
+              "x": 778,
+              "y": 0,
+              "w": 1229,
+              "h": 2457
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 3276,
+              "h": 2457
+            }
+          ]
+        },
+        "sizes": {
+          "large": {
+            "h": 1536,
+            "resize": "fit",
+            "w": 2048
+          },
+          "medium": {
+            "h": 900,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 510,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/6YBLHgTHBR"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "x": 0,
+            "y": 622,
+            "w": 3276,
+            "h": 1835
+          },
+          {
+            "x": 164,
+            "y": 0,
+            "w": 2457,
+            "h": 2457
+          },
+          {
+            "x": 315,
+            "y": 0,
+            "w": 2155,
+            "h": 2457
+          },
+          {
+            "x": 778,
+            "y": 0,
+            "w": 1229,
+            "h": 2457
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 3276,
+            "h": 2457
+          }
+        ],
+        "expandedUrl": "https://x.com/ciffelia/status/1703709774192480284/photo/1",
+        "url": "https://pbs.twimg.com/media/F6TK_qoa4AED1Lk.jpg",
+        "width": 3276,
+        "height": 2457
+      }
+    ],
+    "conversation_count": 1,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false
+  }
+}

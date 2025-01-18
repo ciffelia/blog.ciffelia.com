@@ -1,0 +1,173 @@
+{
+  "type": "tweet",
+  "tweet": {
+    "__typename": "Tweet",
+    "lang": "ja",
+    "favorite_count": 12,
+    "possibly_sensitive": false,
+    "created_at": "2023-08-06T11:21:08.000Z",
+    "display_text_range": [
+      0,
+      2
+    ],
+    "entities": {
+      "hashtags": [],
+      "urls": [],
+      "user_mentions": [],
+      "symbols": [],
+      "media": [
+        {
+          "display_url": "pic.x.com/kPQAQnjlvx",
+          "expanded_url": "https://x.com/ciffelia/status/1688148193912164352/photo/1",
+          "indices": [
+            3,
+            26
+          ],
+          "url": "https://t.co/kPQAQnjlvx"
+        }
+      ]
+    },
+    "id_str": "1688148193912164352",
+    "text": "宮島 https://t.co/kPQAQnjlvx",
+    "user": {
+      "id_str": "4637307672",
+      "name": "Ciffelia",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1590340501655683072/D_G0W9KL_normal.jpg",
+      "screen_name": "ciffelia",
+      "verified": false,
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1688148193912164352"
+      ],
+      "editable_until_msecs": "1691324468000",
+      "is_edit_eligible": false,
+      "edits_remaining": "5"
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/kPQAQnjlvx",
+        "expanded_url": "https://x.com/ciffelia/status/1688148193912164352/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          3,
+          26
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/F22BxwZb0AEx707.jpg",
+        "original_info": {
+          "height": 2457,
+          "width": 3276,
+          "focus_rects": [
+            {
+              "x": 0,
+              "y": 622,
+              "w": 3276,
+              "h": 1835
+            },
+            {
+              "x": 819,
+              "y": 0,
+              "w": 2457,
+              "h": 2457
+            },
+            {
+              "x": 1121,
+              "y": 0,
+              "w": 2155,
+              "h": 2457
+            },
+            {
+              "x": 2047,
+              "y": 0,
+              "w": 1229,
+              "h": 2457
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 3276,
+              "h": 2457
+            }
+          ]
+        },
+        "sizes": {
+          "large": {
+            "h": 1536,
+            "resize": "fit",
+            "w": 2048
+          },
+          "medium": {
+            "h": 900,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 510,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/kPQAQnjlvx"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "x": 0,
+            "y": 622,
+            "w": 3276,
+            "h": 1835
+          },
+          {
+            "x": 819,
+            "y": 0,
+            "w": 2457,
+            "h": 2457
+          },
+          {
+            "x": 1121,
+            "y": 0,
+            "w": 2155,
+            "h": 2457
+          },
+          {
+            "x": 2047,
+            "y": 0,
+            "w": 1229,
+            "h": 2457
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 3276,
+            "h": 2457
+          }
+        ],
+        "expandedUrl": "https://x.com/ciffelia/status/1688148193912164352/photo/1",
+        "url": "https://pbs.twimg.com/media/F22BxwZb0AEx707.jpg",
+        "width": 3276,
+        "height": 2457
+      }
+    ],
+    "conversation_count": 1,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false
+  }
+}

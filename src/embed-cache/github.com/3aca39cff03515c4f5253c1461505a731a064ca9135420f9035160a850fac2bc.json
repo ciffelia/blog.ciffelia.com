@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://github.com/denoland/deno-gfm",
+  "title": "GitHub - denoland/deno-gfm: Server-side GitHub Flavored Markdown rendering for Deno",
+  "description": "Server-side GitHub Flavored Markdown rendering for Deno - denoland/deno-gfm",
+  "faviconUrl": "https://github.githubassets.com/favicons/favicon.png",
+  "ogImageUrl": "https://opengraph.githubassets.com/e2286f67840331a0d02679bef549ffd584838bbf7ce8677e87f78c0e0d257049/denoland/deno-gfm"
+}

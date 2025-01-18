@@ -1,0 +1,108 @@
+{
+  "type": "tweet",
+  "tweet": {
+    "__typename": "Tweet",
+    "lang": "ja",
+    "favorite_count": 15,
+    "possibly_sensitive": false,
+    "created_at": "2023-10-14T07:16:59.000Z",
+    "display_text_range": [
+      0,
+      55
+    ],
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "display_url": "github.com/ciffelia/tsblo…",
+          "expanded_url": "https://github.com/ciffelia/tsblock",
+          "indices": [
+            0,
+            23
+          ],
+          "url": "https://t.co/84YTepfql8"
+        }
+      ],
+      "user_mentions": [],
+      "symbols": []
+    },
+    "id_str": "1713091513935331633",
+    "text": "https://t.co/84YTepfql8 Tailscaleがおかしな挙動をする問題をeBPFで解決した",
+    "user": {
+      "id_str": "4637307672",
+      "name": "Ciffelia",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1590340501655683072/D_G0W9KL_normal.jpg",
+      "screen_name": "ciffelia",
+      "verified": false,
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1713091513935331633"
+      ],
+      "editable_until_msecs": "1697271419000",
+      "is_edit_eligible": true,
+      "edits_remaining": "5"
+    },
+    "conversation_count": 0,
+    "news_action_type": "conversation",
+    "card": {
+      "card_platform": {
+        "platform": {
+          "audience": {
+            "name": "production"
+          },
+          "device": {
+            "name": "iPhone",
+            "version": "13"
+          }
+        }
+      },
+      "name": "summary_large_image",
+      "url": "https://t.co/84YTepfql8",
+      "binding_values": {
+        "description": {
+          "string_value": "Prevent tailscale from using specific network interfaces - ciffelia/tsblock",
+          "type": "STRING"
+        },
+        "domain": {
+          "string_value": "github.com",
+          "type": "STRING"
+        },
+        "site": {
+          "scribe_key": "publisher_id",
+          "type": "USER",
+          "user_value": {
+            "id_str": "13334762",
+            "path": []
+          }
+        },
+        "photo_image_full_size_alt_text": {
+          "string_value": "Prevent tailscale from using specific network interfaces - ciffelia/tsblock",
+          "type": "STRING"
+        },
+        "vanity_url": {
+          "scribe_key": "vanity_url",
+          "string_value": "github.com",
+          "type": "STRING"
+        },
+        "summary_photo_image_alt_text": {
+          "string_value": "Prevent tailscale from using specific network interfaces - ciffelia/tsblock",
+          "type": "STRING"
+        },
+        "title": {
+          "string_value": "GitHub - ciffelia/tsblock: Prevent tailscale from using specific network interfaces",
+          "type": "STRING"
+        },
+        "card_url": {
+          "scribe_key": "card_url",
+          "string_value": "https://t.co/84YTepfql8",
+          "type": "STRING"
+        }
+      }
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  }
+}

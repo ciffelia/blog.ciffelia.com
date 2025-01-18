@@ -1,0 +1,173 @@
+{
+  "type": "tweet",
+  "tweet": {
+    "__typename": "Tweet",
+    "lang": "ja",
+    "favorite_count": 29,
+    "possibly_sensitive": false,
+    "created_at": "2023-02-01T10:46:00.000Z",
+    "display_text_range": [
+      0,
+      7
+    ],
+    "entities": {
+      "hashtags": [],
+      "urls": [],
+      "user_mentions": [],
+      "symbols": [],
+      "media": [
+        {
+          "display_url": "pic.x.com/d2GMrW1D9j",
+          "expanded_url": "https://x.com/ciffelia/status/1620735209569390596/photo/1",
+          "indices": [
+            8,
+            31
+          ],
+          "url": "https://t.co/d2GMrW1D9j"
+        }
+      ]
+    },
+    "id_str": "1620735209569390596",
+    "text": "免許とりました https://t.co/d2GMrW1D9j",
+    "user": {
+      "id_str": "4637307672",
+      "name": "Ciffelia",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1590340501655683072/D_G0W9KL_normal.jpg",
+      "screen_name": "ciffelia",
+      "verified": false,
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1620735209569390596"
+      ],
+      "editable_until_msecs": "1675250160000",
+      "is_edit_eligible": true,
+      "edits_remaining": "5"
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/d2GMrW1D9j",
+        "expanded_url": "https://x.com/ciffelia/status/1620735209569390596/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          8,
+          31
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/Fn4CFNzagAAgxuI.jpg",
+        "original_info": {
+          "height": 1122,
+          "width": 1762,
+          "focus_rects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 1762,
+              "h": 987
+            },
+            {
+              "x": 363,
+              "y": 0,
+              "w": 1122,
+              "h": 1122
+            },
+            {
+              "x": 432,
+              "y": 0,
+              "w": 984,
+              "h": 1122
+            },
+            {
+              "x": 644,
+              "y": 0,
+              "w": 561,
+              "h": 1122
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 1762,
+              "h": 1122
+            }
+          ]
+        },
+        "sizes": {
+          "large": {
+            "h": 1122,
+            "resize": "fit",
+            "w": 1762
+          },
+          "medium": {
+            "h": 764,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 433,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/d2GMrW1D9j"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1762,
+            "h": 987
+          },
+          {
+            "x": 363,
+            "y": 0,
+            "w": 1122,
+            "h": 1122
+          },
+          {
+            "x": 432,
+            "y": 0,
+            "w": 984,
+            "h": 1122
+          },
+          {
+            "x": 644,
+            "y": 0,
+            "w": 561,
+            "h": 1122
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1762,
+            "h": 1122
+          }
+        ],
+        "expandedUrl": "https://x.com/ciffelia/status/1620735209569390596/photo/1",
+        "url": "https://pbs.twimg.com/media/Fn4CFNzagAAgxuI.jpg",
+        "width": 1762,
+        "height": 1122
+      }
+    ],
+    "conversation_count": 0,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false
+  }
+}
