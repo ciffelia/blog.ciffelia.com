@@ -12,10 +12,10 @@ const { as: Tag, rounded, hoverTransition, ...props } = Astro.props;
 
 <Tag
   class:list={[
-    "bg-slate-50 dark:bg-slate-900 shadow-lg shadow-white/10 dark:shadow-black/10",
+    "bg-slate-50 shadow-lg shadow-white/10 dark:bg-slate-900 dark:shadow-black/10",
     {
       "rounded-2xl": rounded,
-      "hover:shadow-white/25 dark:hover:shadow-black/25 transition-all duration-200":
+      "transition-all duration-200 hover:shadow-white/25 dark:hover:shadow-black/25":
         hoverTransition,
     },
   ]}

@@ -18,15 +18,15 @@ const {
 ---
 
 <Card as="li" class="flex overflow-hidden" rounded hoverTransition>
-  <a href={`/article/${id}`} class="grow flex flex-col">
+  <a href={`/article/${id}`} class="flex grow flex-col">
     <div class="border-b border-slate-200 dark:border-slate-800">
       <Thumbnail {thumbnail} />
     </div>
-    <div class="grow p-4 flex flex-col gap-1">
-      <div class="grow flex justify-center items-center">
+    <div class="flex grow flex-col gap-1 p-4">
+      <div class="flex grow items-center justify-center">
         <span class="text-xl font-bold">{title}</span>
       </div>
-      <div class="flex justify-center items-center gap-2">
+      <div class="flex items-center justify-center gap-2">
         <FaRegEdit />
         <Timestamp value={publishedAt} dateOnly />
       </div>

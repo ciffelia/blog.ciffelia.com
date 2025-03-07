@@ -16,13 +16,13 @@ const { name, url, color, icon, smallerIcon = false } = Astro.props;
 <a href={url} target="_blank">
   <div
     style={{ backgroundColor: color }}
-    class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full"
+    class="flex h-12 w-12 items-center justify-center rounded-full sm:h-14 sm:w-14"
   >
     <Image
       src={icon}
       alt={name}
       class="object-contain"
-      class:list={{ "w-7 h-7": smallerIcon, "w-8 h-8": !smallerIcon }}
+      class:list={{ "h-7 w-7": smallerIcon, "h-8 w-8": !smallerIcon }}
       loading="eager"
     />
   </div>

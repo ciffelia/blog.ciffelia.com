@@ -21,9 +21,9 @@ const articleList = (
     <meta property="og:description" content={SITE_DESCRIPTION} />
     <meta name="twitter:card" content="summary_large_image" />
   </Fragment>
-  <div class="flex justify-center w-screen md:px-16">
+  <div class="flex w-screen justify-center md:px-16">
     <ul
-      class="grid grid-cols-[repeat(auto-fit,min(400px,100%))] justify-center gap-10 w-full"
+      class="grid w-full grid-cols-[repeat(auto-fit,min(400px,100%))] justify-center gap-10"
     >
       {articleList.map((article) => <ArticleCard {article} />)}
       <SilhouetteCard />

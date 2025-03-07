@@ -12,18 +12,18 @@ const title = data.title ?? data.url;
 const host = URL.canParse(url) ? new URL(url).host : undefined;
 ---
 
-<div class="not-prose tracking-normal text-start">
+<div class="not-prose text-start tracking-normal">
   <a
-    class="my-5 w-full h-32 flex border border-slate-200 dark:border-slate-800 rounded-sm overflow-hidden bg-slate-50 dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+    class="my-5 flex h-32 w-full overflow-hidden rounded-sm border border-slate-200 bg-slate-50 transition-colors hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800"
     href={url}
     target="_blank"
   >
-    <div class="grow px-5 py-3 flex flex-col gap-1.5 overflow-hidden">
-      <span class="text-lg font-bold tracking-wide line-clamp-2">
+    <div class="flex grow flex-col gap-1.5 overflow-hidden px-5 py-3">
+      <span class="line-clamp-2 text-lg font-bold tracking-wide">
         {title}
       </span>
       <span
-        class="grow text-sm tracking-wide text-slate-500 dark:text-slate-400 truncate"
+        class="grow truncate text-sm tracking-wide text-slate-500 dark:text-slate-400"
       >
         {description}
       </span>
@@ -31,7 +31,7 @@ const host = URL.canParse(url) ? new URL(url).host : undefined;
         {
           faviconUrl !== undefined && (
             <img
-              class="w-3.5 h-3.5"
+              class="h-3.5 w-3.5"
               src={faviconUrl}
               alt=""
               loading="lazy"
@@ -40,13 +40,13 @@ const host = URL.canParse(url) ? new URL(url).host : undefined;
             />
           )
         }
-        <span class="text-sm truncate">{host}</span>
+        <span class="truncate text-sm">{host}</span>
       </div>
     </div>
     {
       ogImageUrl !== undefined && (
         <img
-          class="h-full object-cover aspect-square sm:aspect-ogp"
+          class="sm:aspect-ogp aspect-square h-full object-cover"
           src={ogImageUrl}
           alt=""
           loading="lazy"

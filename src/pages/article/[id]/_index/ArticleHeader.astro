@@ -21,22 +21,22 @@ const {
     {title}
   </h1>
   <TagList tags={tags} />
-  <div class="flex justify-center items-center gap-x-4">
+  <div class="flex items-center justify-center gap-x-4">
     {
       !isPublished && (
-        <div class="flex justify-center items-center gap-x-2 text-red-500">
+        <div class="flex items-center justify-center gap-x-2 text-red-500">
           <FaPencilRuler role="presentation" />
           <span>下書き</span>
         </div>
       )
     }
-    <div class="flex justify-center items-center gap-x-2">
+    <div class="flex items-center justify-center gap-x-2">
       <FaRegEdit role="img" aria-label="公開日" />
       <Timestamp value={publishedAt} dateOnly />
     </div>
     {
       !isSameDay(publishedAt, modifiedAt) && (
-        <div class="flex justify-center items-center gap-x-2">
+        <div class="flex items-center justify-center gap-x-2">
           <FaSync role="img" aria-label="最終更新日" />
           <Timestamp value={modifiedAt} dateOnly />
         </div>

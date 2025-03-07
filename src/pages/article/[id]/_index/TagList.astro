@@ -6,10 +6,10 @@ interface Props {
 const { tags } = Astro.props;
 ---
 
-<ul class="flex flex-wrap justify-center items-center gap-x-2">
+<ul class="flex flex-wrap items-center justify-center gap-x-2">
   {
     tags.map((tag) => (
-      <li class="border border-slate-300 dark:border-slate-700 rounded-md px-1.5">
+      <li class="rounded-md border border-slate-300 px-1.5 dark:border-slate-700">
         {tag}
       </li>
     ))

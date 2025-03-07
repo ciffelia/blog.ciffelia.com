@@ -10,18 +10,18 @@ import SocialLink from "./SocialLink.astro";
 ---
 
 <header
-  class="flex flex-col lg:flex-row items-center justify-between gap-y-4 px-16 py-6"
+  class="flex flex-col items-center justify-between gap-y-4 px-16 py-6 lg:flex-row"
 >
   <a href="/" class="flex items-center gap-2 sm:gap-4">
     <Image
       src={ciffeliaIcon}
       alt=""
-      class="w-12 h-12 sm:w-20 sm:h-20 max-w-none rounded-full"
+      class="h-12 w-12 max-w-none rounded-full sm:h-20 sm:w-20"
       sizes="(min-width: 640px) 80px, 48px"
       loading="eager"
     />
     <span
-      class="font-quicksand font-semibold text-4xl sm:text-5xl text-slate-50"
+      class="font-quicksand text-4xl font-semibold text-slate-50 sm:text-5xl"
     >
       {SITE_NAME}
     </span>

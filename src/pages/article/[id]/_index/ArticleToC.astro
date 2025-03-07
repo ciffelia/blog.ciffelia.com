@@ -22,22 +22,22 @@ const minDepth = Math.min(...headings.map(({ depth }) => depth));
         return (
           <li class="group" data-toc-slug={slug} data-active="true">
             <a class="flex" href={`#${slug}`}>
-              <div class="w-4 pr-2 flex flex-col items-center">
-                <div class="w-0.5 h-3.5 bg-slate-300 dark:bg-slate-700 group-first:bg-transparent" />
+              <div class="flex w-4 flex-col items-center pr-2">
+                <div class="h-3.5 w-0.5 bg-slate-300 group-first:bg-transparent dark:bg-slate-700" />
                 <div
                   class:list={[
-                    "rounded-full opacity-60 group-hover:opacity-100 group-data-[active=true]:opacity-100 bg-blue-900 dark:bg-slate-400",
+                    "rounded-full bg-blue-900 opacity-60 group-hover:opacity-100 group-data-[active=true]:opacity-100 dark:bg-slate-400",
                     {
                       "size-2": depth === minDepth,
                       "size-1": depth > minDepth,
                     },
                   ]}
                 />
-                <div class="flex-1 w-0.5 bg-slate-300 dark:bg-slate-700 group-last:bg-transparent" />
+                <div class="w-0.5 flex-1 bg-slate-300 group-last:bg-transparent dark:bg-slate-700" />
               </div>
               <span
                 class:list={[
-                  "my-1.5 group-last:mb-0 opacity-60 group-hover:opacity-100 group-data-[active=true]:opacity-100 transition-opacity",
+                  "my-1.5 opacity-60 transition-opacity group-last:mb-0 group-hover:opacity-100 group-data-[active=true]:opacity-100",
                   {
                     "font-bold": depth === minDepth,
                     "text-sm opacity-80": depth > minDepth,
