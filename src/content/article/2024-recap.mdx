@@ -1,0 +1,181 @@
+---
+title: '2024年を振り返る'
+description: '2024年の出来事を振り返ります。'
+tags: ['振り返り']
+isPublished: true
+publishedAt: '2025-03-08T00:24:00+09:00'
+modifiedAt: '2025-03-08T00:24:00+09:00'
+thumbnail: '4️⃣'
+---
+
+# 2024年を振り返る
+
+気づけば2025年も6分の1が終わってしまいました。卒論と学会発表の準備に追われて遅くなってしまいましたが、2024年にやったことを振り返ってみます。
+
+## WaniCTF 2024
+
+所属しているCTFサークル[Wani Hackase](https://wanictf.org/about/)でCTFを開催しました。今回私はインフラ管理を担当することとなり、初めてのAWSでのサービス運用を経験しました。
+
+https://blog.ciffelia.com/article/wanictf2024
+
+## CTF参加
+
+Wani Hackaseとして週末のCTFに参加しました。IERAE CTFで8位、SECCON Beginners CTF 5位、DIVER OSINT CTFで3位など、いくつかのCTFで良い成績を残すことができました。
+
+https://ctftime.org/team/70717
+
+## OSSの脆弱性報告
+
+OSSを利用していて発見した脆弱性などをいくつか報告しました。
+
+https://github.com/advisories/GHSA-9hc7-6w9r-wj94
+
+https://github.com/advisories/GHSA-h78m-j95m-5356
+
+https://github.com/oauth2-proxy/oauth2-proxy/pull/2827
+
+## ソフトウェア開発
+
+日々の生活で必要になったツールをいくつか作りました。公開しているものをいくつか挙げます。
+
+### matplotlib-fontja
+
+https://github.com/ciffelia/matplotlib-fontja
+
+Matplotlibを日本語表示に対応させる設定を簡単に行えるようにするライブラリです。既存のライブラリがPython 3.13で動かなくなったため、フォークして作りました。期せずして私が公開したOSSの中で最も多くのスターを獲得しています。
+
+```python
+import matplotlib.pyplot as plt
+import matplotlib_fontja
+
+plt.plot([1, 2, 3, 4])
+plt.xlabel('簡単なグラフ')
+plt.show()
+```
+
+### nid
+
+https://github.com/ciffelia/nid
+
+Rustで[Nano ID](https://github.com/ai/nanoid)を扱うためのcrateです。Rustの型システムを利用し、文字数や文字種の制約を型に持たせる機能を備えています。ドキュメントも充実させており、気に入っているプロジェクトの一つです。
+
+```rust
+use nid::{alphabet::Base62Alphabet, Nanoid};
+
+// Generate a new Nano ID and print it.
+let id: Nanoid = Nanoid::new();
+println!("{}", id);
+
+// Parse a string into a Nano ID and convert it back to a string.
+let id: Nanoid = "abcdefg1234567UVWXYZ_".parse()?;
+let s = id.to_string();
+
+// Parse a string into a Nano ID with a different length and alphabet.
+let id: Nanoid<9, Base62Alphabet> = "abc123XYZ".parse()?;
+```
+
+### wsl-win32-openssh-agent
+
+https://github.com/ciffelia/wsl-win32-openssh-agent
+
+WSLからWin32-OpenSSHのAgentを簡単に利用するためのツールです。Windows security contextに秘密鍵を保存し、WSL内での秘密鍵管理を不要にします。
+
+### leetgen
+
+https://github.com/ciffelia/leetgen
+
+英数字からなる文字列をLeetに変換するウェブアプリです。CTFのフラグをつくるとき便利です。
+
+### uuidgen
+
+https://github.com/ciffelia/uuidgen
+
+ランダムに生成したUUID (v4)を生成するウェブアプリです。ゼロクリックで大量のUUIDを生成できるのが便利です。
+
+## 卒業と進学
+
+2025年3月に大阪大学を卒業し、4月からは大阪大学大学院に進学します。進路選択にあたっては多くの方にお世話になりました。ありがとうございました。
+
+進学後は新しい研究室で、これまでとは異なる分野の研究に取り組む予定です。有意義な研究成果を残せるよう頑張ります。
+
+修士課程修了後は27卒として就職活動を行う予定です。**ソフトウェアエンジニアとしてのインターン先を探しているので、興味のある企業の方はぜひご連絡ください。** レジュメを送ります。
+
+## 旅行
+
+最後に2024年の旅行を振り返ります。
+
+札幌→旭川→網走→知床というルートで北海道を周りました。特に知床の自然は素晴らしく、何度でも訪れたくなる場所です。
+
+https://x.com/ciffelia/status/1755516016258613565
+
+https://x.com/ciffelia/status/1755817429719191927
+
+https://x.com/ciffelia/status/1756325872569860393
+
+https://x.com/ciffelia/status/1756328378125455739
+
+https://x.com/ciffelia/status/1756461694031929422
+
+https://x.com/ciffelia/status/1756480455116030248
+
+https://x.com/ciffelia/status/1756654218843394486
+
+https://x.com/ciffelia/status/1757039816217358547
+
+https://x.com/ciffelia/status/1757043131000967312
+
+特徴的なシルエットで知られるエアバスのベルーガが来日していると聞き、神戸空港の展望デッキで見学してきました。
+
+https://x.com/ciffelia/status/1760633260588310761
+
+雪の残る金沢や白川郷も訪れました。
+
+https://x.com/ciffelia/status/1898015030320546163
+
+https://x.com/ciffelia/status/1898015589836145024
+
+初夏の天橋立です。
+
+https://x.com/ciffelia/status/1898016237478666701
+
+びわ湖バレイ。高いところが好きです。
+
+https://x.com/ciffelia/status/1898016586377875789
+
+牛久大仏では、成田空港にアプローチするA380 FLYING HONUとのツーショットが撮れました。
+
+https://x.com/ciffelia/status/1898016725280645289
+
+今年は海外にも進出しました。スイスです。街を歩いているだけでそびえ立つ山々に圧倒されます。今回はバスツアーでしたが、鉄道やケーブルカーなど公共交通が非常に発達していたのも印象的でした。
+
+https://x.com/ciffelia/status/1898017649738858996
+
+但馬空港での一日一組限定の見学ツアーに参加しました。滑走路の上を歩いたり、旧管制塔、格納庫、YS11などを見学できます。滑走路脇から定期便の離陸を見学するときにはパイロットが手を振ってくれました。
+
+https://x.com/ciffelia/status/1898018170633699526
+
+青森では龍飛崎を訪れました。トロッコで青函トンネルの旧竜飛海底駅付近まで行くことができます。少し離れていますが、頑張って三沢航空科学館も見学しました。
+
+https://x.com/ciffelia/status/1898018804434690357
+
+津軽海峡をフェリーで渡り、函館に上陸しました。
+
+https://x.com/ciffelia/status/1898019185483194879
+
+東京の飛び出すしぐれうい。
+
+https://x.com/ciffelia/status/1898019393650802716
+
+10月には諏訪を訪れました。残念ながら天気に恵まれず。
+
+https://x.com/ciffelia/status/1898019750766428670
+
+御在所ロープウェイからの景色。
+
+https://x.com/ciffelia/status/1898019976088633475
+
+2024年最後の旅行は名古屋でした。岐阜かがみがはら航空宇宙博物館にも行きました。
+
+https://x.com/ciffelia/status/1898020290031993234
+
+載せられる写真がありませんでしたが、宇治、奈良、ニンテンドーミュージアムにも行きました。2025年も日本全国を旅したいです。

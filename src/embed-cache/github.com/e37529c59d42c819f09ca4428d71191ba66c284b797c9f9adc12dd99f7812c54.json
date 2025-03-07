@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://github.com/oauth2-proxy/oauth2-proxy/pull/2827",
+  "title": "docs: fix insecure Caddy configuration example by ciffelia · Pull Request #2827 · oauth2-proxy/oauth2-proxy",
+  "description": "Description\n\nThis PR corrects the Caddy configuration example on the &quot;Integration&quot; page.\nIt also includes minor improvements, such as fixes for syntax highlighting and heading levels.\nMot...",
+  "faviconUrl": "https://github.githubassets.com/favicons/favicon.png",
+  "ogImageUrl": "https://opengraph.githubassets.com/dbca57ff215502c8c24e01c5a884f2414c032d54d0d559ad5267d0082fe913ba/oauth2-proxy/oauth2-proxy/pull/2827"
+}

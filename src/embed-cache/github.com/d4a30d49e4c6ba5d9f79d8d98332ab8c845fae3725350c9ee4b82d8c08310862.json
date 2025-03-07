@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://github.com/advisories/GHSA-9hc7-6w9r-wj94",
+  "title": "CVE-2024-36400 - GitHub Advisory Database",
+  "description": "Unable to generate the correct character set",
+  "faviconUrl": "https://github.githubassets.com/favicons/favicon.png",
+  "ogImageUrl": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"
+}
