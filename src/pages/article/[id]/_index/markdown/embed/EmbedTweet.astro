@@ -12,5 +12,5 @@ const { data } = Astro.props;
 <div
   class="not-prose flex w-full justify-center overflow-x-auto tracking-normal"
 >
-  <EmbeddedTweet tweet={data.tweet} />
+  <EmbeddedTweet client:visible tweet={data.tweet} />
 </div>
