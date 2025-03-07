@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://github.com/ciffelia/wsl-win32-openssh-agent",
+  "title": "GitHub - ciffelia/wsl-win32-openssh-agent: A set of systemd units to forward SSH agent socket from Windows to WSL.",
+  "description": "A set of systemd units to forward SSH agent socket from Windows to WSL. - ciffelia/wsl-win32-openssh-agent",
+  "faviconUrl": "https://github.githubassets.com/favicons/favicon.png",
+  "ogImageUrl": "https://opengraph.githubassets.com/b776e77d2f157aa584e0ac038d68429e7969b276acbd6ca2cf2e2ee0f6c9fec4/ciffelia/wsl-win32-openssh-agent"
+}

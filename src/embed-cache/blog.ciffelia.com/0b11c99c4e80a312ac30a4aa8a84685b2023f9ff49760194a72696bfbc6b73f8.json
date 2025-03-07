@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://blog.ciffelia.com/article/wanictf2024",
+  "title": "WaniCTF 2024開催記",
+  "description": "大阪大学CTFサークルWani Hackaseが開催したWaniCTF 2024の舞台裏を解説。AWSを用いたインフラ構築を振り返ります。",
+  "faviconUrl": "https://blog.ciffelia.com/favicon.png",
+  "ogImageUrl": "https://blog.ciffelia.com/article/wanictf2024/og.png?v=1"
+}

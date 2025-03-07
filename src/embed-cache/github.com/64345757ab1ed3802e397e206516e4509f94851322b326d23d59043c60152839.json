@@ -1,0 +1,8 @@
+{
+  "type": "card",
+  "url": "https://github.com/advisories/GHSA-h78m-j95m-5356",
+  "title": "CVE-2025-23047 - GitHub Advisory Database",
+  "description": "Cilium has an information leakage via insecure default Hubble UI CORS header",
+  "faviconUrl": "https://github.githubassets.com/favicons/favicon.png",
+  "ogImageUrl": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"
+}

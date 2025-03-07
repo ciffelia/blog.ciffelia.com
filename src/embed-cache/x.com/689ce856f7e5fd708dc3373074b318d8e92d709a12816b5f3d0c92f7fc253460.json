@@ -1,0 +1,564 @@
+{
+  "type": "tweet",
+  "tweet": {
+    "__typename": "Tweet",
+    "in_reply_to_screen_name": "ciffelia",
+    "in_reply_to_status_id_str": "1757039816217358547",
+    "in_reply_to_user_id_str": "4637307672",
+    "lang": "qme",
+    "favorite_count": 4,
+    "possibly_sensitive": false,
+    "created_at": "2024-02-12T14:05:01.000Z",
+    "display_text_range": [
+      0,
+      2
+    ],
+    "entities": {
+      "hashtags": [],
+      "urls": [],
+      "user_mentions": [],
+      "symbols": [],
+      "media": [
+        {
+          "display_url": "pic.x.com/oIRfPJ3Wjq",
+          "expanded_url": "https://x.com/ciffelia/status/1757043131000967312/video/1",
+          "indices": [
+            2,
+            25
+          ],
+          "url": "https://t.co/oIRfPJ3Wjq"
+        }
+      ]
+    },
+    "id_str": "1757043131000967312",
+    "text": "🦌 https://t.co/oIRfPJ3Wjq",
+    "user": {
+      "id_str": "4637307672",
+      "name": "Ciffelia",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1590340501655683072/D_G0W9KL_normal.jpg",
+      "screen_name": "ciffelia",
+      "verified": false,
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1757043131000967312"
+      ],
+      "editable_until_msecs": "1707750301000",
+      "is_edit_eligible": false,
+      "edits_remaining": "5"
+    },
+    "mediaDetails": [
+      {
+        "additional_media_info": {},
+        "display_url": "pic.x.com/oIRfPJ3Wjq",
+        "expanded_url": "https://x.com/ciffelia/status/1757043131000967312/video/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          2,
+          25
+        ],
+        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1757043012725792768/pu/img/ML02gnbFbkQzch6j.jpg",
+        "original_info": {
+          "height": 1280,
+          "width": 720,
+          "focus_rects": []
+        },
+        "sizes": {
+          "large": {
+            "h": 1280,
+            "resize": "fit",
+            "w": 720
+          },
+          "medium": {
+            "h": 1200,
+            "resize": "fit",
+            "w": 675
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 383
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "video",
+        "url": "https://t.co/oIRfPJ3Wjq",
+        "video_info": {
+          "aspect_ratio": [
+            9,
+            16
+          ],
+          "duration_millis": 12033,
+          "variants": [
+            {
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/ext_tw_video/1757043012725792768/pu/pl/7IeK5cwLoEF9G_o7.m3u8?tag=15"
+            },
+            {
+              "bitrate": 632000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1757043012725792768/pu/vid/avc1/320x568/glUXp9K6pWvF2B9Z.mp4?tag=15"
+            },
+            {
+              "bitrate": 772800,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1757043012725792768/pu/vid/hevc/480x852/pIHFROV7yJGXEz3L.mp4?tag=15"
+            },
+            {
+              "bitrate": 1664000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1757043012725792768/pu/vid/hevc/720x1280/Y5qBVRTIOXrgmlB0.mp4?tag=15"
+            }
+          ]
+        }
+      }
+    ],
+    "photos": [],
+    "video": {
+      "aspectRatio": [
+        9,
+        16
+      ],
+      "contentType": "media_entity",
+      "durationMs": 12033,
+      "mediaAvailability": {
+        "status": "available"
+      },
+      "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1757043012725792768/pu/img/ML02gnbFbkQzch6j.jpg",
+      "variants": [
+        {
+          "type": "application/x-mpegURL",
+          "src": "https://video.twimg.com/ext_tw_video/1757043012725792768/pu/pl/7IeK5cwLoEF9G_o7.m3u8?tag=15"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1757043012725792768/pu/vid/avc1/320x568/glUXp9K6pWvF2B9Z.mp4?tag=15"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1757043012725792768/pu/vid/hevc/480x852/pIHFROV7yJGXEz3L.mp4?tag=15"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1757043012725792768/pu/vid/hevc/720x1280/Y5qBVRTIOXrgmlB0.mp4?tag=15"
+        }
+      ],
+      "videoId": {
+        "type": "tweet",
+        "id": "1757043131000967312"
+      },
+      "viewCount": 0
+    },
+    "conversation_count": 0,
+    "news_action_type": "conversation",
+    "parent": {
+      "lang": "ja",
+      "reply_count": 1,
+      "retweet_count": 0,
+      "favorite_count": 17,
+      "possibly_sensitive": false,
+      "created_at": "2024-02-12T13:51:51.000Z",
+      "display_text_range": [
+        0,
+        5
+      ],
+      "entities": {
+        "hashtags": [],
+        "urls": [],
+        "user_mentions": [],
+        "symbols": [],
+        "media": [
+          {
+            "display_url": "pic.x.com/Iq8vuiaZLT",
+            "expanded_url": "https://x.com/ciffelia/status/1757039816217358547/photo/1",
+            "indices": [
+              6,
+              29
+            ],
+            "url": "https://t.co/Iq8vuiaZLT"
+          }
+        ]
+      },
+      "id_str": "1757039816217358547",
+      "text": "知床よすぎ https://t.co/Iq8vuiaZLT",
+      "user": {
+        "id_str": "4637307672",
+        "name": "Ciffelia",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1590340501655683072/D_G0W9KL_normal.jpg",
+        "screen_name": "ciffelia",
+        "verified": false,
+        "is_blue_verified": false,
+        "profile_image_shape": "Circle"
+      },
+      "edit_control": {
+        "edit_tweet_ids": [
+          "1757039816217358547"
+        ],
+        "editable_until_msecs": "1707749511000",
+        "is_edit_eligible": false,
+        "edits_remaining": "5"
+      },
+      "mediaDetails": [
+        {
+          "display_url": "pic.x.com/Iq8vuiaZLT",
+          "expanded_url": "https://x.com/ciffelia/status/1757039816217358547/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "indices": [
+            6,
+            29
+          ],
+          "media_url_https": "https://pbs.twimg.com/media/GGJCX6AawAA6-LB.jpg",
+          "original_info": {
+            "height": 2457,
+            "width": 3276,
+            "focus_rects": [
+              {
+                "x": 0,
+                "y": 622,
+                "w": 3276,
+                "h": 1835
+              },
+              {
+                "x": 819,
+                "y": 0,
+                "w": 2457,
+                "h": 2457
+              },
+              {
+                "x": 1121,
+                "y": 0,
+                "w": 2155,
+                "h": 2457
+              },
+              {
+                "x": 1597,
+                "y": 0,
+                "w": 1229,
+                "h": 2457
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3276,
+                "h": 2457
+              }
+            ]
+          },
+          "sizes": {
+            "large": {
+              "h": 1536,
+              "resize": "fit",
+              "w": 2048
+            },
+            "medium": {
+              "h": 900,
+              "resize": "fit",
+              "w": 1200
+            },
+            "small": {
+              "h": 510,
+              "resize": "fit",
+              "w": 680
+            },
+            "thumb": {
+              "h": 150,
+              "resize": "crop",
+              "w": 150
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/Iq8vuiaZLT"
+        },
+        {
+          "display_url": "pic.x.com/Iq8vuiaZLT",
+          "expanded_url": "https://x.com/ciffelia/status/1757039816217358547/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "indices": [
+            6,
+            29
+          ],
+          "media_url_https": "https://pbs.twimg.com/media/GGJCSIjaYAAJM5y.jpg",
+          "original_info": {
+            "height": 3000,
+            "width": 3000,
+            "focus_rects": [
+              {
+                "x": 0,
+                "y": 885,
+                "w": 3000,
+                "h": 1680
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3000,
+                "h": 3000
+              },
+              {
+                "x": 109,
+                "y": 0,
+                "w": 2632,
+                "h": 3000
+              },
+              {
+                "x": 675,
+                "y": 0,
+                "w": 1500,
+                "h": 3000
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3000,
+                "h": 3000
+              }
+            ]
+          },
+          "sizes": {
+            "large": {
+              "h": 2048,
+              "resize": "fit",
+              "w": 2048
+            },
+            "medium": {
+              "h": 1200,
+              "resize": "fit",
+              "w": 1200
+            },
+            "small": {
+              "h": 680,
+              "resize": "fit",
+              "w": 680
+            },
+            "thumb": {
+              "h": 150,
+              "resize": "crop",
+              "w": 150
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/Iq8vuiaZLT"
+        },
+        {
+          "display_url": "pic.x.com/Iq8vuiaZLT",
+          "expanded_url": "https://x.com/ciffelia/status/1757039816217358547/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "indices": [
+            6,
+            29
+          ],
+          "media_url_https": "https://pbs.twimg.com/media/GGJCXrFaUAELNU0.jpg",
+          "original_info": {
+            "height": 2457,
+            "width": 3276,
+            "focus_rects": [
+              {
+                "x": 0,
+                "y": 622,
+                "w": 3276,
+                "h": 1835
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 2457,
+                "h": 2457
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 2155,
+                "h": 2457
+              },
+              {
+                "x": 123,
+                "y": 0,
+                "w": 1229,
+                "h": 2457
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3276,
+                "h": 2457
+              }
+            ]
+          },
+          "sizes": {
+            "large": {
+              "h": 1536,
+              "resize": "fit",
+              "w": 2048
+            },
+            "medium": {
+              "h": 900,
+              "resize": "fit",
+              "w": 1200
+            },
+            "small": {
+              "h": 510,
+              "resize": "fit",
+              "w": 680
+            },
+            "thumb": {
+              "h": 150,
+              "resize": "crop",
+              "w": 150
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/Iq8vuiaZLT"
+        }
+      ],
+      "photos": [
+        {
+          "backgroundColor": {
+            "red": 204,
+            "green": 214,
+            "blue": 221
+          },
+          "cropCandidates": [
+            {
+              "x": 0,
+              "y": 622,
+              "w": 3276,
+              "h": 1835
+            },
+            {
+              "x": 819,
+              "y": 0,
+              "w": 2457,
+              "h": 2457
+            },
+            {
+              "x": 1121,
+              "y": 0,
+              "w": 2155,
+              "h": 2457
+            },
+            {
+              "x": 1597,
+              "y": 0,
+              "w": 1229,
+              "h": 2457
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 3276,
+              "h": 2457
+            }
+          ],
+          "expandedUrl": "https://x.com/ciffelia/status/1757039816217358547/photo/1",
+          "url": "https://pbs.twimg.com/media/GGJCX6AawAA6-LB.jpg",
+          "width": 3276,
+          "height": 2457
+        },
+        {
+          "backgroundColor": {
+            "red": 204,
+            "green": 214,
+            "blue": 221
+          },
+          "cropCandidates": [
+            {
+              "x": 0,
+              "y": 885,
+              "w": 3000,
+              "h": 1680
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 3000,
+              "h": 3000
+            },
+            {
+              "x": 109,
+              "y": 0,
+              "w": 2632,
+              "h": 3000
+            },
+            {
+              "x": 675,
+              "y": 0,
+              "w": 1500,
+              "h": 3000
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 3000,
+              "h": 3000
+            }
+          ],
+          "expandedUrl": "https://x.com/ciffelia/status/1757039816217358547/photo/1",
+          "url": "https://pbs.twimg.com/media/GGJCSIjaYAAJM5y.jpg",
+          "width": 3000,
+          "height": 3000
+        },
+        {
+          "backgroundColor": {
+            "red": 204,
+            "green": 214,
+            "blue": 221
+          },
+          "cropCandidates": [
+            {
+              "x": 0,
+              "y": 622,
+              "w": 3276,
+              "h": 1835
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 2457,
+              "h": 2457
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 2155,
+              "h": 2457
+            },
+            {
+              "x": 123,
+              "y": 0,
+              "w": 1229,
+              "h": 2457
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 3276,
+              "h": 2457
+            }
+          ],
+          "expandedUrl": "https://x.com/ciffelia/status/1757039816217358547/photo/1",
+          "url": "https://pbs.twimg.com/media/GGJCXrFaUAELNU0.jpg",
+          "width": 3276,
+          "height": 2457
+        }
+      ],
+      "isEdited": false,
+      "isStaleEdit": false
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  }
+}
