@@ -25,7 +25,7 @@ const { Content, headings } = await render(article);
 <Layout>
   <ArticleHead slot="head" {article} />
   <article
-    class="flex flex-col gap-5 w-screen max-w-screen-md lg:max-w-screen-lg mx-auto"
+    class="flex flex-col gap-5 w-screen max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg) mx-auto"
   >
     <Card as="div" class="md:rounded-2xl p-7 md:p-10">
       <ArticleHeader {article} />
@@ -46,7 +46,7 @@ const { Content, headings } = await render(article);
       </aside>
       <Card
         as="main"
-        class="lg:w-full lg:max-w-screen-md md:rounded-2xl p-7 md:p-10"
+        class="lg:w-full lg:max-w-(--breakpoint-md) md:rounded-2xl p-7 md:p-10"
       >
         <ArticleContent {Content} />
       </Card>

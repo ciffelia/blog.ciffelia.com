@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
@@ -17,7 +17,7 @@ import {
 export default defineConfig({
   site: "https://blog.ciffelia.com",
   trailingSlash: "never",
-  integrations: [react(), tailwind(), mdx(), sitemap()],
+  integrations: [react(), mdx(), sitemap()],
   prefetch: {
     prefetchAll: true,
   },
@@ -45,6 +45,7 @@ export default defineConfig({
     },
   },
   vite: {
+    plugins: [tailwindcss()],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
