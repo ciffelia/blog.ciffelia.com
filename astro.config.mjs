@@ -10,6 +10,7 @@ import {
   rehypeEmbed,
   remarkExtractImageSize,
   remarkCustomImage,
+  remarkForbidMdx,
   remarkRemoveTitle,
 } from "./src/pages/article/[id]/_index/markdown/unifiedPlugins";
 
@@ -23,6 +24,7 @@ export default defineConfig({
   },
   markdown: {
     remarkPlugins: [
+      remarkForbidMdx,
       remarkRemoveTitle,
       remarkExtractImageSize,
       remarkCustomImage,
