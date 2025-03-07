@@ -58,5 +58,10 @@
     "prettier-plugin-astro": "^0.14.1",
     "schema-dts": "^1.1.5",
     "unified": "^11.0.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
