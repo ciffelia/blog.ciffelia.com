@@ -4,6 +4,10 @@ import { isSameDay } from "date-fns";
 import { FaPencilRuler, FaRegEdit, FaSync } from "react-icons/fa";
 import TagList from "./TagList.astro";
 import Timestamp from "../../../../components/Timestamp.astro";
+import {
+  vtArticleCardInner,
+  vtArticleCardTitle,
+} from "../../../../view-transition";
 
 interface Props {
   article: CollectionEntry<"article">;
@@ -11,14 +15,15 @@ interface Props {
 
 const {
   article: {
+    id,
     data: { title, isPublished, publishedAt, modifiedAt, tags },
   },
 } = Astro.props;
 ---
 
-<div class="flex flex-col gap-y-5">
+<div class="view-transition flex flex-col gap-y-5" {...vtArticleCardInner(id)}>
   <h1 class="text-center text-4xl font-extrabold tracking-wide">
-    {title}
+    <span class="view-transition" {...vtArticleCardTitle(id)}>{title}</span>
   </h1>
   <TagList tags={tags} />
   <div class="flex items-center justify-center gap-x-4">

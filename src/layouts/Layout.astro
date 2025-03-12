@@ -64,8 +64,48 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
     }
   }
 
+  @layer components {
+    .view-transition {
+      view-transition-name: attr(data-vt-name type(<custom-ident>), none);
+      view-transition-class: attr(data-vt-class type(<custom-ident>), none);
+    }
+  }
+
   @view-transition {
     navigation: auto;
+  }
+
+  @media (prefers-reduced-motion) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+      animation: none !important;
+    }
+  }
+
+  ::view-transition-group(*) {
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    height: 100%;
+  }
+
+  ::view-transition-old(.article-card-inner),
+  ::view-transition-new(.article-card-inner) {
+    object-fit: none;
+    overflow: clip;
+  }
+
+  /* FIXME: これらのスタイルが適用されない。:not(:only-child) に問題がありそうだが、原因不明。 */
+  ::view-transition-old(.article-card-inner):not(:only-child) {
+    animation-duration: 0.25s;
+  }
+  ::view-transition-new(.article-card-inner):not(:only-child) {
+    animation-delay: 0.25s;
+    animation-duration: 0.25s;
   }
 
   :root {
