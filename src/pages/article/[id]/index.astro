@@ -7,6 +7,7 @@ import ArticleHeader from "./_index/ArticleHeader.astro";
 import ArticleShare from "./_index/ArticleShare.astro";
 import ArticleToC from "./_index/ArticleToC.astro";
 import ArticleContent from "./_index/ArticleContent.astro";
+import { vtArticleCard } from "../../../view-transition";
 
 export async function getStaticPaths() {
   const articles = await getCollection("article", ({ data }) => {
@@ -27,7 +28,11 @@ const { Content, headings } = await render(article);
   <article
     class="mx-auto flex w-screen max-w-(--breakpoint-md) flex-col gap-5 lg:max-w-(--breakpoint-lg)"
   >
-    <Card as="div" class="p-7 md:rounded-2xl md:p-10">
+    <Card
+      as="div"
+      class="view-transition p-7 md:rounded-2xl md:p-10"
+      {...vtArticleCard(article.id)}
+    >
       <ArticleHeader {article} />
     </Card>
     <div class="flex flex-col gap-5 lg:flex-row-reverse lg:items-start">
