@@ -99,13 +99,20 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
     overflow: clip;
   }
 
-  /* FIXME: これらのスタイルが適用されない。:not(:only-child) に問題がありそうだが、原因不明。 */
-  ::view-transition-old(.article-card-inner):not(:only-child) {
+  /* FIXME: :not(:only-child) が使えないので冗長な書き方になっている。Chromeのバグかも。 */
+  ::view-transition-old(.article-card-inner) {
     animation-duration: 0.25s;
   }
-  ::view-transition-new(.article-card-inner):not(:only-child) {
+  ::view-transition-old(.article-card-inner):only-child {
+    animation-duration: 0.5s;
+  }
+  ::view-transition-new(.article-card-inner) {
     animation-delay: 0.25s;
     animation-duration: 0.25s;
+  }
+  ::view-transition-new(.article-card-inner):only-child {
+    animation-delay: 0s;
+    animation-duration: 0.5s;
   }
 
   :root {
