@@ -1,25 +1,25 @@
-export type ViewTransitionAttrs = {
-  "data-vt-name": string;
-  "data-vt-class": string;
+export type ViewTransitionStyles = {
+  "--vt-name": string;
+  "--vt-class": string;
 };
 
-export const vtArticleCard = (articleId: string): ViewTransitionAttrs => {
+export const vtArticleCard = (articleId: string): ViewTransitionStyles => {
   return {
-    "data-vt-name": `article-card-${articleId}`,
-    "data-vt-class": "article-card",
+    "--vt-name": `article-card-${articleId}`,
+    "--vt-class": "article-card",
   };
 };
 
-export const vtArticleCardInner = (articleId: string): ViewTransitionAttrs => {
+export const vtArticleCardInner = (articleId: string): ViewTransitionStyles => {
   return {
-    "data-vt-name": `article-card-inner-${articleId}`,
-    "data-vt-class": "article-card-inner",
+    "--vt-name": `article-card-inner-${articleId}`,
+    "--vt-class": "article-card-inner",
   };
 };
 
-export const vtArticleCardTitle = (articleId: string): ViewTransitionAttrs => {
+export const vtArticleCardTitle = (articleId: string): ViewTransitionStyles => {
   return {
-    "data-vt-name": `article-card-title-${articleId}`,
-    "data-vt-class": "article-card-title",
+    "--vt-name": `article-card-title-${articleId}`,
+    "--vt-class": "article-card-title",
   };
 };

@@ -66,8 +66,8 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 
   @layer components {
     .view-transition {
-      view-transition-name: attr(data-vt-name type(<custom-ident>), none);
-      view-transition-class: attr(data-vt-class type(<custom-ident>), none);
+      view-transition-name: var(--vt-name);
+      view-transition-class: var(--vt-name);
     }
   }
 

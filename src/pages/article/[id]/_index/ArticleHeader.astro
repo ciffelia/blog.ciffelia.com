@@ -21,9 +21,12 @@ const {
 } = Astro.props;
 ---
 
-<div class="view-transition flex flex-col gap-y-5" {...vtArticleCardInner(id)}>
+<div
+  class="view-transition flex flex-col gap-y-5"
+  style={vtArticleCardInner(id)}
+>
   <h1 class="text-center text-4xl font-extrabold tracking-wide">
-    <span class="view-transition" {...vtArticleCardTitle(id)}>{title}</span>
+    <span class="view-transition" style={vtArticleCardTitle(id)}>{title}</span>
   </h1>
   <TagList tags={tags} />
   <div class="flex items-center justify-center gap-x-4">

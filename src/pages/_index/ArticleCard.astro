@@ -27,12 +27,12 @@ const {
   class="view-transition flex overflow-hidden"
   rounded
   hoverTransition
-  {...vtArticleCard(id)}
+  style={vtArticleCard(id)}
 >
   <a
     href={`/article/${id}`}
     class="view-transition flex grow flex-col overflow-hidden rounded-2xl"
-    {...vtArticleCardInner(id)}
+    style={vtArticleCardInner(id)}
   >
     <div class="border-b border-slate-200 dark:border-slate-800">
       <Thumbnail {thumbnail} />
@@ -41,7 +41,7 @@ const {
       <div class="flex grow items-center justify-center">
         <span
           class="view-transition text-xl font-bold"
-          {...vtArticleCardTitle(id)}>{title}</span
+          style={vtArticleCardTitle(id)}>{title}</span
         >
       </div>
       <div class="flex items-center justify-center gap-2">

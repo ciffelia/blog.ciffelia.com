@@ -31,7 +31,7 @@ const { Content, headings } = await render(article);
     <Card
       as="div"
       class="view-transition p-7 md:rounded-2xl md:p-10"
-      {...vtArticleCard(article.id)}
+      style={vtArticleCard(article.id)}
     >
       <ArticleHeader {article} />
     </Card>
