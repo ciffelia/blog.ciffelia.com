@@ -52,7 +52,7 @@
     "@types/node": "^24.13.3",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
-    "schema-dts": "^1.1.5",
+    "schema-dts": "^2.0.0",
     "unified": "^11.0.5"
   },
   "packageManager": "pnpm@11.17.0"

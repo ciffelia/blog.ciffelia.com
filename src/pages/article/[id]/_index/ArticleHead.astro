@@ -17,6 +17,13 @@ if (Astro.site === undefined) {
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 
 const ogImageUrl = `${Astro.url}/og.png?v=2`;
+
+const safeJsonLd = (data: object): string =>
+  JSON.stringify(data)
+    .replaceAll("<", "\\u003C")
+    .replaceAll(">", "\\u003E")
+    .replaceAll("&", "\\u0026")
+    .replaceAll("'", "\\u0027");
 ---
 
 <title>{article.data.title} | {SITE_NAME}</title>
@@ -40,7 +47,7 @@ const ogImageUrl = `${Astro.url}/og.png?v=2`;
 <script
   is:inline
   type="application/ld+json"
-  set:html={JSON.stringify({
+  set:html={safeJsonLd({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -56,7 +63,7 @@ const ogImageUrl = `${Astro.url}/og.png?v=2`;
 <script
   is:inline
   type="application/ld+json"
-  set:html={JSON.stringify({
+  set:html={safeJsonLd({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: article.data.title,
