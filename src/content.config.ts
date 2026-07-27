@@ -1,11 +1,9 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 import { parseISO } from "date-fns";
 
-const ISO8601 = z
-  .string()
-  .datetime({ offset: true })
-  .transform((x) => parseISO(x));
+const ISO8601 = z.iso.datetime({ offset: true }).transform((x) => parseISO(x));
 
 const segmenter = new Intl.Segmenter("ja", { granularity: "grapheme" });
 
@@ -21,7 +19,7 @@ const articleCollection = defineCollection({
       modifiedAt: ISO8601,
       thumbnail: z.union([
         z.string().refine((x) => [...segmenter.segment(x)].length === 1, {
-          message: "must be a single grapheme cluster",
+          error: "must be a single grapheme cluster",
         }),
         image(),
       ]),

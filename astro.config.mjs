@@ -1,6 +1,6 @@
 // @ts-check
 
-import { rehypeHeadingIds } from "@astrojs/markdown-remark";
+import { rehypeHeadingIds, unified } from "@astrojs/markdown-remark";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
@@ -23,21 +23,23 @@ export default defineConfig({
     prefetchAll: true,
   },
   markdown: {
-    remarkPlugins: [
-      remarkRemoveTitle,
-      remarkExtractImageSize,
-      remarkCustomImage,
-    ],
-    rehypePlugins: [
-      rehypeHeadingIds,
-      [
-        rehypeAutoLinkHeadings,
-        {
-          content: { type: "text", value: "#" },
-        },
+    processor: unified({
+      remarkPlugins: [
+        remarkRemoveTitle,
+        remarkExtractImageSize,
+        remarkCustomImage,
       ],
-      rehypeEmbed,
-    ],
+      rehypePlugins: [
+        rehypeHeadingIds,
+        [
+          rehypeAutoLinkHeadings,
+          {
+            content: { type: "text", value: "#" },
+          },
+        ],
+        rehypeEmbed,
+      ],
+    }),
     shikiConfig: {
       themes: {
         light: "github-light",
@@ -50,7 +52,7 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
-    ssr: {
+    resolve: {
       noExternal: ["react-tweet"],
     },
   },
