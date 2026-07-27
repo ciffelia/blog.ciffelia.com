@@ -7,7 +7,7 @@ import {
 
 export async function render(
   article: CollectionEntry<"article">,
-): Promise<Buffer> {
+): Promise<Uint8Array<ArrayBuffer>> {
   return await renderElement(
     <div lang="ja-JP" tw="relative w-full h-full flex">
       <img

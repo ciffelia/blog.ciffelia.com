@@ -4,7 +4,7 @@ import {
   render as renderElement,
 } from "../../opengraph";
 
-export async function render(): Promise<Buffer> {
+export async function render(): Promise<Uint8Array<ArrayBuffer>> {
   return await renderElement(
     <div lang="ja-JP" tw="relative w-full h-full flex">
       <img

@@ -26,7 +26,9 @@ const quicksand600Data = await fetch(
   "https://cdn.jsdelivr.net/fontsource/fonts/quicksand@5.1.1/latin-600-normal.ttf",
 ).then((res) => res.arrayBuffer());
 
-export async function render(element: React.ReactNode): Promise<Buffer> {
+export async function render(
+  element: React.ReactNode,
+): Promise<Uint8Array<ArrayBuffer>> {
   const svg = await satori(element, {
     width: 1200,
     height: 630,
@@ -49,5 +51,5 @@ export async function render(element: React.ReactNode): Promise<Buffer> {
     ],
   });
 
-  return new Resvg(svg).render().asPng();
+  return new Uint8Array(new Resvg(svg).render().asPng());
 }
