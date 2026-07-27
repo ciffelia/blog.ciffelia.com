@@ -16,5 +16,5 @@ export const GET: APIRoute<
   Awaited<ReturnType<typeof getStaticPaths>>[number]["props"],
   Awaited<ReturnType<typeof getStaticPaths>>[number]["params"]
 > = async ({ props: { article } }) => {
-  return new Response(await render(article));
+  return new Response(new Uint8Array(await render(article)));
 };
