@@ -55,5 +55,8 @@
     "schema-dts": "^2.0.0",
     "unified": "^11.0.5"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "packageManager": "pnpm@11.17.0"
 }
