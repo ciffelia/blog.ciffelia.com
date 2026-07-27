@@ -1,8 +1,8 @@
-import type { Plugin } from "unified";
 import type { Element, Root as HastRoot } from "hast";
 import { isElement } from "hast-util-is-element";
-import { is } from "unist-util-is";
 import type {} from "mdast-util-mdxjs-esm";
+import type { Plugin } from "unified";
+import { is } from "unist-util-is";
 import { createEmbedData } from "../embed/createEmbedData";
 
 /**

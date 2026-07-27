@@ -1,9 +1,9 @@
-import type { Plugin } from "unified";
 import type { Image, Root as MdastRoot } from "mdast";
-import { SKIP, visit } from "unist-util-visit";
 import { fromMarkdown } from "mdast-util-from-markdown";
-import { mdxjs } from "micromark-extension-mdxjs";
 import { mdxFromMarkdown } from "mdast-util-mdx";
+import { mdxjs } from "micromark-extension-mdxjs";
+import type { Plugin } from "unified";
+import { SKIP, visit } from "unist-util-visit";
 
 /**
  * A remark plugin to replace image nodes with custom Astro components.

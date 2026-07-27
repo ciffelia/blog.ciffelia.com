@@ -1,13 +1,13 @@
 ---
 import { getCollection, render } from "astro:content";
-import Layout from "../../../layouts/Layout.astro";
 import Card from "../../../components/Card.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { vtArticleCard } from "../../../view-transition";
+import ArticleContent from "./_index/ArticleContent.astro";
 import ArticleHead from "./_index/ArticleHead.astro";
 import ArticleHeader from "./_index/ArticleHeader.astro";
 import ArticleShare from "./_index/ArticleShare.astro";
 import ArticleToC from "./_index/ArticleToC.astro";
-import ArticleContent from "./_index/ArticleContent.astro";
-import { vtArticleCard } from "../../../view-transition";
 
 export async function getStaticPaths() {
   const articles = await getCollection("article", ({ data }) => {

@@ -1,5 +1,5 @@
-import type { Plugin } from "unified";
 import type { Root as MdastRoot } from "mdast";
+import type { Plugin } from "unified";
 import { CONTINUE, visit } from "unist-util-visit";
 
 const imageTitleRegExp = /^w=(large|medium|small|\d+)$/u;

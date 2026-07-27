@@ -1,13 +1,13 @@
-import {
-  createEmbedTweetData,
-  isTweetUrl,
-  type EmbedTweetData,
-} from "./createEmbedTweetData";
+import { CachedFetcher } from "./cache";
 import {
   createEmbedLinkCardData,
   type EmbedLinkCardData,
 } from "./createEmbedLinkCardData";
-import { CachedFetcher } from "./cache";
+import {
+  createEmbedTweetData,
+  type EmbedTweetData,
+  isTweetUrl,
+} from "./createEmbedTweetData";
 
 export type EmbedData = EmbedLinkCardData | EmbedTweetData;
 

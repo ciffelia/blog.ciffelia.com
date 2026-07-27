@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { FaRegEdit } from "react-icons/fa";
-import Thumbnail from "./Thumbnail.astro";
 import Card from "../../components/Card.astro";
 import Timestamp from "../../components/Timestamp.astro";
 import {
@@ -9,6 +8,7 @@ import {
   vtArticleCardInner,
   vtArticleCardTitle,
 } from "../../view-transition";
+import Thumbnail from "./Thumbnail.astro";
 
 interface Props {
   article: CollectionEntry<"article">;

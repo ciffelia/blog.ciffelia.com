@@ -1,5 +1,5 @@
-import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
+import type { APIRoute } from "astro";
 import { render } from "./_og/render";
 
 export async function getStaticPaths() {

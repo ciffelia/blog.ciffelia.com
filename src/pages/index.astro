@@ -1,10 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 import { compareAsc } from "date-fns";
+import { SITE_DESCRIPTION, SITE_NAME } from "../constant";
 import Layout from "../layouts/Layout.astro";
 import ArticleCard from "./_index/ArticleCard.astro";
 import SilhouetteCard from "./_index/SilhouetteCard.astro";
-import { SITE_DESCRIPTION, SITE_NAME } from "../constant";
 
 const articleList = (
   await getCollection("article", ({ data }) => data.isPublished)

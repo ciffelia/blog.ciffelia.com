@@ -1,15 +1,16 @@
 // @ts-check
-import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
-import tailwindcss from "@tailwindcss/vite";
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
+
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
+import mdx from "@astrojs/mdx";
+import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "astro/config";
 import rehypeAutoLinkHeadings from "rehype-autolink-headings";
 import {
   rehypeEmbed,
-  remarkExtractImageSize,
   remarkCustomImage,
+  remarkExtractImageSize,
   remarkRemoveTitle,
 } from "./src/pages/article/[id]/_index/markdown/unifiedPlugins";
 

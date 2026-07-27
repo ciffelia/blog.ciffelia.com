@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
+import { Resvg } from "@resvg/resvg-js";
 import type React from "react";
 import satori from "satori";
-import { Resvg } from "@resvg/resvg-js";
 import type {} from "./types.d.ts";
 
 // NOTE: Productionビルド時にはこのソースファイルはdistディレクトリ内にバンドルされた状態で実行される。

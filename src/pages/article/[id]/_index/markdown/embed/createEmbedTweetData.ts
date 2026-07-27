@@ -1,4 +1,4 @@
-import { type Tweet, getTweet } from "react-tweet/api";
+import { getTweet, type Tweet } from "react-tweet/api";
 
 export interface EmbedTweetData {
   type: "tweet";

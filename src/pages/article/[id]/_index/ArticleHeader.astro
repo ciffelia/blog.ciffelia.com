@@ -2,12 +2,12 @@
 import type { CollectionEntry } from "astro:content";
 import { isSameDay } from "date-fns";
 import { FaPencilRuler, FaRegEdit, FaSync } from "react-icons/fa";
-import TagList from "./TagList.astro";
 import Timestamp from "../../../../components/Timestamp.astro";
 import {
   vtArticleCardInner,
   vtArticleCardTitle,
 } from "../../../../view-transition";
+import TagList from "./TagList.astro";
 
 interface Props {
   article: CollectionEntry<"article">;

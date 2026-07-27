@@ -1,5 +1,5 @@
-import type { Plugin } from "unified";
 import type { Root as MdastRoot } from "mdast";
+import type { Plugin } from "unified";
 
 /**
  * A remark plugin to check and remove the first <h1> heading.
