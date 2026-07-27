@@ -1,5 +1,8 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.5.5/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "includes": ["**", "!src/embed-cache"]
+  },
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -12,7 +15,7 @@
     }
   },
   "formatter": {
-    "enabled": false
+    "indentStyle": "space"
   },
   "assist": { "actions": { "source": { "organizeImports": "off" } } }
 }

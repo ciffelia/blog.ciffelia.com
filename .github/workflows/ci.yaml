@@ -62,21 +62,4 @@ jobs:
           node-version-file: .node-version
           cache: pnpm
       - run: pnpm ci
-      - run: pnpm run lint:check
-
-  format:
-    runs-on: ubuntu-24.04
-    permissions:
-      contents: read
-    timeout-minutes: 5
-    steps:
-      - uses: actions/checkout@v7
-        with:
-          persist-credentials: false
-      - uses: pnpm/action-setup@v6
-      - uses: actions/setup-node@v7
-        with:
-          node-version-file: .node-version
-          cache: pnpm
-      - run: pnpm ci
-      - run: pnpm run format:check
+      - run: pnpm run lint
