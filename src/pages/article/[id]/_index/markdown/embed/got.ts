@@ -1,8 +1,4 @@
-import rawGot, {
-  type CancelableRequest,
-  type Progress,
-  type Request,
-} from "got";
+import rawGot, { type Progress, type Request, type RequestPromise } from "got";
 
 /**
  * gotの拡張
@@ -16,15 +12,21 @@ export const got = rawGot.extend({
     // https://github.com/sindresorhus/got/blob/main/documentation/examples/advanced-creation.js#L40
     (options, next) => {
       const downloadLimit = 10485760; // 10MiB
+      const controller = new AbortController();
+      options.signal = options.signal
+        ? AbortSignal.any([options.signal, controller.signal])
+        : controller.signal;
+
       const promiseOrStream = next(options);
 
       const cancel = (message: string) => {
+        const error = new Error(message);
+
         if (options.isStream) {
           const stream = promiseOrStream as Request;
-          stream.destroy(new Error(message));
+          stream.destroy(error);
         } else {
-          const promise = promiseOrStream as CancelableRequest;
-          promise.cancel(message);
+          controller.abort(error);
         }
       };
 
@@ -38,7 +40,7 @@ export const got = rawGot.extend({
         const stream = promiseOrStream as Request;
         stream.on("downloadProgress", handleProgress);
       } else {
-        const promise = promiseOrStream as CancelableRequest;
+        const promise = promiseOrStream as RequestPromise;
         promise.on("downloadProgress", handleProgress);
       }
 
