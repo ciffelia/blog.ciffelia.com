@@ -1,0 +1,5 @@
+allowBuilds:
+  '@biomejs/biome': false
+  esbuild: true
+  sharp: false
+  tsparticles-engine: false

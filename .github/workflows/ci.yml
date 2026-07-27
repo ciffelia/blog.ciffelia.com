@@ -10,8 +10,8 @@ permissions:
   contents: read
 
 env:
-  NODE_VERSION: 22
-  PNPM_VERSION: 10
+  NODE_VERSION: 24
+  PNPM_VERSION: 11
 
 jobs:
   typecheck:
