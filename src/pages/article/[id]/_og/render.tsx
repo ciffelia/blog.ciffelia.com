@@ -8,6 +8,8 @@ import {
 export async function render(
   article: CollectionEntry<"article">,
 ): Promise<Uint8Array<ArrayBuffer>> {
+  const titleLines = article.data.ogTitleLines ?? [article.data.title];
+
   return await renderElement(
     <div lang="ja-JP" tw="relative w-full h-full flex">
       <img
@@ -18,9 +20,11 @@ export async function render(
       />
       <div tw="absolute w-full h-full flex flex-col">
         <div tw="w-full h-[80%] flex items-center justify-center text-center">
-          <span tw="text-slate-50 text-8xl leading-tight font-bold">
-            {article.data.title}
-          </span>
+          <div tw="flex flex-col items-center text-slate-50 text-8xl leading-tight font-bold">
+            {titleLines.map((line) => (
+              <span>{line}</span>
+            ))}
+          </div>
         </div>
         <div tw="w-full h-[20%] bg-[rgba(0,0,0,0.2)] flex items-center justify-center">
           <Logo />

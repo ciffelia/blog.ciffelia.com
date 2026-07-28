@@ -12,6 +12,7 @@ const articleCollection = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
+      ogTitleLines: z.string().array().min(1).max(3).optional(),
       description: z.string(),
       tags: z.string().array(),
       isPublished: z.boolean(),
