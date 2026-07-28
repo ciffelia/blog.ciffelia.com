@@ -51,6 +51,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
+      include: ["react-tweet > swr > use-sync-external-store/shim"],
     },
     resolve: {
       noExternal: ["react-tweet"],
