@@ -3,3 +3,4 @@ allowBuilds:
   esbuild: true
   sharp: false
   tsparticles-engine: false
+  workerd: false
